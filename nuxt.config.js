@@ -1,9 +1,16 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  ssr: false,
+  env: {
+    local: process.env.UCO_LOCAL || true,
+    gqlApiEndpoint: process.env.UCO_GQL_API_ENDPOINT,
+    recaptchaSiteKey: process.env.UCO_RECAPTCHA_SITE_KEY,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - libor',
+    titleTemplate: '%s - Dřevo Libor',
     title: 'libor',
     meta: [
       { charset: 'utf-8' },
@@ -18,7 +25,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/syncI18n', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,6 +44,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/apollo',
+    // '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -45,12 +54,42 @@ export default {
     baseURL: '/',
   },
 
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/apolloDefault.js',
+    },
+    errorHandler: '~/plugins/apolloErrorHandler.js',
+  },
+
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      name: 'UCO Customer Portal ',
+      short_name: 'UCO Portal',
+      background_color: '#f5efe9',
+      theme_color: '#096453',
+      description: 'Portal for customers',
+      lang: 'cs',
+      csp: "script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net www.recaptcha.net www.gstatic.com; frame-src cdn.jsdelivr.net www.recaptcha.net www.gstatic.com; object-src 'self'; img-src https://*; worker-src 'self'; child-src 'self';",
     },
   },
+
+  // i18n: {
+  //   locales: [
+  //     { code: 'en', iso: 'en-GB', file: 'en-GB.js', isCatchallLocale: true },
+  //     { code: 'cs', iso: 'cs-CZ', file: 'cs-CZ.js' },
+  //   ],
+  //   lazy: true,
+  //   langDir: 'locales/',
+  //   defaultLocale: 'cs',
+  //   vueI18n: '~/plugins/vueI18n.js',
+  //   detectBrowserLanguage: {
+  //     useCookie: true,
+  //     onlyOnRoot: true,
+  //     cookieKey: 'uco-customer-portal-lang',
+  //   },
+  //   seo: false,
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
