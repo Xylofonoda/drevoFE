@@ -75,14 +75,10 @@
           elevation="3"
           large
           color="black"
-          class="white--text my-5"
+          class="white--text my-4"
         >Login</v-btn>
 
         <a href="#" style="color: black" class="my-6">Register new account</a>
-
-        <v-footer color="white">
-          <a href="#" style="color: black" class="mx-auto pa-15">About us</a>
-        </v-footer>
 
       </v-form>
     </v-col>
@@ -91,5 +87,6 @@
 <script>
 export default {
   name: 'LoginPage',
+  layout:"LoginLayout"
 }
 </script>
