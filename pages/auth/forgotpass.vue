@@ -12,7 +12,7 @@
       <v-container style="padding-top: 120px">
         <v-card class="py-8 px-4">
           <v-form>
-            <p style="text-align: left">Email</p>
+            <p style="text-align: left">Email:</p>
             <v-text-field
               v-model="email"
               :rules="emailRules"
