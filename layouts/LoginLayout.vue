@@ -1,12 +1,13 @@
 <template>
   <v-app dark>
-    <v-main>
-        <Nuxt />
-    </v-main>
-
-    <v-footer color="white">
-      <span class="mx-auto "><a href="#" style="color: black">About us</a></span>
-    </v-footer>
+    <v-container class="xs">
+      <v-main>
+          <Nuxt/>
+      </v-main>
+      <v-footer color="white" app bottom absolute padless>
+        <span class="mx-auto "><a href="#" style="color: black">About us</a></span>
+      </v-footer>
+    </v-container>
   </v-app>
 </template>
 
