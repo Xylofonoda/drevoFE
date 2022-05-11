@@ -66,7 +66,7 @@
             color="black"
           />
 
-        <nuxt-link to="/auth/passRec" style="color: black">Resend Password</nuxt-link>
+        <nuxt-link to="/auth/forgotpass" style="color: black">Resend Password</nuxt-link>
         <v-btn
           block
           elevation="3"
