@@ -2,7 +2,7 @@
   <v-row>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/userprofileview"
         style="text-decoration: none">
       <CardComponent
         label="Profil"
