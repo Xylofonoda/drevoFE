@@ -1,39 +1,67 @@
 <template>
   <v-row>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Profil"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Plán"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Projekty"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Metodika"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Hardware"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="About"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
     <v-col xl="6">
+      <nuxt-link
+        to=""
+        style="text-decoration: none">
       <CardComponent
         label="Queue"
       ></CardComponent>
+      </nuxt-link>
     </v-col>
 
 
