@@ -11,7 +11,7 @@
     </v-col>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/plan"
         style="text-decoration: none">
       <CardComponent
         label="Plán"
@@ -29,7 +29,7 @@
     </v-col>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/tutorials"
         style="text-decoration: none">
       <CardComponent
         label="Metodika"

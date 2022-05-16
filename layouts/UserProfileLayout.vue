@@ -6,7 +6,7 @@
         User Profile
       </v-toolbar-title>
     </v-app-bar>
-    <v-container class="">
+    <v-container>
       <v-main>
         <Nuxt/>
       </v-main>
