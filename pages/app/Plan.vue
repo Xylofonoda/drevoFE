@@ -15,22 +15,37 @@
             style="color: gray"
           >Buy more:</p>
           <plan-card-component
-            v-model="checkboxOnce"
             evals="10 evaluations"
             save="Save 20%"
+            price="1500 Kč"
           ></plan-card-component>
           <plan-card-component
-            v-model="checkboxOnce"
             evals="30 evaluations"
             save="Save 20%"
+            price="7000 Kč"
           ></plan-card-component>
           <plan-card-component
-            v-model="checkboxOnce"
             evals="50 evaluations"
             save="Save 20%"
+            price="21000 Kč"
           ></plan-card-component>
         </v-form>
       </v-container>
+      <v-btn
+        block
+        color="black"
+        class="white--text"
+      >Buy
+      </v-btn>
+      <nuxt-link
+        to=""
+        style="text-decoration: none; color: gray"
+      ><p class="text-center subtitle-2 py-3">Proceed to payment gateway</p></nuxt-link>
+      <nuxt-link
+        to=""
+        style="text-decoration-color: black; color: black"
+      ><p class="text-center">Historie Plateb (seznam faktur + PDF)</p>
+      </nuxt-link>
     </v-col>
   </v-row>
 </template>
@@ -41,6 +56,7 @@ import PlanCardComponent from "@/components/PlanCard";
 export default {
   name: "PlanPage",
   components: {PlanCardComponent},
+  layout: "PlanLayout",
 
 }
 </script>

@@ -9,7 +9,7 @@
         <v-row>
           <v-col cols="1">
             <v-checkbox
-
+              mandatory
               class="pt-5 mx-2"
               color="black"
             ></v-checkbox>
@@ -30,7 +30,7 @@
               class="pt-8 ml-3 text-no-wrap"
             >
               <p class="text-right">
-                1500 CZK
+                {{price}}
               </p>
 
             </v-card-title>
@@ -57,7 +57,10 @@ export default {
     checkboxOnce: {
       type: String,
       default: null,
-
+    },
+    price:{
+      type:String,
+      default:null,
     },
     // eslint-disable-next-line vue/require-default-prop,vue/require-prop-types
   }

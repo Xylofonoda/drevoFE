@@ -14,7 +14,7 @@
         </v-col>
         <v-col cols="9">
           <v-toolbar-title class="py-1">
-            Tutorial
+            Plan
           </v-toolbar-title>
         </v-col>
       </v-row>
@@ -27,24 +27,9 @@
   </v-app>
 </template>
 
-
 <script>
-
 export default {
-  name: 'TutorialLayout',
-  props:{
-    title:{
-      type: String,
-      default: null,
+  name: "PlanLayout",
 
-    }
-  },
-  data (){
-    return{
-      fixed:false,
-      miniVariant:false,
-    }
-  }
 }
-
 </script>
