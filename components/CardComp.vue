@@ -1,47 +1,47 @@
 <template>
-      <v-card
-        :class="radius"
-        height="120px"
-        width="130px"
-        outlined
-        rounded
-        color="black"
-        class="mx-3"
+  <v-card
+    :class="radius"
+    height="120px"
+    width="130px"
+    outlined
+    rounded
+    color="black"
+    class="mx-3"
 
-      >
-        <v-list-item four-line>
-          <v-list-item-content>
-            <v-list-item-title>
-<!--              Nazev karticky-->
-              <p class="white--text" style="font-size: small">{{label}}</p>
-            </v-list-item-title>
-          </v-list-item-content>
-          <v-list-item-avatar
-            class="mx-0"
-            circle
-            color="grey"
-            size="25"
-          ></v-list-item-avatar>
-        </v-list-item>
-      </v-card>
+  >
+    <v-list-item four-line>
+      <v-list-item-content>
+        <v-list-item-title>
+          <!--              Nazev karticky-->
+          <p class="white--text" style="font-size: small">{{ label }}</p>
+        </v-list-item-title>
+      </v-list-item-content>
+      <v-list-item-avatar
+        class="mx-0"
+        circle
+        color="grey"
+        size="25"
+      ></v-list-item-avatar>
+    </v-list-item>
+  </v-card>
 </template>
 
 <script>
 // import { mdiAccountCircleOutline } from '@mdi/js';
 export default {
-  name:"CardComponent",
+  name: "CardComponent",
   components: {},
-  props:{
-    label:{
+  props: {
+    label: {
       type: String,
       default: null,
 
     },
-  icons:{
-      type:String,
-      default:null,
-    // mdiAccountCircleOutline
-  }
+    icons: {
+      type: String,
+      default: null,
+      // mdiAccountCircleOutline
+    }
   },
   data: () => ({
     model: 3,
@@ -57,7 +57,7 @@ export default {
   }),
 
   computed: {
-    radius () {
+    radius() {
       let rounded = 'rounded'
       const value = this.rounded[this.model]
 

@@ -14,44 +14,21 @@
           <p
             style="color: gray"
           >Buy more:</p>
-
-          <v-list>
-            <v-list-item-group
-              v-model="model"
-            >
-              <template v-for="(item, i) in items">
-
-                <v-divider
-                  v-if="!item"
-                  :key="`divider-${i}`"
-                ></v-divider>
-
-                <v-list-item
-                  v-else
-                  :key="`item-${i}`"
-                  :value="item"
-                  active-class="black--text"
-                >
-                  <template #default="{ active }">
-                    <v-list-item-action>
-                      <v-checkbox
-                        :input-value="active"
-                        color="black"
-                      ></v-checkbox>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                      <v-list-item-title
-                        align="left"
-                        v-text="item"
-                      ></v-list-item-title>
-                    </v-list-item-content>
-                    <v-list-item-action>
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-item-group>
-          </v-list>
+          <plan-card-component
+            v-model="checkboxOnce"
+            evals="10 evaluations"
+            save="Save 20%"
+          ></plan-card-component>
+          <plan-card-component
+            v-model="checkboxOnce"
+            evals="30 evaluations"
+            save="Save 20%"
+          ></plan-card-component>
+          <plan-card-component
+            v-model="checkboxOnce"
+            evals="50 evaluations"
+            save="Save 20%"
+          ></plan-card-component>
         </v-form>
       </v-container>
     </v-col>
@@ -59,15 +36,11 @@
 </template>
 
 <script>
+import PlanCardComponent from "@/components/PlanCard";
+
 export default {
   name: "PlanPage",
-  data: () => ({
-    items: [
-      '10 evaluations',
-      '50 evaluation',
-      '200 evaluations',
-    ],
-    model: [''],
-  }),
+  components: {PlanCardComponent},
+
 }
 </script>
