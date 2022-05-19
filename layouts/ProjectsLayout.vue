@@ -14,7 +14,7 @@
         </v-col>
         <v-col cols="9">
           <v-toolbar-title class="py-1">
-            Plan
+            Projects
           </v-toolbar-title>
         </v-col>
       </v-row>
@@ -28,13 +28,13 @@
 </template>
 
 <script>
-export default {
-  name: "PlanLayout",
-  data (){
-    return{
-      miniVariant:false,
+  export default{
+    name:"ProjectsLayout",
+    data (){
+      return{
+        fixed:false,
+        miniVariant:false,
+      }
     }
   }
-
-}
 </script>

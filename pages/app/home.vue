@@ -20,7 +20,7 @@
     </v-col>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/projects"
         style="text-decoration: none">
       <CardComponent
         label="Projekty"

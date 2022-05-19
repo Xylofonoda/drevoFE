@@ -32,6 +32,7 @@
 
 export default {
   name: 'TutorialLayout',
+  miniVariant: false,
   props:{
     title:{
       type: String,
@@ -41,7 +42,6 @@ export default {
   },
   data (){
     return{
-      fixed:false,
       miniVariant:false,
     }
   }
