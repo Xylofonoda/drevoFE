@@ -1,6 +1,5 @@
 <template>
-  <v-app fluid>
-
+  <v-container>
     <v-list
       subheader
       two-line
@@ -26,7 +25,7 @@
             <v-list-item-action>
               <v-btn
                 icon
-                to=""
+                to="/app/project/showproject"
               >{{ folder.num }}
                 <v-icon
                   color="black"
@@ -40,21 +39,22 @@
         </v-col>
       </v-list-item>
     </v-list>
-    <v-btn
-      outlined
-      fab
-      max-width="50px"
-      max-height="50px"
-      style="bottom: -260px"
-      class="mx-auto"
-      to=""
-    >
-      <v-icon
-        size="50px"
-      >mdi-plus
-      </v-icon>
-    </v-btn>
-  </v-app>
+    <p class="text-center">
+      <v-btn
+        outlined
+        fab
+        max-width="50px"
+        max-height="50px"
+        style="bottom: -260px"
+        to="/app/project/createproject"
+      >
+        <v-icon
+          size="50px"
+        >mdi-plus
+        </v-icon>
+      </v-btn>
+    </p>
+  </v-container>
 </template>
 
 <script>
@@ -67,6 +67,7 @@ export default {
       {
         title: 'Projekt 1',
         num: 33,
+        where: "/app/project/showProject",
       },
       {
 
@@ -81,3 +82,4 @@ export default {
   }),
 }
 </script>
+
