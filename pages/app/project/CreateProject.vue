@@ -1,87 +1,91 @@
 <template>
-  <v-container>
-    <v-form>
-      <h2 class="text-center py-5">
-        Create a new project
-      </h2>
-      <v-text-field
-        v-model="desc"
-        :rules="descRules"
-        label="Description"
-        persistent-hint
-        outlined
-        color="black"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="long"
-        :rules="longRules"
-        label="Longitude"
-        outlined
-        color="black"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="lat"
-        :rules="longRules"
-        label="Latitude"
-        outlined
-        color="black"
-        required
-      ></v-text-field>
-      <div>
-        <v-menu
-          ref="menu"
-          v-model="menu"
-          :close-on-content-click="false"
-          transition="scale-transition"
-          offset-y
-          min-width="auto"
-        >
-          <template #activator="{ on, attrs }">
-            <v-text-field
+  <v-app fluid>
+    <layout-component
+      title="Vytvořit nový projekt"
+    ></layout-component>
+    <v-container class="py-8">
+      <v-form >
+        <v-text-field
+          v-model="desc"
+          :rules="descRules"
+          label="Description"
+          persistent-hint
+          outlined
+          color="black"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="long"
+          :rules="longRules"
+          label="Longitude"
+          outlined
+          color="black"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="lat"
+          :rules="longRules"
+          label="Latitude"
+          outlined
+          color="black"
+          required
+        ></v-text-field>
+        <div>
+          <v-menu
+            ref="menu"
+            v-model="menu"
+            :close-on-content-click="false"
+            transition="scale-transition"
+            offset-y
+            min-width="auto"
+          >
+            <template #activator="{ on, attrs }">
+              <v-text-field
+                v-model="date"
+                label="Date"
+                color="black"
+                readonly
+                outlined
+                v-bind="attrs"
+                v-on="on"
+              ></v-text-field>
+            </template>
+            <v-date-picker
               v-model="date"
-              label="Date"
+              locale="cs-cz"
               color="black"
-              readonly
-              outlined
-              v-bind="attrs"
-              v-on="on"
-            ></v-text-field>
-          </template>
-          <v-date-picker
-            v-model="date"
-            locale="cs-cz"
-            color="black"
-            :active-picker.sync="activePicker"
-            :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
-            min="1950-01-01"
-            @change="save"
-          ></v-date-picker>
-        </v-menu>
-      </div>
-      <v-file-input
-        :rules="imgRules"
-        accept="image/png, image/jpeg, image/bmp"
-        placeholder="Vložte firemní logo"
-        prepend-icon="mdi-camera"
-        label="Logo"
+              :active-picker.sync="activePicker"
+              :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
+              min="1950-01-01"
+              @change="save"
+            ></v-date-picker>
+          </v-menu>
+        </div>
+        <v-file-input
+          :rules="imgRules"
+          accept="image/png, image/jpeg, image/bmp"
+          placeholder="Vložte firemní logo"
+          prepend-icon="mdi-camera"
+          label="Logo"
+          color="black"
+          outlined
+        >
+        </v-file-input>
+      </v-form>
+      <v-btn
         color="black"
-        outlined
-      >
-      </v-file-input>
-    </v-form>
-    <v-btn
-      color="black"
-      class="white--text"
-      block
-    >Vytvořit</v-btn>
+        class="white--text"
+        block
+      >Vytvořit</v-btn>
 
-  </v-container>
+    </v-container>
+  </v-app>
 </template>
 <script>
+  import LayoutComponent from "@/components/LayoutComp";
   export default {
     name:"CreateProject",
+    components: {LayoutComponent},
     layout:"ProjectsLayout",
     data: () => ({
       desc:"",
@@ -116,3 +120,8 @@
     },
   }
 </script>
+<style>
+  html{
+    overflow-y: hidden
+  }
+</style>

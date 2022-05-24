@@ -1,5 +1,8 @@
 <template>
-  <v-app>
+  <v-app fluid>
+    <layout-component
+      title="Tutorial"
+    ></layout-component>
     <v-list
       subheader
       two-line
@@ -42,8 +45,10 @@
 </template>
 <!--roboto condensed -->
 <script>
+import LayoutComponent from "@/components/LayoutComp";
 export default {
   name: "TutorialsPage",
+  components: {LayoutComponent},
   layout: "TutorialLayout",
   data: () => ({
     folders: [

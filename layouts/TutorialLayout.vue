@@ -19,11 +19,9 @@
         </v-col>
       </v-row>
     </v-app-bar>
-    <v-container>
-      <v-main>
+      <v-main class="pt-15">
         <Nuxt/>
       </v-main>
-    </v-container>
   </v-app>
 </template>
 
