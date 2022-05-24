@@ -38,7 +38,7 @@
     </v-col>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/hardware"
         style="text-decoration: none">
       <CardComponent
         label="Hardware"
@@ -47,7 +47,7 @@
     </v-col>
     <v-col xl="6">
       <nuxt-link
-        to=""
+        to="/app/about"
         style="text-decoration: none">
       <CardComponent
         label="About"
