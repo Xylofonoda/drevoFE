@@ -10,7 +10,7 @@
           >mdi-square-edit-outline
           </v-icon>
         </v-col>
-        Project description
+        {{name}}
       </v-expansion-panel-header>
       <v-expansion-panel-content>
       </v-expansion-panel-content>
@@ -21,7 +21,13 @@
 <script>
 export default {
   name: "AccordComp",
-  components: {}
+  components: {},
+  props:{
+    name:{
+      default:null,
+      type:String,
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-app>
+  <v-form>
     <v-list
       subheader
       two-line
@@ -19,13 +20,13 @@
               </v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="folder.title"></v-list-item-title>
+              <v-list-item-title style="font-size:14px " v-text="folder.title"></v-list-item-title>
 
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
                 icon
-                to="/app/project/showproject"
+                to=""
               >{{ folder.num }}
                 <v-icon
                   color="black"
@@ -39,47 +40,41 @@
         </v-col>
       </v-list-item>
     </v-list>
-    <p class="text-center">
-      <v-btn
-        outlined
-        fab
-        max-width="50px"
-        max-height="50px"
-        style="bottom: -260px"
-        to="/app/project/createproject"
-      >
-        <v-icon
-          size="50px"
-        >mdi-plus
-        </v-icon>
-      </v-btn>
-    </p>
-  </v-container>
+  </v-form>
+
+  <p class="text-center">
+    <v-btn
+      outlined
+      fab
+      max-width="50px"
+      max-height="50px"
+      style="bottom: -280px"
+      to="/app/project/createproject"
+    >
+      <v-icon
+        size="50px"
+      >mdi-plus
+      </v-icon>
+    </v-btn>
+  </p>
+  </v-app>
 </template>
-
 <script>
-export default {
-  name: "ProjectsPage",
-  layout: "ProjectsLayout",
-  data: () => ({
-    miniVariant: false,
-    folders: [
-      {
-        title: 'Projekt 1',
-        num: 33,
-        where: "/app/project/showProject",
-      },
-      {
+  export default {
+    name:"FoldersComp",
+    components:{},
+    data: () => ({
+      miniVariant: false,
+      folders: [
+        {
+          title: 'Measurement 01'
+        },
+        {
 
-        title: 'Projekt2',
-        num: 23,
-      },
-      {
-        title: 'Projekt3',
-        num: 10,
-      },
-    ],
-  }),
-}
+          title: 'Měření 02',
+        },
+
+      ],
+    }),
+  }
 </script>
-

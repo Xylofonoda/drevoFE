@@ -3,7 +3,9 @@
     <layout-component
       title="Název projektu"
     ></layout-component>
-    <AccordComp>
+    <AccordComp
+      name="Project Description"
+    >
     </AccordComp>
     <v-form>
       <v-list
@@ -31,7 +33,7 @@
               <v-list-item-action>
                 <v-btn
                   icon
-                  to=""
+                  to="/app/project/nameofproject"
                 >{{ folder.num }}
                   <v-icon
                     color="black"
@@ -61,7 +63,7 @@
         fab
         max-width="50px"
         max-height="50px"
-        style="bottom: -260px"
+        style="bottom: -220px"
         to="/app/project/createproject"
       >
         <v-icon
