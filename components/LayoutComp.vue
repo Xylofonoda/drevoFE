@@ -6,7 +6,7 @@
         >
           <nuxt-link to="/app/home" style="text-decoration: none">
             <v-btn elevation="0">
-              <v-icon style="float: left" plain>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+              <v-icon style="float: left" plain>mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
             </v-btn>
           </nuxt-link>
         </v-toolbar-title>
@@ -61,8 +61,8 @@ export default {
       { name: 'Přejmenovat' },
       { name: 'Smazat' },
     ],
+    miniVariant: false,
   }),
 }
-
-
 </script>
+

@@ -42,21 +42,6 @@
     </v-list>
   </v-form>
 
-  <p class="text-center">
-    <v-btn
-      outlined
-      fab
-      max-width="50px"
-      max-height="50px"
-      style="bottom: -280px"
-      to="/app/project/createproject"
-    >
-      <v-icon
-        size="50px"
-      >mdi-plus
-      </v-icon>
-    </v-btn>
-  </p>
   </v-app>
 </template>
 <script>

@@ -1,4 +1,8 @@
 <template>
+  <v-app>
+  <layout-comp
+    title="Plan"
+  ></layout-comp>
   <v-row>
     <v-col>
       <v-container>
@@ -32,7 +36,7 @@
         </v-form>
       </v-container>
       <v-btn
-        block
+        width="100%"
         color="black"
         class="white--text"
       >Buy
@@ -48,6 +52,7 @@
       </nuxt-link>
     </v-col>
   </v-row>
+  </v-app>
 </template>
 
 <script>
@@ -56,7 +61,7 @@ import PlanCardComponent from "@/components/PlanCard";
 export default {
   name: "PlanPage",
   components: {PlanCardComponent},
-  layout: "PlanLayout",
+  layout: "AllroundLayout",
 
 }
 </script>

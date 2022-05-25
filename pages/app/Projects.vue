@@ -1,5 +1,9 @@
 <template>
-  <v-container>
+  <v-app>
+  <layout-comp
+    title="Projects"
+  ></layout-comp>
+
     <v-list
       subheader
       two-line
@@ -7,6 +11,8 @@
       <v-list-item
         v-for="folder in folders"
         :key="folder.title"
+        link
+        to="/app/project/showproject"
       >
         <v-col>
           <v-row>
@@ -52,15 +58,16 @@
           size="50px"
         >mdi-plus
         </v-icon>
+
       </v-btn>
     </p>
-  </v-container>
+  </v-app>
 </template>
 
 <script>
 export default {
   name: "ProjectsPage",
-  layout: "ProjectsLayout",
+  layout: "AllroundLayout",
   data: () => ({
     miniVariant: false,
     folders: [
@@ -83,3 +90,8 @@ export default {
 }
 </script>
 
+<style>
+  html{
+    overflow-y: hidden;
+  }
+</style>

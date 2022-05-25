@@ -1,6 +1,5 @@
 <template>
-
-  <v-app fluid>
+  <v-app>
     <layout-comp title="About"></layout-comp>
     <v-row justify="center">
       <v-container>
@@ -21,7 +20,6 @@
               {{ accord.title }}
             </v-expansion-panel-header>
             <v-expansion-panel-content
-
             >
               <v-col cols="6" class="mx-auto">
                 <p class="text-center">{{accord.desc}}</p>
@@ -37,7 +35,7 @@
 <script>
 export default {
   name: "AboutPage",
-  layout: "ProjectsLayout",
+  layout: "AllroundLayout",
 
 
   data: () => ({
@@ -61,3 +59,8 @@ export default {
   }),
 }
 </script>
+<style>
+ html{
+   overflow-y: hidden;
+ }
+</style>

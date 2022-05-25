@@ -1,5 +1,5 @@
 <template>
-  <v-expansion-panels class="py-2">
+  <v-expansion-panels>
     <v-expansion-panel>
       <v-expansion-panel-header class="py-6">
         <v-col cols="2">

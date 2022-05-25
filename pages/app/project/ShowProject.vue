@@ -1,8 +1,8 @@
 <template>
-  <v-app fluid>
-    <layout-component
-      title="Název projektu"
-    ></layout-component>
+  <v-app>
+    <layout-comp
+      title="Nazev projektu"
+    ></layout-comp>
     <AccordComp
       name="Project Description"
     >
@@ -15,6 +15,8 @@
         <v-list-item
           v-for="folder in folders"
           :key="folder.title"
+          link
+          to="/app/project/nameofproject"
         >
           <v-col>
             <v-row>
@@ -77,12 +79,12 @@
 </template>
 
 <script>
-import LayoutComponent from "@/components/LayoutComp";
+import LayoutComp from "@/components/LayoutComp";
 
 export default {
   name: "ShowProject",
-  components: {LayoutComponent},
-  layout: "ProjectsLayout",
+  components: {LayoutComp},
+  layout: "AllroundLayout",
 
   data: () => ({
     miniVariant: false,
