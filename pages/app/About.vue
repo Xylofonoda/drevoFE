@@ -3,7 +3,7 @@
     <layout-comp title="About"></layout-comp>
     <v-row justify="center">
       <v-container>
-        <v-expansion-panels accordion class="py-2">
+        <v-expansion-panels accordion class="py-1">
           <v-expansion-panel
             v-for="accord in accords"
             :key="accord.title"

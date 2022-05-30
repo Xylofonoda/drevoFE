@@ -103,3 +103,11 @@
 
   }
 </script>
+<style>
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+</style>

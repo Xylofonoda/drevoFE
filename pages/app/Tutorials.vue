@@ -1,5 +1,5 @@
 <template>
-  <v-app fluid>
+  <v-app>
     <layout-component
       title="Tutorial"
     ></layout-component>
@@ -33,7 +33,6 @@
               ></v-progress-circular>
             </v-list-item-action>
           </v-row>
-          <v-divider class="mt-2"></v-divider>
         </v-col>
       </v-list-item>
       <v-list-item

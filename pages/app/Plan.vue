@@ -5,7 +5,7 @@
   ></layout-comp>
   <v-row>
     <v-col>
-      <v-container>
+      <v-container class="justify-center">
         <v-form class="text-center">
           <p>Your Plan:</p>
           <h2
@@ -34,22 +34,23 @@
             price="21000 Kč"
           ></plan-card-component>
         </v-form>
+        <v-btn
+          width="100%"
+          color="black"
+          class="white--text my-5"
+        >Buy
+        </v-btn>
+        <nuxt-link
+          to=""
+          style="text-decoration: none; color: gray"
+        ><p class="text-center subtitle-2 py-3">Proceed to payment gateway</p></nuxt-link>
+        <nuxt-link
+          to=""
+          style="text-decoration-color: black; color: black"
+        ><p class="text-center">Historie Plateb (seznam faktur + PDF)</p>
+        </nuxt-link>
       </v-container>
-      <v-btn
-        width="100%"
-        color="black"
-        class="white--text"
-      >Buy
-      </v-btn>
-      <nuxt-link
-        to=""
-        style="text-decoration: none; color: gray"
-      ><p class="text-center subtitle-2 py-3">Proceed to payment gateway</p></nuxt-link>
-      <nuxt-link
-        to=""
-        style="text-decoration-color: black; color: black"
-      ><p class="text-center">Historie Plateb (seznam faktur + PDF)</p>
-      </nuxt-link>
+
     </v-col>
   </v-row>
   </v-app>
@@ -65,8 +66,3 @@ export default {
 
 }
 </script>
-<style scoped>
-  html{
-    overflow-y: hidden ;
-  }
-</style>
