@@ -16,28 +16,29 @@
           </v-col>
           Trám 2B
         </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          <p class="text-start"></p>
+        <v-expansion-panel-content class="pt-6">
           <v-row class="justify-center align-center">
-            <v-col cols="10">
-              <p
-                style="color: gray"
-              >Rozměry v prvku (mm):</p>
-            </v-col>
-            <v-col cols="2">
-              <v-btn
-                elevation="0"
-                plain
-                fab
-                style="bottom: 17px"
-                color="black"
-              >
-                <v-icon
+            <v-row>
+              <v-col cols="10">
+                <p
+                  style="color: gray"
+                >Rozměry v prvku (mm):</p>
+              </v-col>
+              <v-col cols="2">
+                <v-btn
+                  elevation="0"
+                  plain
+                  style="bottom: 18px"
+                  fab
                   color="black"
-                >mdi-help-circle-outline
-                </v-icon>
-              </v-btn>
-            </v-col>
+                >
+                  <v-icon
+                    color="black"
+                  >mdi-help-circle-outline
+                  </v-icon>
+                </v-btn>
+              </v-col>
+            </v-row>
             <v-col cols="6">
               <v-img
                 src="/sirka.png"
@@ -260,28 +261,30 @@
                 </v-btn>
               </v-col>
               <v-col cols="12">
-                <v-select
-                  label="Typ dřeva"
-                  outlined
-                  color="black"
-                ></v-select>
-                <v-select
-                  label="Původ dřeva"
-                  outlined
-                  color="black"
-                ></v-select>
-                <v-divider></v-divider>
-                <v-textarea
-                outlined
-                label="Popis prvku(nepovinné)"
-                color="black"
-                >
-                </v-textarea>
-                <v-btn
-                  block
-                  color="black"
-                  class="white--text"
-                >Save Description</v-btn>
+                <v-card elevation="0">
+                  <v-select
+                    label="Typ dřeva"
+                    outlined
+                    color="black"
+                  ></v-select>
+                  <v-select
+                    label="Původ dřeva"
+                    outlined
+                    color="black"
+                  ></v-select>
+                  <v-textarea
+                    outlined
+                    label="Popis prvku(nepovinné)"
+                    color="black"
+                  >
+                  </v-textarea>
+                  <v-btn
+                    block
+                    color="black"
+                    class="white--text mb-16"
+                  >Save Description</v-btn>
+                </v-card>
+
               </v-col>
             </v-row>
         </v-expansion-panel-content>

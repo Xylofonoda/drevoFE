@@ -1,7 +1,7 @@
 <template>
   <v-app-bar fixed app>
     <v-row>
-      <v-col cols="3">
+      <v-col cols="2">
         <v-toolbar-title
         >
           <nuxt-link to="/app/home" style="text-decoration: none">
@@ -15,12 +15,12 @@
           </nuxt-link>
         </v-toolbar-title>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="7">
         <v-toolbar-title class="py-3">
           {{ title }}
         </v-toolbar-title>
       </v-col>
-      <v-col cols="3">
+      <v-col cols="2">
         <v-menu>
           <template #activator="{ on, attrs }">
             <v-btn
@@ -30,8 +30,8 @@
               v-bind="attrs"
               color="black"
               small
-              v-on="on"
               class="py-7"
+              v-on="on"
 
             >
               <v-icon

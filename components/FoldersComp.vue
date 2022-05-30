@@ -9,6 +9,7 @@
         v-for="folder in folders"
         :key="folder.title"
         link
+        style="border-bottom: 1px solid lightgray"
 
       >
         <v-col>
@@ -38,7 +39,7 @@
               </v-btn>
             </v-list-item-action>
           </v-row>
-          <v-divider class="mt-2"></v-divider>
+
         </v-col>
       </v-list-item>
     </v-list>

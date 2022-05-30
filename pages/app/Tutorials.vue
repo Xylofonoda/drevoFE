@@ -11,6 +11,7 @@
         v-for="folder in folders"
         :key="folder.title"
         link
+        style="border-bottom: 1px solid lightgray"
       >
         <v-col>
           <v-row>
@@ -41,6 +42,7 @@
         link
         href="/blank.pdf"
         target="_blank"
+
       >
         <v-col>
           <v-row>
@@ -69,7 +71,6 @@
               </v-btn>
             </v-list-item-action>
           </v-row>
-          <v-divider class="mt-2" ></v-divider>
         </v-col>
       </v-list-item>
     </v-list>
@@ -94,13 +95,19 @@ export default {
         title: 'Lorem ipsum dolor sit ame',
       },
     ],
-    bananas:[
+    bananas: [
       {
-        title:'Loremimpusim',
-        subtitle:'Language: CZE'
+        title: 'Loremimpusim',
+        subtitle: 'Language: CZE'
       }
     ]
 
   }),
 }
 </script>
+
+<style scoped>
+  v-list-item:last-child{
+    border-bottom: none;
+  }
+</style>

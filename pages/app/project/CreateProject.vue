@@ -42,11 +42,13 @@
             <template #activator="{ on, attrs }">
               <v-text-field
                 v-model="date"
+                :rules="datumRules"
                 label="Date"
                 color="black"
                 readonly
                 outlined
                 v-bind="attrs"
+                required
                 v-on="on"
               ></v-text-field>
             </template>
@@ -95,6 +97,10 @@
       long:"",
       longRules:[
         v=> !!v || "Longitude must not be empty"
+      ],
+      datum:"",
+      datumRules:[
+        v=> !!v || "Date must not be empty"
       ],
       lat:"",
       latRules:[

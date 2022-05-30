@@ -4,26 +4,40 @@
     height="120px"
     width="130px"
     outlined
+    elevation="4"
     rounded
-    color="black"
+    :color="color"
     class="mx-3"
     link
 
   >
-    <v-list-item four-line>
-      <v-list-item-content>
-        <v-list-item-title>
-          <!--              Nazev karticky-->
-          <p class="white--text" style="font-size: small">{{ label }}</p>
-        </v-list-item-title>
-      </v-list-item-content>
-      <v-list-item-avatar
-        class="mx-0"
-        circle
-        color="grey"
-        size="25"
-      ></v-list-item-avatar>
-    </v-list-item>
+    <v-row>
+        <v-list-item two-line class="py-3">
+          <v-list-item-content>
+            <v-list-item-title class="pl-3">
+              <!--              Nazev karticky-->
+              <p class="white--text" style="font-size: small">{{ label }}</p>
+            </v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-avatar
+            class="mr-4"
+            circle
+            color="grey"
+            size="25"
+            :icon="icon"
+          ></v-list-item-avatar>
+        </v-list-item>
+      <v-list-item two-line class="py-3">
+        <v-list-item-content>
+          <v-list-item-title class="pl-3">
+            <!--              Nazev karticky-->
+            <p class="white--text" style="font-size: 40px;font-weight: bold; position: absolute; bottom: 40px">{{ number }}</p>
+          </v-list-item-title>
+        </v-list-item-content>
+
+      </v-list-item>
+    </v-row>
+
   </v-card>
 </template>
 
@@ -38,7 +52,17 @@ export default {
       default: null,
 
     },
-    icons: {
+    number: {
+      type: String,
+      default: null,
+
+    },
+    icon: {
+      type: String,
+      default: null,
+      // mdiAccountCircleOutline
+    },
+    color: {
       type: String,
       default: null,
       // mdiAccountCircleOutline
@@ -72,3 +96,8 @@ export default {
 
 }
 </script>
+<style scoped>
+.v-card--outlined >>> fieldset {
+  border-color: black;
+}
+</style>

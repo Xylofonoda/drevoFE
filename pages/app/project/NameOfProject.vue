@@ -16,7 +16,7 @@
         fab
         to="/app/project/tram2b"
         fixed
-        class="mb-7"
+        class="mb-16"
         bottom
       >
         <v-icon

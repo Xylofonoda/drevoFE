@@ -17,6 +17,7 @@
           :key="folder.title"
           link
           to="/app/project/nameofproject"
+          style="border-bottom: 1px solid lightgray"
         >
           <v-col>
             <v-row>
@@ -45,7 +46,6 @@
                 </v-btn>
               </v-list-item-action>
             </v-row>
-            <v-divider class="mt-2"></v-divider>
           </v-col>
         </v-list-item>
       </v-list>
@@ -59,22 +59,21 @@
       </v-container>
 
     </v-form>
-    <p class="text-center">
+    <v-row justify="center">
       <v-btn
         outlined
         fab
-        max-width="50px"
-        max-height="50px"
-        style="bottom: -220px"
-        to="/app/project/createproject"
+        to="/app/project/tram2b"
+        fixed
+        class="mb-16"
+        bottom
       >
         <v-icon
           size="50px"
         >mdi-plus
         </v-icon>
       </v-btn>
-    </p>
-
+    </v-row>
   </v-app>
 </template>
 

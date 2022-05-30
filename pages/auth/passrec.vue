@@ -20,6 +20,7 @@
               type="password"
               required
               outlined
+              color="black"
           ></v-text-field>
             <p style="text-align: left">Potvrďte nové heslo:</p>
             <v-text-field
@@ -29,6 +30,7 @@
               type="password"
               required
               outlined
+              color="black"
           ></v-text-field>
             <div class="d-flex justify-space-between text-caption">
               <div>
