@@ -6,6 +6,7 @@
         style="text-decoration: none">
       <CardComponent
         label="Profil"
+
       ></CardComponent>
       </nuxt-link>
     </v-col>

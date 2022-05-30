@@ -7,6 +7,7 @@
     rounded
     color="black"
     class="mx-3"
+    link
 
   >
     <v-list-item four-line>
@@ -27,7 +28,7 @@
 </template>
 
 <script>
-// import { mdiAccountCircleOutline } from '@mdi/js';
+
 export default {
   name: "CardComponent",
   components: {},

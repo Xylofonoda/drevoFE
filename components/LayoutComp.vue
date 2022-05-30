@@ -5,14 +5,18 @@
         <v-toolbar-title
         >
           <nuxt-link to="/app/home" style="text-decoration: none">
-            <v-btn elevation="0">
-              <v-icon style="float: left" plain>mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
+            <v-btn
+              fab
+              elevation="0"
+              small
+              class="py-7"
+            ><v-icon style="float: left" plain>mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
             </v-btn>
           </nuxt-link>
         </v-toolbar-title>
       </v-col>
       <v-col cols="6">
-        <v-toolbar-title class="py-1">
+        <v-toolbar-title class="py-3">
           {{ title }}
         </v-toolbar-title>
       </v-col>
@@ -20,13 +24,18 @@
         <v-menu>
           <template #activator="{ on, attrs }">
             <v-btn
+              fab
               elevation="0"
               plain
               v-bind="attrs"
+              color="black"
+              small
               v-on="on"
+              class="py-7"
+
             >
               <v-icon
-                style="left: 15px"
+
               >mdi-dots-vertical
               </v-icon>
             </v-btn>

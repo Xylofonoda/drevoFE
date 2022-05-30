@@ -8,9 +8,9 @@
       two-line
     >
       <v-list-item
-        link
         v-for="folder in folders"
         :key="folder.title"
+        link
       >
         <v-col>
           <v-row>

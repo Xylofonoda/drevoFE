@@ -13,6 +13,7 @@
         {{name}}
       </v-expansion-panel-header>
       <v-expansion-panel-content>
+        {{content}}
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -24,6 +25,10 @@ export default {
   components: {},
   props:{
     name:{
+      default:null,
+      type:String,
+    },
+    content:{
       default:null,
       type:String,
     }

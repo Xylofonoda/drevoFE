@@ -28,6 +28,10 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </v-container>
+      <v-col cols="12">
+        <p style="color: gray;" class="text-center">
+        </p>
+      </v-col>
     </v-row>
   </v-app>
 </template>
@@ -59,7 +63,7 @@ export default {
   }),
 }
 </script>
-<style>
+<style scoped>
  html{
    overflow-y: hidden;
  }

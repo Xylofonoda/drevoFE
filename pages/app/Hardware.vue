@@ -13,7 +13,7 @@
     layout:"AllroundLayout"
   }
 </script>
-<style>
+<style scoped>
   html{
     overflow-y: hidden;
   }

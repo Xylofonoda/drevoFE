@@ -7,9 +7,8 @@
     name="Subproject description"
     >
     </accord-comp>
-    <folders-comp>
-    </folders-comp>
-
+    <folders-comp
+    ></folders-comp>
     <p class="text-center">
       <v-btn
         outlined
@@ -17,7 +16,7 @@
         max-width="50px"
         max-height="50px"
         style="bottom: 260px"
-        to="/app/project/addmeasurement"
+        to="/app/project/tram2b"
       >
         <v-icon
           size="50px"
@@ -35,8 +34,4 @@
     layout:"AllroundLayout"
   }
 </script>
-<style>
-  html{
-    overflow-y: hidden;
-  }
-</style>
+
