@@ -4,63 +4,93 @@
       <nuxt-link
         to="/app/userprofileview"
         style="text-decoration: none">
-      <CardComponent
-        label="Profil"
-        color="black"
-        icon="mdi-account-circle-outline"
-      ></CardComponent>
+        <v-card
+          :class="radius"
+          height="120px"
+          width="130px"
+          outlined
+          elevation="4"
+          rounded
+          color="black"
+          class="mx-3"
+          link
+
+        >
+          <v-row>
+            <v-list-item two-line class="py-3">
+              <v-list-item-content>
+                <v-list-item-title class="pl-3">
+                  <!--              Nazev karticky-->
+                  <p class="white--text" style="font-size: small; font-weight: bold">Profile</p>
+                </v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-avatar
+                class="mr-3"
+                size="25"
+                style="bottom: 10px"
+              >
+                <v-icon
+                  color="white"
+                  size="30"
+                >mdi-account-circle
+                </v-icon>
+              </v-list-item-avatar>
+            </v-list-item>
+          </v-row>
+
+        </v-card>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
       <nuxt-link
         to="/app/plan"
         style="text-decoration: none">
-      <CardComponent
-        label="Plán"
-        color="black"
-        number="36"
-      ></CardComponent>
+        <CardComponent
+          label="Plán"
+          color="black"
+          number="36"
+        ></CardComponent>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
       <nuxt-link
         to="/app/projects"
         style="text-decoration: none">
-      <CardComponent
-        label="Projekty"
-        color="black"
-        number="365"
-      ></CardComponent>
+        <CardComponent
+          label="Projekty"
+          color="black"
+          number="365"
+        ></CardComponent>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
       <nuxt-link
         to="/app/tutorials"
         style="text-decoration: none">
-      <CardComponent
-        label="Metodika"
-        color="black"
-      ></CardComponent>
+        <CardComponent
+          label="Metodika"
+          color="black"
+        ></CardComponent>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
       <nuxt-link
         to="/app/hardware"
         style="text-decoration: none">
-      <CardComponent
-        label="Hardware"
-        color="black"
-      ></CardComponent>
+        <CardComponent
+          label="Hardware"
+          color="black"
+        ></CardComponent>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
       <nuxt-link
         to="/app/about"
         style="text-decoration: none">
-      <CardComponent
-        label="About"
-        color="black"
-      ></CardComponent>
+        <CardComponent
+          label="About"
+          color="black"
+        ></CardComponent>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
@@ -74,7 +104,7 @@
           outlined
           elevation="4"
           rounded
-          :color="color"
+
           class="mx-3"
           link
 
@@ -84,21 +114,23 @@
               <v-list-item-content>
                 <v-list-item-title class="pl-3">
                   <!--              Nazev karticky-->
-                  <p class="black--text" style="font-size: small">Queue</p>
+                  <p class="black--text" style="font-size: small; font-weight: bold">Queue</p>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-avatar
-                class="mr-4"
+                class="mr-3"
                 circle
                 color="grey"
-                size="25"
+                size="22"
+                style="bottom: 10px"
               ></v-list-item-avatar>
             </v-list-item>
             <v-list-item two-line class="py-3">
               <v-list-item-content>
                 <v-list-item-title class="pl-3">
                   <!--              Nazev karticky-->
-                  <p class="black--text" style="font-size: 40px;font-weight: bold; position: absolute; bottom: 40px">3</p>
+                  <p class="black--text" style="font-size: 40px;font-weight: bold; position: absolute; bottom: 40px">
+                    3</p>
                 </v-list-item-title>
               </v-list-item-content>
 
@@ -114,47 +146,50 @@
 </template>
 
 <script>
-  import CardComponent from "@/components/CardComp";
-  export default {
-    name:"HomePage",
-    components: {CardComponent},
-    layout:"HomeLayout",
-    data: () => ({
-      model: 3,
-      rounded: [
-        '0',
-        'sm',
-        'md',
-        'lg',
-        'xl',
-        'pill',
-        'circle',
-      ],
-    }),
+import CardComponent from "@/components/CardComp";
 
-    computed: {
-      radius () {
-        let rounded = 'rounded'
-        const value = this.rounded[this.model]
+export default {
+  name: "HomePage",
+  components: {CardComponent},
+  layout: "HomeLayout",
+  data: () => ({
+    model: 3,
+    rounded: [
+      '0',
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      'pill',
+      'circle',
+    ],
+  }),
 
-        if (value !== 'md') {
-          rounded += `-${value}`
-        }
+  computed: {
+    radius() {
+      let rounded = 'rounded'
+      const value = this.rounded[this.model]
 
-        return rounded
-      },
+      if (value !== 'md') {
+        rounded += `-${value}`
+      }
+
+      return rounded
     },
+  },
 
-  }
+}
 </script>
 <style>
-  html{
-    overflow-x: hidden;
-  }
-  body{
-    overflow-x: hidden;
-  }
-  .v-card--outlined  >>> fieldset{
-    border-color: black;
-  }
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.v-card--outlined >>> fieldset {
+  border-color: black;
+}
 </style>

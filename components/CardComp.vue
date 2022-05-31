@@ -16,14 +16,15 @@
           <v-list-item-content>
             <v-list-item-title class="pl-3">
               <!--              Nazev karticky-->
-              <p class="white--text" style="font-size: small">{{ label }}</p>
+              <p class="white--text" style="font-size: small; font-weight: bold">{{ label }}</p>
             </v-list-item-title>
           </v-list-item-content>
           <v-list-item-avatar
-            class="mr-4"
+            class="mr-3"
             circle
             color="grey"
-            size="25"
+            size="22"
+            style="bottom: 8px"
             :icon="icon"
           ></v-list-item-avatar>
         </v-list-item>

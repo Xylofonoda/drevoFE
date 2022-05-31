@@ -42,6 +42,7 @@
         link
         href="/blank.pdf"
         target="_blank"
+        style="border-bottom: 1px solid lightgray"
 
       >
         <v-col>
@@ -88,7 +89,7 @@ export default {
     folders: [
       {
         subtitle: 'Language: CZE',
-        title: 'Lorem ipsum dolor sit ame',
+        title: 'Lorem ipsum dolor site',
       },
       {
         subtitle: 'Language: CZE',
