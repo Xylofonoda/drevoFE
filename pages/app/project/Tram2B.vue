@@ -284,7 +284,6 @@
                     class="white--text mb-16"
                   >Save Description</v-btn>
                 </v-card>
-
               </v-col>
             </v-row>
         </v-expansion-panel-content>

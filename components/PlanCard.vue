@@ -5,6 +5,7 @@
         outlined
         rounded
         max-width="100%"
+        max-height="105px"
       >
         <v-row>
           <v-col cols="1">
@@ -15,14 +16,19 @@
             ></v-checkbox>
           </v-col>
           <v-col cols="6">
-            <v-card-title class="mx-2" style="font-size: 13px;">
-              {{ evals }}
-            </v-card-title>
-            <v-card-subtitle style="font-size: 10px">
-              <div class="rounded-pill elevation-2 mx-2" style="width: 60px">
-                {{ save }}
-              </div>
-            </v-card-subtitle>
+            <v-row>
+              <v-card-title class="mx-3 mt-7" style="font-size: 13px;">
+                {{ evals }}
+              </v-card-title>
+            </v-row>
+            <v-row>
+              <v-card-subtitle style="font-size: 10px; position: relative; bottom: 30px">
+                <div class="rounded-pill elevation-2 mx-2" style="width: 60px">
+                  {{ save }}
+                </div>
+              </v-card-subtitle>
+            </v-row>
+
           </v-col>
           <v-col cols="5">
             <v-card-title
@@ -65,6 +71,4 @@ export default {
     // eslint-disable-next-line vue/require-default-prop,vue/require-prop-types
   }
 }
-
-
 </script>

@@ -183,13 +183,13 @@ export default {
 <style>
 html {
   overflow-x: hidden;
+  overflow-y: unset;
 }
 
 body {
   overflow-x: hidden;
+  overflow-y: unset
+;
 }
 
-.v-card--outlined >>> fieldset {
-  border-color: black;
-}
 </style>
