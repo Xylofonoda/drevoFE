@@ -71,13 +71,13 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
+          title: 'Appka',
+          to: '/app/Home',
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
+          title: 'Login',
+          to: '/auth/login',
         },
       ],
       miniVariant: false,

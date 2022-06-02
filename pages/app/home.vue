@@ -2,7 +2,7 @@
   <v-row>
     <v-col xl="6">
       <nuxt-link
-        to="/app/userprofileview"
+        to="/app/user-profile-view"
         style="text-decoration: none">
         <v-card
           :class="radius"
