@@ -19,6 +19,7 @@
               label="E-mail"
               outlined
               required
+              dark
               color="black"
           ></v-text-field>
             <div class="d-flex justify-space-between text-caption">

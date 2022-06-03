@@ -16,7 +16,7 @@
           v-for="folder in folders"
           :key="folder.title"
           link
-          to="/app/project/nameofproject"
+          to="/app/project/name-of-project"
           style="border-bottom: 1px solid lightgray"
         >
           <v-col>
@@ -36,7 +36,7 @@
               <v-list-item-action>
                 <v-btn
                   icon
-                  to="/app/project/nameofproject"
+                  to="/app/project/name-of-project"
                 >{{ folder.num }}
                   <v-icon
                     color="black"
@@ -63,7 +63,7 @@
       <v-btn
         outlined
         fab
-        to="/app/project/tram2b"
+        to="/app/project/tram-2b"
         fixed
         class="mb-16"
         bottom

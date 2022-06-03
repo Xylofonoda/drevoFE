@@ -54,7 +54,7 @@
             label="ID(E-mail)"
             persistent-hint
             outlined
-            color="black"
+            color="white"
           />
         <v-text-field
             v-model="password"
@@ -63,18 +63,18 @@
             persistent-hint
             type="password"
             outlined
-            color="black"
+            color="white"
           />
 
-        <nuxt-link to="/auth/forgotpass" style="color: black">Resend Password</nuxt-link>
+        <nuxt-link to="/auth/forgotpass" style="color: white; text-decoration: none">Resend Password</nuxt-link>
         <v-btn
           block
-          elevation="3"
+          elevation="5"
           large
-          color="black"
-          class="white--text my-4"
+          color="#F8B400"
+          class="black--text my-4"
         >Login</v-btn>
-        <nuxt-link to="/auth/register" style="color: black" class="my-6">Register new account</nuxt-link>
+        <nuxt-link to="/auth/register" style="color: white; text-decoration: none" class="my-6">Register new account</nuxt-link>
         </v-form>
 
     </v-col>

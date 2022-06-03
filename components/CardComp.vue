@@ -12,31 +12,42 @@
 
   >
     <v-row>
-        <v-list-item two-line class="py-3">
-          <v-list-item-content>
-            <v-list-item-title class="pl-3">
-              <!--              Nazev karticky-->
-              <p class="white--text" style="font-size: small; font-weight: bold">{{ label }}</p>
-            </v-list-item-title>
-          </v-list-item-content>
-          <v-list-item-avatar
-            class="mr-3"
-            circle
-            color="grey"
-            size="22"
-            style="bottom: 8px"
-            :icon="icon"
-          ></v-list-item-avatar>
-        </v-list-item>
-      <v-list-item two-line class="py-3">
+      <v-list-item two-line class="py-2">
         <v-list-item-content>
           <v-list-item-title class="pl-3">
-            <!--              Nazev karticky-->
-            <p class="white--text" style="font-size: 40px;font-weight: bold; position: absolute; bottom: 40px">{{ number }}</p>
+            <p class="white--text text-uppercase font-weight-thin" style="font-size: small; ">{{ label }}</p>
           </v-list-item-title>
         </v-list-item-content>
-
       </v-list-item>
+      <v-row>
+        <v-list-item two-line class="py-0">
+          <v-list-item-content>
+            <v-col cols="7">
+              <v-list-item-title class="pl-2">
+                <p class="white--text" style="font-size: 30px;font-weight: bold; position: absolute; bottom: 45px ">
+                  {{ number }}</p>
+              </v-list-item-title>
+            </v-col>
+            <v-col cols="5">
+              <v-list-item-avatar
+                style="bottom: 15px"
+
+              >
+                <v-list-item-avatar
+                  class="mr-0 pb-3"
+                >
+                  <v-icon
+                    color="#F8B400"
+                    size="30"
+                    style=""
+                  >{{ icon }}
+                  </v-icon>
+                </v-list-item-avatar>
+              </v-list-item-avatar>
+            </v-col>
+          </v-list-item-content>
+        </v-list-item>
+      </v-row>
     </v-row>
 
   </v-card>
@@ -65,7 +76,7 @@ export default {
     },
     color: {
       type: String,
-      default: null,
+      default: "black",
       // mdiAccountCircleOutline
     }
   },

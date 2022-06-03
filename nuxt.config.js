@@ -66,7 +66,7 @@ export default {
     manifest: {
       name: 'UCO Customer Portal ',
       short_name: 'UCO Portal',
-      background_color: '#f5efe9',
+      background_color: '#f5efe9', // #f5efe9
       theme_color: '#096453',
       description: 'Portal for customers',
       lang: 'cs',
@@ -95,7 +95,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
+      dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -105,6 +105,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+          lightgray: colors.grey.lighten5,
         },
       },
     },

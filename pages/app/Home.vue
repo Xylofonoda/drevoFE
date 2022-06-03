@@ -2,7 +2,7 @@
   <v-row>
     <v-col xl="6">
       <nuxt-link
-        to="/app/userprofileview"
+        to="/app/user-profile-view"
         style="text-decoration: none">
         <v-card
           :class="radius"
@@ -14,29 +14,54 @@
           color="black"
           class="mx-3"
           link
+          style="background: transparent; border-style: solid; border-color: #F8B400"
 
         >
           <v-row>
-            <v-list-item two-line class="py-3">
+            <v-list-item two-line class="py-2">
               <v-list-item-content>
                 <v-list-item-title class="pl-3">
-                  <!--              Nazev karticky-->
-                  <p class="white--text" style="font-size: small; font-weight: bold">Profile</p>
+                  <p class="white--text text-uppercase font-weight-thin" style="font-size: small; ">Profil</p>
                 </v-list-item-title>
               </v-list-item-content>
-              <v-list-item-avatar
-                class="mr-3"
-                size="25"
-                style="bottom: 10px"
-              >
-                <v-icon
-                  color="white"
-                  size="30"
-                >mdi-account-circle
-                </v-icon>
-              </v-list-item-avatar>
             </v-list-item>
+            <v-row>
+              <v-list-item two-line class="py-1">
+                <v-list-item-content>
+                  <v-col cols="6">
+                    <v-list-item-title>
+                    </v-list-item-title>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-list-item-avatar
+                      style="bottom: 20px"
+                    >
+                      <v-list-item-avatar
+                        class="mr-0 pb-3"
+                      >
+                        <v-icon
+                          color="#F8B400"
+                          size="30"
+                        >mdi-account
+                        </v-icon>
+                      </v-list-item-avatar>
+                    </v-list-item-avatar>
+                  </v-col>
+                </v-list-item-content>
+              </v-list-item>
+            </v-row>
           </v-row>
+
+          <!--          <v-row>-->
+          <!--            <v-list-item two-line class="py-3">-->
+          <!--              <v-list-item-content>-->
+          <!--                <v-list-item-title class="pl-3">-->
+          <!--                  &lt;!&ndash;              Nazev karticky&ndash;&gt;-->
+          <!--                  <p class="white&#45;&#45;text font-weight-thin text-uppercase" style="font-size: small;">Profil</p>-->
+          <!--                </v-list-item-title>-->
+          <!--              </v-list-item-content>-->
+          <!--            </v-list-item>-->
+          <!--          </v-row>-->
 
         </v-card>
       </nuxt-link>
@@ -48,7 +73,8 @@
         <CardComponent
           label="Plán"
           color="black"
-          number="36"
+          number="34"
+          icon="mdi-archive"
         ></CardComponent>
       </nuxt-link>
     </v-col>
@@ -60,6 +86,7 @@
           label="Projekty"
           color="black"
           number="365"
+          icon="mdi-folder-open"
         ></CardComponent>
       </nuxt-link>
     </v-col>
@@ -70,6 +97,7 @@
         <CardComponent
           label="Metodika"
           color="black"
+          icon="mdi-lightbulb"
         ></CardComponent>
       </nuxt-link>
     </v-col>
@@ -80,6 +108,7 @@
         <CardComponent
           label="Hardware"
           color="black"
+          icon="mdi-toolbox"
         ></CardComponent>
       </nuxt-link>
     </v-col>
@@ -87,10 +116,55 @@
       <nuxt-link
         to="/app/about"
         style="text-decoration: none">
-        <CardComponent
-          label="About"
-          color="black"
-        ></CardComponent>
+        <v-card
+          :class="radius"
+          height="120px"
+          width="130px"
+          outlined
+          elevation="4"
+          rounded
+          class="mx-3"
+          link
+          color="#FFAB00"
+
+        >
+          <v-row>
+            <v-list-item two-line class="py-2">
+              <v-list-item-content>
+                <v-list-item-title class="pl-3">
+                  <p class="black--text text-uppercase " style="font-size: small;font-weight: 500">O nás</p>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-row>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-col cols="7">
+                    <v-list-item-title class="pl-3">
+                      <p class="white--text" style="font-size: 30px;font-weight: bold; position:relative; bottom: 5px ">
+                      </p>
+                    </v-list-item-title>
+                  </v-col>
+                  <v-col cols="5">
+                    <v-list-item-avatar
+                      style="bottom: 20px"
+                    >
+                      <v-list-item-avatar
+                        class="mr-0 pb-3"
+                      >
+                        <v-icon
+                          color="white"
+                          size="30"
+                        >mdi-map-marker
+                        </v-icon>
+                      </v-list-item-avatar>
+                    </v-list-item-avatar>
+                  </v-col>
+                </v-list-item-content>
+              </v-list-item>
+            </v-row>
+          </v-row>
+        </v-card>
       </nuxt-link>
     </v-col>
     <v-col xl="6">
@@ -104,39 +178,48 @@
           outlined
           elevation="4"
           rounded
-
           class="mx-3"
           link
+          style="background: transparent; border-style: solid; border-color: #F8B400"
 
         >
           <v-row>
-            <v-list-item two-line class="py-3">
+            <v-list-item two-line class="py-2">
               <v-list-item-content>
                 <v-list-item-title class="pl-3">
                   <!--              Nazev karticky-->
-                  <p class="black--text" style="font-size: small; font-weight: bold">Queue</p>
+                  <p class="white--text text-uppercase font-weight-thin " style="font-size: small; ">Queue</p>
                 </v-list-item-title>
               </v-list-item-content>
-              <v-list-item-avatar
-                class="mr-3"
-                circle
-                color="grey"
-                size="22"
-                style="bottom: 10px"
-              ></v-list-item-avatar>
             </v-list-item>
-            <v-list-item two-line class="py-3">
-              <v-list-item-content>
-                <v-list-item-title class="pl-3">
-                  <!--              Nazev karticky-->
-                  <p class="black--text" style="font-size: 40px;font-weight: bold; position: absolute; bottom: 40px">
-                    3</p>
-                </v-list-item-title>
-              </v-list-item-content>
-
-            </v-list-item>
+            <v-row>
+              <v-list-item two-line class="py-1">
+                <v-list-item-content>
+                  <v-col cols="7">
+                    <v-list-item-title class="pl-2">
+                      <p class="white--text" style="font-size: 30px;font-weight: bold; position: absolute; bottom: 55px">
+                        3</p>
+                    </v-list-item-title>
+                  </v-col>
+                  <v-col cols="5">
+                    <v-list-item-avatar
+                      style="bottom: 20px"
+                    >
+                      <v-list-item-avatar
+                        class="mr-0 pb-3"
+                      >
+                        <v-icon
+                          color="#F8B400"
+                          size="30"
+                        >mdi-timer-sand
+                        </v-icon>
+                      </v-list-item-avatar>
+                    </v-list-item-avatar>
+                  </v-col>
+                </v-list-item-content>
+              </v-list-item>
+            </v-row>
           </v-row>
-
         </v-card>
       </nuxt-link>
     </v-col>
@@ -188,8 +271,7 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: unset
-;
+  overflow-y: unset;
 }
 
 </style>

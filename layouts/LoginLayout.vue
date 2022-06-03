@@ -4,8 +4,8 @@
       <v-main>
           <Nuxt/>
       </v-main>
-      <v-footer color="white" app bottom absolute padless>
-        <span class="mx-auto my-16 pb-6"><nuxt-link to="/app/about" style="color: black">About us</nuxt-link></span>
+      <v-footer color="transparent" bottom absolute padless>
+        <span class="mx-auto my-16 pb-6"><nuxt-link to="/app/about" style="color: lightgray; text-decoration: none" >About us</nuxt-link></span>
       </v-footer>
     </v-container>
   </v-app>

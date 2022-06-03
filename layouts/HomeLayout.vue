@@ -2,11 +2,9 @@
   <v-app>
     <v-app-bar app elevation="3">
       <v-img
-        src="/Logo-Test.png"
-        max-height="100"
-        max-width="100"
-        contain
-        class="mx-auto"
+        src="/logo_white.svg"
+        style="position: absolute; height: 55px; width: 270px; left: 30px"
+
       ></v-img>
     </v-app-bar>
     <v-main>
@@ -27,3 +25,21 @@ export default {
 }
 </script>
 
+<style>
+#app {
+  background: url('/bg.jpg') no-repeat center center fixed !important;
+  background-size: cover;
+}
+</style>
+<style>
+#app {
+  background: url('/bg.jpg') no-repeat center center fixed !important;
+  background-size: cover;
+}
+</style>
+<style>
+#app {
+  background: url('/bg.jpg') no-repeat center center fixed !important;
+  background-size: cover;
+}
+</style>
