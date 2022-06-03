@@ -17,7 +17,7 @@
           Trám 2B
         </v-expansion-panel-header>
         <v-expansion-panel-content class="pt-6">
-          <v-row class="justify-center align-center">
+          <v-row class="justify-end align-center" justify="flex-end">
             <v-row>
               <v-col cols="10">
                 <p
@@ -28,7 +28,6 @@
                 <v-btn
                   elevation="0"
                   plain
-                  style="bottom: 18px"
                   fab
                   color="black"
                 >
@@ -38,8 +37,7 @@
                   </v-icon>
                 </v-btn>
               </v-col>
-            </v-row>
-            <v-col cols="6">
+            <v-col cols="6" align-self="end">
               <v-img
                 src="/sirka.png"
                 max-height="70px"
@@ -53,22 +51,22 @@
                 class="pt-2"
               ></v-text-field>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="6" align-self="end">
               <v-img
                 src="/vyska1.png"
                 class="mx-auto"
                 max-height="103px"
                 max-width="60px"
-                style="bottom: 20px"
               ></v-img>
               <v-text-field
                 outlined
                 label="Výška (d)"
                 color="black"
                 class="pt-2"
-                style="bottom: 20px"
               ></v-text-field>
             </v-col>
+            </v-row>
+
           </v-row>
           <v-divider></v-divider>
           <v-row class="pt-3">
