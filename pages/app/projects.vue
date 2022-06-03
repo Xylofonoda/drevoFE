@@ -13,7 +13,7 @@
         v-for="folder in folders"
         :key="folder.title"
         link
-        to="/app/project/show-project"
+        to="/app/project/showproject"
         style="border-bottom: 1px solid lightgray"
       >
         <v-col>
@@ -33,7 +33,7 @@
             <v-list-item-action>
               <v-btn
                 icon
-                to="/app/project/show-project"
+                to="/app/project/showproject"
               >{{ folder.num }}
                 <v-icon
                   color="black"
@@ -74,7 +74,7 @@ export default {
       {
         title: 'Projekt 1',
         num: 33,
-        where: "/app/project/show-project",
+        where: "/app/project/showProject",
       },
       {
 
