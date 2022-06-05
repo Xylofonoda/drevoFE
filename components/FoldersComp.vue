@@ -16,7 +16,7 @@
           <v-row>
             <v-list-item-icon>
               <v-icon
-                color="black"
+                color="white"
                 class="pt-2"
                 size="30px"
               >mdi-folder
@@ -32,7 +32,7 @@
                 to=""
               >{{ folder.num }}
                 <v-icon
-                  color="black"
+                  color="white"
                   size="30px"
                 >mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
                 </v-icon>

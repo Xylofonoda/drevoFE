@@ -69,14 +69,14 @@
           placeholder="Vložte firemní logo"
           prepend-icon="mdi-camera"
           label="Logo"
-          color="black"
+          color="#F8B400"
           outlined
         >
         </v-file-input>
       </v-form>
       <v-btn
-        color="black"
-        class="white--text"
+        color="#F8B400"
+        class="black--text"
         block
       >Vytvořit</v-btn>
 

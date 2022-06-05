@@ -31,15 +31,3 @@ export default {
   background-size: cover;
 }
 </style>
-<style>
-#app {
-  background: url('/bg.jpg') no-repeat center center fixed !important;
-  background-size: cover;
-}
-</style>
-<style>
-#app {
-  background: url('/bg.jpg') no-repeat center center fixed !important;
-  background-size: cover;
-}
-</style>

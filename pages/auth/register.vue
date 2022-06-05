@@ -6,25 +6,29 @@
         md="3">
         <v-app-bar fixed app>
           <v-toolbar-title class="ml-2 justify-center">
-            <nuxt-link to="/auth/login" style="text-decoration: none"><v-btn elevation="0"><v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon></v-btn></nuxt-link>
+            <nuxt-link to="/auth/login" style="text-decoration: none"><v-btn fab elevation="0"><v-icon color="#F8B400">mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon></v-btn></nuxt-link>
               Registration Page
           </v-toolbar-title>
         </v-app-bar>
         <v-form>
-          <v-img
-            contain
-            src="/czflag.jpg"
-            max-width="100px"
-            max-height="100px"
-            class="py-16 mx-auto"
-          ></v-img>
+          <p class="text-center">
+            <v-avatar
+              width="100px"
+              height="100px"
+              color="#F8B400">
+              <v-icon
+              x-large>
+                mdi-account
+              </v-icon>
+            </v-avatar>
+          </p>
           <v-text-field
             v-model="firstname"
             :rules="firstnameRules"
             label="First Name"
             persistent-hint
             outlined
-            color="black"
+            color="white"
             required
           />
           <v-text-field
@@ -33,13 +37,14 @@
             label="Last Name"
             persistent-hint
             outlined
-            color="black"
+            color="white"
             required
           />
           <v-text-field
             v-model="email"
             :rules="emailRules"
             label="E-mail"
+            color="white"
             outlined
             required
           ></v-text-field>
@@ -50,14 +55,17 @@
             type="password"
             outlined
             required
-            color="black"
+            color="white"
           />
           <v-select
+            v-model="countrychoose"
+            :rules="countrychooseRules"
             label="Country"
             outlined
-
+            required
+            color="white"
           ></v-select>
-          <h3>Fakturační údaje</h3>
+          <p style="font-weight: 500">Fakturační údaje</p>
 
           <v-text-field
             v-model="companyname"
@@ -66,7 +74,7 @@
             persistent-hint
             outlined
             required
-            color="black"
+            color="white"
           />
           <v-text-field
             v-model="VAT"
@@ -75,7 +83,7 @@
             persistent-hint
             outlined
             required
-            color="black"
+            color="white"
         />
           <v-text-field
             v-model="address"
@@ -84,14 +92,14 @@
             persistent-hint
             outlined
             required
-            color="black"
+            color="white"
         />
           <v-btn
             block
             elevation="3"
             large
-            color="black"
-            class="white--text my-4"
+            color="#F8B400"
+            class="black--text my-4"
           >Register
           </v-btn>
         </v-form>
@@ -129,6 +137,10 @@ export default {
       companyname: "",
       companynameRules: [
         v => !!v || "Company name is required",
+      ],
+      countrychoose: "",
+      countrychooseRules: [
+        v => !!v || "Country select is required",
       ],
       VAT: "",
       VATRules: [

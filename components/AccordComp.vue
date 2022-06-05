@@ -6,7 +6,7 @@
           <v-icon
             style="position:absolute; left: 14px; top: 20px"
             size="30px"
-            color="black"
+            color="#F8B400"
           >mdi-square-edit-outline
           </v-icon>
         </v-col>

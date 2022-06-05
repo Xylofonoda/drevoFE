@@ -11,18 +11,18 @@
             <v-row>
               <v-col cols="12">
                 <h2
-                  class="text-h2 text-center"
-                  style="font-weight: bold;"
+                  class=" text-center"
+                  style="font-weight: 600; font-size:60px"
                 >36</h2>
                 <v-btn
                   x-small
                   fab
                   plain
-                  color="black"
-                  style="position: relative; bottom: 60px; left: 50px"
+                  color="#F8B400"
+                  style="position: relative; bottom: 80px; left: 50px"
                 >
                   <v-icon
-                    color="black"
+                    color="#F8B400"
                   >mdi-help-circle-outline
                   </v-icon>
                 </v-btn>
@@ -51,8 +51,8 @@
           </v-form>
           <v-btn
             width="100%"
-            color="black"
-            class="white--text my-5"
+            color="#F8B400"
+            class="black--text my-5"
           >Buy
           </v-btn>
           <nuxt-link
@@ -61,7 +61,7 @@
           ><p class="text-center subtitle-2 py-3">Proceed to payment gateway</p></nuxt-link>
           <nuxt-link
             to=""
-            style="text-decoration-color: black; color: black"
+            style="text-decoration:none; color: #F8B400"
           ><p class="text-center mb-10">Historie Plateb (seznam faktur + PDF)</p>
           </nuxt-link>
         </v-container>

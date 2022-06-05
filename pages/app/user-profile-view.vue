@@ -15,18 +15,18 @@
               </v-icon>
             </v-avatar>
           </p>
-          <p class="text-center">
-            <nuxt-link to="/auth/forgotpass" style="color: white"> Change Password</nuxt-link>
-          </p>
           <v-form class="pt-2">
             <v-btn
-              color="black"
+              color="#F8B400"
               block
-              class="white--text"
+              class="black--text"
             >Logout
             </v-btn>
-            <nuxt-link to="/app/user-profile" style="color: white">
-              <p class="text-center pt-3">
+            <p class="text-center pt-2">
+              <nuxt-link to="/auth/forgotpass" style="color: white; text-decoration: none"> Change Password</nuxt-link>
+            </p>
+            <nuxt-link to="/app/user-profile" style="color: white; text-decoration: none">
+              <p class="text-center ">
                 Change your credentials
               </p>
             </nuxt-link>

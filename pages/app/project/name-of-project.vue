@@ -11,7 +11,7 @@
             <v-icon
               style="position:absolute; left: 14px; top: 20px"
               size="30px"
-              color="black"
+              color="#F8B400"
             >mdi-square-edit-outline
             </v-icon>
           </v-col>
@@ -38,7 +38,7 @@
           <v-row>
             <v-list-item-icon>
               <v-icon
-                color="black"
+                color="#F8B400"
                 class="pt-2"
                 size="30px"
               >mdi-chart-areaspline
@@ -54,7 +54,7 @@
                 to=""
               >{{ folder.num }}
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                   size="30px"
                 >mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
                 </v-icon>
@@ -72,11 +72,13 @@
         fab
         to="/app/project/tram-2b"
         fixed
+        color="#F8B400"
         class="mb-16"
         bottom
       >
         <v-icon
           size="50px"
+          color="#F8B400"
         >mdi-plus
         </v-icon>
       </v-btn>

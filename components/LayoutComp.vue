@@ -10,7 +10,8 @@
               elevation="0"
               small
               class="py-7"
-            ><v-icon plain>mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
+              style="background: transparent"
+            ><v-icon plain color="#F8B400">mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
             </v-btn>
           </nuxt-link>
         </v-toolbar-title>
@@ -34,7 +35,7 @@
               v-on="on"
             >
               <v-icon
-                color="black"
+                color="#F8B400"
               >mdi-dots-vertical
               </v-icon>
             </v-btn>

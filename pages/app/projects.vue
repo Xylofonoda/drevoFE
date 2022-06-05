@@ -13,14 +13,14 @@
         v-for="folder in folders"
         :key="folder.title"
         link
-        to="/app/project/showproject"
+        to="/app/project/show-project"
         style="border-bottom: 1px solid lightgray"
       >
         <v-col>
           <v-row>
             <v-list-item-icon>
               <v-icon
-                color="black"
+                color="#F8B400"
                 class="pt-2"
                 size="30px"
               >mdi-folder
@@ -33,10 +33,10 @@
             <v-list-item-action>
               <v-btn
                 icon
-                to="/app/project/showproject"
+                to="/app/project/show-project"
               >{{ folder.num }}
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                   size="30px"
                 >mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
                 </v-icon>
@@ -50,13 +50,15 @@
       <v-btn
         outlined
         fab
-        to="/app/project/createproject"
+        to="/app/project/create-project"
         fixed
+        color="#F8B400"
         class="mb-16"
         bottom
       >
         <v-icon
           size="50px"
+          color="#F8B400"
         >mdi-plus
         </v-icon>
       </v-btn>

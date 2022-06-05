@@ -23,7 +23,7 @@
             <v-row>
               <v-list-item-icon>
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                   class="pt-2"
                   size="30px"
                 >mdi-folder
@@ -39,7 +39,7 @@
                   to="/app/project/name-of-project"
                 >{{ folder.num }}
                   <v-icon
-                    color="black"
+                    color="#F8B400"
                     size="30px"
                   >mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
                   </v-icon>
@@ -53,8 +53,8 @@
         <v-btn
           block
           tile
-          color="black"
-          class="white--text"
+          color="#F8B400"
+          class="black--text"
         >Project report</v-btn>
       </v-container>
 
@@ -63,6 +63,7 @@
       <v-btn
         outlined
         fab
+        color="#F8B400"
         to="/app/project/tram-2b"
         fixed
         class="mb-16"
@@ -70,6 +71,7 @@
       >
         <v-icon
           size="50px"
+          color="#F8B400"
         >mdi-plus
         </v-icon>
       </v-btn>

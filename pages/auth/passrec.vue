@@ -5,7 +5,7 @@
       md="3">
         <v-app-bar fixed app elevation="0">
           <v-toolbar-title class="ml-2 justify-center">
-            <nuxt-link to="/auth/login" style="text-decoration: none"><v-btn elevation="0"><v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon></v-btn></nuxt-link>
+            <nuxt-link to="/auth/login" style="text-decoration: none"><v-btn fab elevation="0"><v-icon color="#F8B400">mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon></v-btn></nuxt-link>
             Password Recovery
           </v-toolbar-title>
         </v-app-bar>
@@ -20,7 +20,7 @@
               type="password"
               required
               outlined
-              color="black"
+              color="white"
           ></v-text-field>
             <p style="text-align: left">Potvrďte nové heslo:</p>
             <v-text-field
@@ -30,7 +30,7 @@
               type="password"
               required
               outlined
-              color="black"
+              color="white"
           ></v-text-field>
             <div class="d-flex justify-space-between text-caption">
               <div>
@@ -43,8 +43,8 @@
               block
               elevation="3"
               large
-              color="black"
-              class="white--text my-4"
+              color="#F8B400"
+              class="black--text my-4"
             >Potvrdit</v-btn>
           </v-form>
         </v-card>

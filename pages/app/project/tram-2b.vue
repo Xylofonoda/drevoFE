@@ -10,7 +10,7 @@
             <v-icon
               style="position:absolute; left: 14px; top: 20px"
               size="30px"
-              color="black"
+              color="#F8B400"
             >mdi-square-edit-outline
             </v-icon>
           </v-col>
@@ -29,10 +29,10 @@
                   elevation="0"
                   plain
                   fab
-                  color="black"
+                  color="white"
                 >
                   <v-icon
-                    color="black"
+                    color="#F8B400"
                   >mdi-help-circle-outline
                   </v-icon>
                 </v-btn>
@@ -47,7 +47,7 @@
               <v-text-field
                 outlined
                 label="Šířka (b)"
-                color="black"
+                color="white"
                 class="pt-2"
               ></v-text-field>
             </v-col>
@@ -61,7 +61,7 @@
               <v-text-field
                 outlined
                 label="Výška (d)"
-                color="black"
+                color="white"
                 class="pt-2"
               ></v-text-field>
             </v-col>
@@ -85,7 +85,7 @@
               </v-col>
               <v-row justify="center">
                     <v-checkbox
-                      color="black"
+                      color="#F8B400"
                     ></v-checkbox>
               </v-row>
             </v-col>
@@ -100,7 +100,7 @@
               </v-col>
               <v-row justify="center">
                 <v-checkbox
-                  color="black"
+                  color="#F8B400"
 
                 ></v-checkbox>
               </v-row>
@@ -121,10 +121,10 @@
                 plain
                 fab
                 style="bottom: 17px"
-                color="black"
+                color="white"
               >
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                 >mdi-help-circle-outline
                 </v-icon>
               </v-btn>
@@ -133,14 +133,14 @@
               <v-col cols="12">
                 <v-img
                   src="/suk1.png"
-                  class="mx-auto"
+                  class="mx-auto pr-1"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
               <v-row justify="center">
                 <v-checkbox
-                  color="black"
+                  color="#F8B400"
                 ></v-checkbox>
               </v-row>
             </v-col>
@@ -148,14 +148,14 @@
               <v-col cols="12">
                 <v-img
                   src="/suk2.png"
-                  class="mx-auto"
+                  class="mx-auto pr-0"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
             <v-row justify="center">
               <v-checkbox
-                color="black"
+                color="#F8B400"
               ></v-checkbox>
             </v-row>
             </v-col>
@@ -163,14 +163,14 @@
               <v-col cols="12">
                 <v-img
                   src="/suk3.png"
-                  class="mx-auto"
+                  class="mx-auto pr-0"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
              <v-row justify="center">
                <v-checkbox
-                 color="black"
+                 color="#F8B400"
                ></v-checkbox>
              </v-row>
 
@@ -186,10 +186,10 @@
                 plain
                 fab
                 style="bottom: 17px"
-                color="black"
+                color="white"
               >
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                 >mdi-help-circle-outline
                 </v-icon>
               </v-btn>
@@ -198,14 +198,14 @@
               <v-col cols="12">
                 <v-img
                   src="/odklon1.png"
-                  class="mx-auto"
+                  class="mx-auto pr-1"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
               <v-row justify="center">
                 <v-checkbox
-                  color="black"
+                  color="#F8B400"
                 ></v-checkbox>
               </v-row>
             </v-col>
@@ -213,14 +213,14 @@
               <v-col cols="12">
                 <v-img
                   src="/odklon2.png"
-                  class="mx-auto"
+                  class="mx-auto pr-1"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
               <v-row justify="center" class="pt-1">
                 <v-checkbox
-                  color="black"
+                  color="#F8B400"
                 ></v-checkbox>
               </v-row>
             </v-col>
@@ -228,14 +228,14 @@
               <v-col cols="12">
                 <v-img
                   src="/odklon3.png"
-                  class="mx-auto"
+                  class="mx-auto pr-1"
                   max-width="60px"
                   max-height="80px"
                 ></v-img>
               </v-col>
               <v-row justify="center">
                 <v-checkbox
-                  color="black"
+                  color="#F8B400"
                 ></v-checkbox>
               </v-row>
             </v-col>
@@ -250,10 +250,10 @@
                   plain
                   fab
                   style="bottom: 17px"
-                  color="black"
+                  color="white"
                 >
                   <v-icon
-                    color="black"
+                    color="#F8B400"
                   >mdi-help-circle-outline
                   </v-icon>
                 </v-btn>
@@ -263,23 +263,23 @@
                   <v-select
                     label="Typ dřeva"
                     outlined
-                    color="black"
+                    color="white"
                   ></v-select>
                   <v-select
                     label="Původ dřeva"
                     outlined
-                    color="black"
+                    color="white"
                   ></v-select>
                   <v-textarea
                     outlined
                     label="Popis prvku(nepovinné)"
-                    color="black"
+                    color="white"
                   >
                   </v-textarea>
                   <v-btn
                     block
-                    color="black"
-                    class="white--text mb-16"
+                    color="#F8B400"
+                    class="black--text mb-16"
                   >Save Description</v-btn>
                 </v-card>
               </v-col>

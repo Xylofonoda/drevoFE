@@ -12,7 +12,7 @@
             <v-checkbox
               mandatory
               class="pt-5 mx-2"
-              color="black"
+              color="#F8B400"
             ></v-checkbox>
           </v-col>
           <v-col cols="6">
@@ -23,8 +23,8 @@
             </v-row>
             <v-row>
               <v-card-subtitle style="font-size: 10px; position: relative; bottom: 30px">
-                <div class="rounded-pill elevation-2 mx-2" style="width: 60px">
-                  {{ save }}
+                <div class="rounded-pill accent elevation-2 mx-2" style="width: 60px;">
+                  <p style="color: #F8B400">{{ save }}</p>
                 </div>
               </v-card-subtitle>
             </v-row>

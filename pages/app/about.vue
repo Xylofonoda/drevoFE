@@ -8,12 +8,12 @@
             v-for="accord in accords"
             :key="accord.title"
           >
-            <v-expansion-panel-header class="py-7">
+            <v-expansion-panel-header class="py-7" >
               <v-col cols="2">
                 <v-icon
                   style="position:absolute; left: 14px; top: 25px"
                   size="30px"
-                  color="black"
+                  color="#F8B400"
                 >mdi-card-account-details
                 </v-icon>
               </v-col>

@@ -17,8 +17,7 @@
           <v-row>
             <v-list-item-avatar>
               <v-icon
-                class="grey lighten-1"
-                dark
+                color="#F8B400"
               >mdi-file
               </v-icon>
             </v-list-item-avatar>
@@ -29,7 +28,7 @@
             <v-list-item-action>
               <v-progress-circular
                 :size="20"
-                color="black"
+                color="#F8B400"
                 indeterminate
               ></v-progress-circular>
             </v-list-item-action>
@@ -49,8 +48,7 @@
           <v-row>
             <v-list-item-avatar>
               <v-icon
-                class="grey lighten-1"
-                dark
+                color="#F8B400"
               >mdi-file
               </v-icon>
             </v-list-item-avatar>
@@ -66,7 +64,7 @@
 
               >
                 <v-icon
-                  color="black"
+                  color="#F8B400"
                 >mdi-download
                 </v-icon>
               </v-btn>
