@@ -17,7 +17,7 @@
           :key="folder.title"
           link
           to="/app/project/name-of-project"
-          style="border-bottom: 1px solid lightgray"
+          style="border-bottom: 1px solid gray"
         >
           <v-col>
             <v-row>

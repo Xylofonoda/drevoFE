@@ -31,7 +31,7 @@
         v-for="folder in folders"
         :key="folder.title"
         link
-        style="border-bottom: 1px solid lightgray"
+        style="border-bottom: 1px solid gray"
 
       >
         <v-col>

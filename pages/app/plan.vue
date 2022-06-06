@@ -62,7 +62,7 @@
           <nuxt-link
             to=""
             style="text-decoration:none; color: #F8B400"
-          ><p class="text-center mb-10">Historie Plateb (seznam faktur + PDF)</p>
+          ><p class="text-center mb-6">Historie Plateb (seznam faktur + PDF)</p>
           </nuxt-link>
         </v-container>
 

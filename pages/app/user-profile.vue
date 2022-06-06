@@ -9,20 +9,24 @@
           cols="12"
           md="3">
           <v-form>
-            <v-img
-              contain
-              src="/Logo-Test.png"
-              max-width="100px"
-              max-height="100px"
-              class="py-16 mx-auto"
-            ></v-img>
+            <p class="text-center">
+              <v-avatar
+                width="100px"
+                height="100px"
+                color="#F8B400">
+                <v-icon
+                  x-large>
+                  mdi-account
+                </v-icon>
+              </v-avatar>
+            </p>
             <v-text-field
               v-model="firstname"
               :rules="firstnameRules"
               label="First Name"
               persistent-hint
               outlined
-              color="black"
+              color="white"
               required
             />
             <v-text-field
@@ -31,7 +35,7 @@
               label="Last Name"
               persistent-hint
               outlined
-              color="black"
+              color="white"
               required
             />
             <v-text-field
@@ -39,6 +43,7 @@
               :rules="emailRules"
               label="E-mail"
               outlined
+              color="white"
               required
             ></v-text-field>
             <v-text-field
@@ -48,7 +53,7 @@
               type="password"
               outlined
               required
-              color="black"
+              color="white"
             />
             <v-select
               label="Country"
@@ -64,7 +69,7 @@
               persistent-hint
               outlined
               required
-              color="black"
+              color="white"
             />
             <v-text-field
               v-model="VAT"
@@ -73,7 +78,7 @@
               persistent-hint
               outlined
               required
-              color="black"
+              color="white"
             />
             <v-text-field
               v-model="address"
@@ -82,10 +87,12 @@
               persistent-hint
               outlined
               required
-              color="black"
+              color="white"
             />
             <v-btn
               block
+              color="#F8B400"
+              class="black--text"
             >
               Save Changes
             </v-btn>

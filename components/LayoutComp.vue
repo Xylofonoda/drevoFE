@@ -9,6 +9,7 @@
               fab
               elevation="0"
               small
+              plain
               class="py-7"
               style="background: transparent"
             ><v-icon plain color="#F8B400">mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
