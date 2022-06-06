@@ -56,8 +56,12 @@
               color="white"
             />
             <v-select
+              v-model="countrychoose"
               label="Country"
+              :rules="countrychooseRules"
               outlined
+              required
+              color="white"
 
             ></v-select>
             <h3>Fakturační údaje</h3>
@@ -124,6 +128,10 @@ export default {
       lastname: "",
       lastnameRules: [
         v => !!v || "Last name is required",
+      ],
+      countrychoose: "",
+      countrychooseRules: [
+        v => !!v || "Country select is required",
       ],
       password: "",
       passwordRules: [
