@@ -1,19 +1,19 @@
 <template>
-  <v-app>
     <v-app-bar color="#FFAB00" app>
       <v-row>
         <v-col cols="2">
-          <v-img
-            class="justify-start"
-            style="left: -10px"
-            src="/adminlogo.png"
-            max-width="219px"
-
-            contain
-          ></v-img>
+          <v-row justify="start">
+            <v-img
+              style="background: black"
+              src="/logo_white.svg"
+              max-width="253px"
+              height="65px"
+              contain
+            ></v-img>
+          </v-row>
         </v-col>
         <v-col cols="10">
-          <v-row class="pt-3" style="position: relative; left: -35px">
+          <v-row style="position: relative;">
             <nuxt-link to="/admin/adminhome" style="text-decoration: none">
               <v-btn
                 fab
@@ -23,7 +23,7 @@
                 class="mt-4"
                 color="black"
               >
-                <v-icon plain class="white--text" style="font-weight: 600;">
+                <v-icon plain class="white--text" style="font-weight: 600; bottom: 2px">
                   mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}
                 </v-icon>
               </v-btn>
@@ -35,7 +35,6 @@
         </v-col>
       </v-row>
     </v-app-bar>
-  </v-app>
 </template>
 
 <script>
@@ -43,7 +42,6 @@ export default {
   name: "AdminToolComp",
   components: {},
   miniVariant: false,
-  layout: "AllroundLayout",
   props: {
     name: {
       type: String,

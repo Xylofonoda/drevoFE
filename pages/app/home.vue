@@ -273,5 +273,10 @@ body {
   overflow-x: hidden;
   overflow-y: unset;
 }
+#app {
+  background: url('/bg.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
 
 </style>
+
