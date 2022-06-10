@@ -65,7 +65,6 @@
           ><p class="text-center mb-6">Historie Plateb (seznam faktur + PDF)</p>
           </nuxt-link>
         </v-container>
-
       </v-col>
     </v-row>
   </v-app>

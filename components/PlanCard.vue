@@ -1,50 +1,51 @@
 <template>
-  <v-row>
-    <v-col>
-      <v-card
-        outlined
-        rounded
-        max-width="100%"
-        max-height="105px"
-      >
-        <v-row>
-          <v-col cols="1">
-            <v-checkbox
-              mandatory
-              class="pt-5 mx-2"
-              color="#F8B400"
-            ></v-checkbox>
-          </v-col>
-          <v-col cols="6">
+  <v-item-group>
+    <v-row>
+      <v-col>
+        <v-item v-slot="{ active, toggle }">
+          <v-card
+            :color="active ? '#F8B400' : ''"
+            class="rounded-xl"
+            :class="active ? 'black--text' : '' "
+            outlined
+            max-width="100%"
+            max-height="80px"
+            @click="toggle"
+          >
             <v-row>
-              <v-card-title class="mx-3 mt-7" style="font-size: 13px;">
-                {{ evals }}
-              </v-card-title>
-            </v-row>
-            <v-row>
-              <v-card-subtitle style="font-size: 10px; position: relative; bottom: 30px">
-                <div class="rounded-pill accent elevation-2 mx-2" style="width: 60px;">
-                  <p style="color: #F8B400">{{ save }}</p>
-                </div>
-              </v-card-subtitle>
+              <v-col cols="8">
+                <v-row>
+                  <v-card-title class="mx-3 mt-5" style="font-size: 13px;">
+                    {{ evals }}
+                  </v-card-title>
+                </v-row>
+                <v-row>
+                  <v-card-subtitle style="font-size: 10px; position: relative; bottom: 40px">
+                    <div class="rounded-pill accent elevation-2 mx-4 " style="width: 70px;">
+                      <p style="color: white" class="text-center">{{ save }}</p>
+                    </div>
+                  </v-card-subtitle>
+                </v-row>
+
+              </v-col>
+              <v-col cols="4">
+                <v-card-title
+                  style="font-size: 16px;"
+                  class="pt-6 pr-1"
+                >
+                  <p class="text-right" style="font-weight: 600">
+                    {{ price }}
+                  </p>
+
+                </v-card-title>
+              </v-col>
             </v-row>
 
-          </v-col>
-          <v-col cols="5">
-            <v-card-title
-              style="font-size: 13px;"
-              class="pt-8 ml-3 text-no-wrap"
-            >
-              <p class="text-right">
-                {{price}}
-              </p>
-
-            </v-card-title>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-col>
-  </v-row>
+          </v-card>
+        </v-item>
+      </v-col>
+    </v-row>
+  </v-item-group>
 </template>
 
 <script>
@@ -64,9 +65,9 @@ export default {
       type: String,
       default: null,
     },
-    price:{
-      type:String,
-      default:null,
+    price: {
+      type: String,
+      default: null,
     },
     // eslint-disable-next-line vue/require-default-prop,vue/require-prop-types
   }
