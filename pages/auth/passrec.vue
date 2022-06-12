@@ -56,6 +56,7 @@
 export default {
   name: 'PassRec',
   layout:"LoginLayout",
+  miniVariant: false,
 
   data: () => ({
     valid: true,

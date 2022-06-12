@@ -3,7 +3,7 @@
     <layout-comp
       title="Plan"
     ></layout-comp>
-    <v-row>
+    <v-row class="ma-0">
       <v-col>
         <v-container class="justify-center">
           <v-form class="text-center">
@@ -34,20 +34,28 @@
             <p
               style="color: gray"
             >Buy more:</p>
-            <plan-card-component
-              evals="10 evaluations"
-              price="1500 Kč"
-            ></plan-card-component>
-            <plan-card-component
-              evals="30 evaluations"
-              save="Save 20%"
-              price="7000 Kč"
-            ></plan-card-component>
-            <plan-card-component
-              evals="50 evaluations"
-              save="Save 20%"
-              price="21000 Kč"
-            ></plan-card-component>
+            <v-item-group>
+              <v-item>
+              <plan-card-component
+                evals="10 evaluations"
+                price="1500 Kč"
+              ></plan-card-component>
+              </v-item>
+              <v-item>
+              <plan-card-component
+                evals="30 evaluations"
+                save="Save 20%"
+                price="7000 Kč"
+              ></plan-card-component>
+              </v-item>
+              <v-item>
+              <plan-card-component
+                evals="50 evaluations"
+                save="Save 20%"
+                price="21000 Kč"
+              ></plan-card-component>
+              </v-item>
+            </v-item-group>
           </v-form>
           <v-btn
             width="100%"

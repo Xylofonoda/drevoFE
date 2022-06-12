@@ -2,9 +2,13 @@
   <v-app>
     <layout-comp
       title="Change"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-comp>
     <v-container fluid class="fill-height">
-      <v-row class="text-center" justify="center" align="center" >
+      <v-row class="text-center ma-0" justify="center">
         <v-col
           cols="12"
           md="3">
@@ -62,9 +66,10 @@
               outlined
               required
               color="white"
+              :items="['Česká republika', 'Německo', 'Velká Británie' ]"
 
             ></v-select>
-            <h3>Fakturační údaje</h3>
+            <h3 class="my-3">Fakturační údaje</h3>
 
             <v-text-field
               v-model="companyname"
@@ -118,7 +123,7 @@ export default {
       email: "",
       emailRules: [
         v => !!v || "E-mail is required",
-        v => /.+@.+/.test(v) || "E-mail must be valid"
+        v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
       ],
       firstname: "",
       firstnameRules: [
@@ -136,6 +141,7 @@ export default {
       password: "",
       passwordRules: [
         v => !!v || "Password is required",
+      //  heslo vice znaku marake fix certified
       ],
       companyname: "",
       companynameRules: [

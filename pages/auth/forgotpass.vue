@@ -46,13 +46,14 @@
 export default {
   name: 'ForgotPass',
   layout:"LoginLayout",
+  miniVariant: false,
 
   data: () => ({
     valid: true,
       email: "",
       emailRules: [
         v => !!v || "E-mail is required",
-        v => /.+@.+/.test(v) || "E-mail must be valid"
+        v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
       ],
 
     }

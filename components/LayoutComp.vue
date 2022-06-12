@@ -22,7 +22,7 @@
           {{ title }}
         </v-toolbar-title>
       </v-col>
-      <v-col cols="2">
+      <v-col v-if="items" cols="2">
         <v-menu>
           <template #activator="{ on, attrs }">
             <v-btn
@@ -65,12 +65,12 @@ export default {
       type: String,
       default: null,
     },
+    items:{
+      type: Array,
+      default: null,
+    }
   },
   data: () => ({
-    items: [
-      { name: 'Přejmenovat' },
-      { name: 'Smazat' },
-    ],
     miniVariant: false,
   }),
 }

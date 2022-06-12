@@ -84,12 +84,13 @@
 export default {
   name: 'LoginPage',
   layout:"LoginLayout",
+  miniVariant: false,
   data() {
     return {
       email: "",
       emailRules: [
         v => !!v || "ID(E-mail) is required",
-        v => /.+@.+/.test(v) || "E-mail must be valid"
+        v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
       ],
       password: "",
       passwordRules: [

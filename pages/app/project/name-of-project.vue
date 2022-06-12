@@ -66,7 +66,7 @@
       </v-list-item>
     </v-list>
     </nuxt-link>
-    <v-row justify="center">
+    <v-row justify="center" class="ma-0">
       <v-btn
         outlined
         fab

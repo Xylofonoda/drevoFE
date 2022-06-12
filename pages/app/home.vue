@@ -183,7 +183,7 @@
           style="background: transparent; border-style: solid; border-color: #F8B400"
 
         >
-          <v-row>
+          <v-row >
             <v-list-item two-line class="py-2">
               <v-list-item-content>
                 <v-list-item-title class="pl-3">
@@ -265,12 +265,10 @@ export default {
 </script>
 <style>
 html {
-  overflow-x: hidden;
   overflow-y: unset;
 }
 
 body {
-  overflow-x: hidden;
   overflow-y: unset;
 }
 #app {

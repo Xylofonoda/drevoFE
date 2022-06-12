@@ -3,7 +3,7 @@
     <layout-comp
       title="User Profile"
     ></layout-comp>
-    <v-row>
+    <v-row class="ma-0">
       <v-col
         cols="12"
       >

@@ -13,7 +13,9 @@
         {{name}}
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        {{content}}
+        <p
+          class="justify-center"
+        >{{content}}</p>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>

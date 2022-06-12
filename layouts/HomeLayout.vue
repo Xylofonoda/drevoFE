@@ -4,7 +4,6 @@
       <v-img
         src="/logo_white.svg"
         style="position: absolute; height: 55px; width: 270px; left: 30px"
-
       ></v-img>
     </v-app-bar>
     <v-main>

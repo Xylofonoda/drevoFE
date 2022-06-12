@@ -14,6 +14,7 @@
 <script>
 export default {
   name: 'LoginLayout',
+  miniVariant: false,
   data (){
     return{
       fixed:false

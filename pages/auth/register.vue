@@ -119,7 +119,7 @@ export default {
       email: "",
       emailRules: [
         v => !!v || "E-mail is required",
-        v => /.+@.+/.test(v) || "E-mail must be valid"
+        v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
       ],
       firstname: "",
       firstnameRules: [

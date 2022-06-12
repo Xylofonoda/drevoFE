@@ -17,7 +17,7 @@
           Trám 2B
         </v-expansion-panel-header>
         <v-expansion-panel-content class="pt-6">
-          <v-row class="justify-end align-center" justify="flex-end">
+          <v-row class="justify-end align-center">
             <v-row>
               <v-col cols="10">
                 <p
@@ -25,46 +25,83 @@
                 >Rozměry v prvku (mm):</p>
               </v-col>
               <v-col cols="2">
-                <v-btn
-                  elevation="0"
-                  plain
-                  fab
-                  color="white"
+                <v-dialog
+                  v-model="dialog"
+                  width="300"
                 >
-                  <v-icon
-                    color="#F8B400"
-                  >mdi-help-circle-outline
-                  </v-icon>
-                </v-btn>
+                  <template #activator="{ on, attrs }">
+                    <v-btn
+                      v-bind="attrs"
+                      elevation="0"
+                      plain
+                      fab
+                      small
+                      style="bottom: 10px"
+                      color="white"
+                      v-on="on"
+                    >
+                      <v-icon
+                        color="#F8B400"
+                      >mdi-help-circle-outline
+                      </v-icon>
+                    </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title class="text-h5 black--text amber darken-1">
+                      Rozměry v prvku (mm)
+                    </v-card-title>
+
+                    <v-card-text class="pt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                      in culpa qui officia deserunt mollit anim id est laborum.
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        class="white--text"
+                        text
+                        @click="dialog = false"
+                      >
+                        OK
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-col>
-            <v-col cols="6" align-self="end">
-              <v-img
-                src="/sirka.png"
-                max-height="70px"
-                max-width="90px"
-                class="mx-auto"
-              ></v-img>
-              <v-text-field
-                outlined
-                label="Šířka (b)"
-                color="white"
-                class="pt-2"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="6" align-self="end">
-              <v-img
-                src="/vyska1.png"
-                class="mx-auto"
-                max-height="103px"
-                max-width="60px"
-              ></v-img>
-              <v-text-field
-                outlined
-                label="Výška (d)"
-                color="white"
-                class="pt-2"
-              ></v-text-field>
-            </v-col>
+              <v-col cols="6" align-self="end">
+                <v-img
+                  src="/sirka.png"
+                  max-height="70px"
+                  max-width="90px"
+                  class="mx-auto"
+                ></v-img>
+                <v-text-field
+                  outlined
+                  label="Šířka (b)"
+                  color="white"
+                  class="pt-2"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="6" align-self="end">
+                <v-img
+                  src="/vyska1.png"
+                  class="mx-auto"
+                  max-height="103px"
+                  max-width="60px"
+                ></v-img>
+                <v-text-field
+                  outlined
+                  label="Výška (d)"
+                  color="white"
+                  class="pt-2"
+                ></v-text-field>
+              </v-col>
             </v-row>
 
           </v-row>
@@ -84,9 +121,9 @@
                 ></v-img>
               </v-col>
               <v-row justify="center">
-                    <v-checkbox
-                      color="#F8B400"
-                    ></v-checkbox>
+                <v-checkbox
+                  color="#F8B400"
+                ></v-checkbox>
               </v-row>
             </v-col>
             <v-col cols="6">
@@ -116,18 +153,54 @@
               >Suky:</p>
             </v-col>
             <v-col cols="2">
-              <v-btn
-                elevation="0"
-                plain
-                fab
-                style="bottom: 17px"
-                color="white"
-              >
-                <v-icon
-                  color="#F8B400"
-                >mdi-help-circle-outline
-                </v-icon>
-              </v-btn>
+              <v-dialog
+                v-model="dialog"
+                width="300">
+                <template #activator="{ on, attrs }">
+                  <v-btn
+                    v-bind="attrs"
+                    elevation="0"
+                    plain
+                    small
+                    fab
+                    style="bottom: 10px"
+                    color="white"
+                    v-on="on"
+
+                  >
+                    <v-icon
+                      color="#F8B400"
+                    >mdi-help-circle-outline
+                    </v-icon>
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-card-title class="text-h5 black--text amber darken-1">
+                    Suky
+                  </v-card-title>
+
+                  <v-card-text class="pt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                  </v-card-text>
+
+                  <v-divider></v-divider>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      class="white--text"
+                      text
+                      @click="dialog = false"
+                    >
+                      OK
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
             </v-col>
             <v-col cols="4">
               <v-col cols="12">
@@ -153,11 +226,11 @@
                   max-height="80px"
                 ></v-img>
               </v-col>
-            <v-row justify="center">
-              <v-checkbox
-                color="#F8B400"
-              ></v-checkbox>
-            </v-row>
+              <v-row justify="center">
+                <v-checkbox
+                  color="#F8B400"
+                ></v-checkbox>
+              </v-row>
             </v-col>
             <v-col cols="4">
               <v-col cols="12">
@@ -168,11 +241,11 @@
                   max-height="80px"
                 ></v-img>
               </v-col>
-             <v-row justify="center">
-               <v-checkbox
-                 color="#F8B400"
-               ></v-checkbox>
-             </v-row>
+              <v-row justify="center">
+                <v-checkbox
+                  color="#F8B400"
+                ></v-checkbox>
+              </v-row>
 
             </v-col>
           </v-row>
@@ -182,17 +255,54 @@
               <p style="color: gray">Odklon vláken:</p>
             </v-col>
             <v-col cols="2">
-              <v-btn
-                plain
-                fab
-                style="bottom: 17px"
-                color="white"
+              <v-dialog
+                v-model="dialog"
+                width="300"
               >
-                <v-icon
-                  color="#F8B400"
-                >mdi-help-circle-outline
-                </v-icon>
-              </v-btn>
+                <template #activator="{ on, attrs }">
+                  <v-btn
+                    v-bind="attrs"
+                    plain
+                    fab
+                    small
+                    style="bottom: 10px"
+                    color="white"
+                    v-on="on"
+                  >
+                    <v-icon
+                      color="#F8B400"
+                    >mdi-help-circle-outline
+                    </v-icon>
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-card-title class="text-h5 black--text amber darken-1">
+                    Odklon vlaken
+                  </v-card-title>
+
+                  <v-card-text class="pt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                  </v-card-text>
+
+                  <v-divider></v-divider>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      class="white--text"
+                      text
+                      @click="dialog = false"
+                    >
+                      OK
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+
             </v-col>
             <v-col cols="4">
               <v-col cols="12">
@@ -240,50 +350,87 @@
               </v-row>
             </v-col>
           </v-row>
-            <v-divider></v-divider>
-            <v-row class="pt-3">
-              <v-col cols="10">
-                <p style="color: gray">Typ dřeva:</p>
-              </v-col>
-              <v-col cols="2">
-                <v-btn
-                  plain
-                  fab
-                  style="bottom: 17px"
+          <v-divider></v-divider>
+          <v-row class="pt-3">
+            <v-col cols="10">
+              <p style="color: gray">Typ dřeva:</p>
+            </v-col>
+            <v-col cols="2">
+              <v-dialog
+                v-model="dialog"
+                width="300"
+              >
+                <template #activator="{ on, attrs }">
+                  <v-btn
+                    v-bind="attrs"
+                    plain
+                    fab
+                    small
+                    style="bottom: 10px"
+                    color="white"
+                    v-on="on"
+                  >
+                    <v-icon
+                      color="#F8B400"
+                    >mdi-help-circle-outline
+                    </v-icon>
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-card-title class="text-h5 black--text amber darken-1">
+                    Typ dreva
+                  </v-card-title>
+
+                  <v-card-text class="pt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                  </v-card-text>
+
+                  <v-divider></v-divider>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      class="white--text"
+                      text
+                      @click="dialog = false"
+                    >
+                      OK
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </v-col>
+            <v-col cols="12">
+              <v-card elevation="0">
+                <v-select
+                  label="Typ dřeva"
+                  outlined
+                  color="white"
+                ></v-select>
+                <v-select
+                  label="Původ dřeva"
+                  outlined
+                  color="white"
+                ></v-select>
+                <v-textarea
+                  outlined
+                  label="Popis prvku(nepovinné)"
                   color="white"
                 >
-                  <v-icon
-                    color="#F8B400"
-                  >mdi-help-circle-outline
-                  </v-icon>
+                </v-textarea>
+                <v-btn
+                  block
+                  color="#F8B400"
+                  class="black--text mb-16"
+                >Save Description
                 </v-btn>
-              </v-col>
-              <v-col cols="12">
-                <v-card elevation="0">
-                  <v-select
-                    label="Typ dřeva"
-                    outlined
-                    color="white"
-                  ></v-select>
-                  <v-select
-                    label="Původ dřeva"
-                    outlined
-                    color="white"
-                  ></v-select>
-                  <v-textarea
-                    outlined
-                    label="Popis prvku(nepovinné)"
-                    color="white"
-                  >
-                  </v-textarea>
-                  <v-btn
-                    block
-                    color="#F8B400"
-                    class="black--text mb-16"
-                  >Save Description</v-btn>
-                </v-card>
-              </v-col>
-            </v-row>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -293,7 +440,12 @@
 <script>
 export default {
   name: "Tram2BPage",
-  layout: "AllroundLayout"
+  layout: "AllroundLayout",
+  data() {
+    return {
+      dialog: false,
+    }
+  },
 }
 </script>
 

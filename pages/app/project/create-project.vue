@@ -3,7 +3,7 @@
     <layout-component
       title="Vytvořit nový projekt"
     ></layout-component>
-    <v-container class="py-8">
+    <v-container>
       <v-form >
         <v-text-field
           v-model="desc"
