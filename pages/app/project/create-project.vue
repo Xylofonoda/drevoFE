@@ -11,7 +11,7 @@
           label="Description"
           persistent-hint
           outlined
-          color="black"
+          color="white"
           required
         ></v-text-field>
         <v-text-field
@@ -19,7 +19,7 @@
           :rules="longRules"
           label="Longitude"
           outlined
-          color="black"
+          color="white"
           required
         ></v-text-field>
         <v-text-field
@@ -27,7 +27,7 @@
           :rules="longRules"
           label="Latitude"
           outlined
-          color="black"
+          color="white"
           required
         ></v-text-field>
         <div>
@@ -44,7 +44,7 @@
                 v-model="date"
                 :rules="datumRules"
                 label="Date"
-                color="black"
+                color="white"
                 readonly
                 outlined
                 v-bind="attrs"
@@ -55,7 +55,7 @@
             <v-date-picker
               v-model="date"
               locale="cs-cz"
-              color="black"
+              color="white"
               :active-picker.sync="activePicker"
               :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
               min="1950-01-01"

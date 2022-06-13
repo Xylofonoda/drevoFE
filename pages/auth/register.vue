@@ -64,6 +64,7 @@
             outlined
             required
             color="white"
+            :items="['Česká republika', 'Německo', 'Velká Británie' ]"
           ></v-select>
           <p style="font-weight: 500">Fakturační údaje</p>
 

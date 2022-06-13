@@ -268,11 +268,8 @@ html {
   overflow-y: unset;
 }
 
-body {
-  overflow-y: unset;
-}
 #app {
-  background: url('/bg.jpg') no-repeat center center fixed;
+  background: url('/bg.jpg') no-repeat center center fixed ;
   background-size:cover;
 }
 

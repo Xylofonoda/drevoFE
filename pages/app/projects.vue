@@ -14,7 +14,7 @@
         :key="folder.title"
         link
         to="/app/project/show-project"
-        style="border-bottom: 1px solid lightgray"
+        style="border-bottom: 1px solid gray"
       >
         <v-col>
           <v-row>
@@ -46,7 +46,7 @@
         </v-col>
       </v-list-item>
     </v-list>
-    <v-row justify="center">
+    <v-row justify="center" class="ma-0">
       <v-btn
         outlined
         fab

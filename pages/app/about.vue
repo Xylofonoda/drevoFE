@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="">
     <layout-comp title="About"></layout-comp>
     <v-row justify="center">
       <v-container>
@@ -28,10 +28,6 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </v-container>
-      <v-col cols="12">
-        <p style="color: gray;" class="text-center">
-        </p>
-      </v-col>
     </v-row>
   </v-app>
 </template>

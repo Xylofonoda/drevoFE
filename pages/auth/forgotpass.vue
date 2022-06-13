@@ -49,12 +49,14 @@ export default {
   miniVariant: false,
 
   data: () => ({
-    valid: true,
+      valid: true,
+      miniVariant: false,
       email: "",
       emailRules: [
         v => !!v || "E-mail is required",
         v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
       ],
+
 
     }
   )
