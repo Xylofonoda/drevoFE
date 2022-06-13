@@ -5,6 +5,10 @@
     ></layout-comp>
     <AccordComp
       name="Project Description"
+      desc="Popis: Lorem Ipsum"
+      gps="GPS: Lorem Ipsum"
+      date-time="Datum: 2022-12-12"
+
     >
     </AccordComp>
     <v-form>

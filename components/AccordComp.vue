@@ -10,12 +10,34 @@
           >mdi-square-edit-outline
           </v-icon>
         </v-col>
-        {{name}}
+        {{ name }}
       </v-expansion-panel-header>
       <v-expansion-panel-content>
         <p
           class="justify-center"
-        >{{content}}</p>
+        >{{ content }}</p>
+        <p class="justify-center">
+          <v-list>
+            <v-list-item>
+              {{ desc }}
+            </v-list-item>
+            <v-list-item>
+              {{ gps }}
+            </v-list-item>
+            <v-list-item>
+              {{ dateTime }}
+            </v-list-item>
+            <v-list-item>
+              {{ params }}
+            </v-list-item>
+            <v-list-item>
+              {{ koty }}
+            </v-list-item>
+            <v-list-item>
+              {{ normy }}
+            </v-list-item>
+          </v-list>
+        </p>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -25,15 +47,40 @@
 export default {
   name: "AccordComp",
   components: {},
-  props:{
-    name:{
-      default:null,
-      type:String,
+  props: {
+    name: {
+      default: null,
+      type: String,
     },
-    content:{
-      default:null,
-      type:String,
+    content: {
+      default: null,
+      type: String,
+    },
+    desc: {
+      default: null,
+      type: String,
+    },
+    gps: {
+      default: null,
+      type: String,
+    },
+    dateTime: {
+      default: null,
+      type: String,
+    },
+    params: {
+      default: null,
+      type: String,
+    },
+    koty: {
+      default: null,
+      type: String,
+    },
+    normy: {
+      default: null,
+      type: String,
     }
+
   }
 }
 </script>

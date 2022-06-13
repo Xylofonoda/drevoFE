@@ -26,7 +26,7 @@
               </v-col>
               <v-col cols="2">
                 <v-dialog
-                  v-model="dialog"
+                  v-model="dialog1"
                   width="300"
                 >
                   <template #activator="{ on, attrs }">
@@ -66,7 +66,7 @@
                       <v-btn
                         class="white--text"
                         text
-                        @click="dialog = false"
+                        @click="dialog1 = false"
                       >
                         OK
                       </v-btn>
@@ -110,51 +110,55 @@
             <v-col cols="7">
               <p style="color: gray;">Orientace prvku:</p>
             </v-col>
-            <v-col cols="6">
-              <v-col cols="12">
-                <v-img
-                  src="/orientaceprvku1.png"
-                  class="mx-auto"
-                  max-height="70px"
-                  max-width="90px"
+            <v-col cols="12">
+              <v-radio-group v-model="radio1" row class="d-flex justify-space-between">
+                <v-col cols="6">
+                  <v-col cols="12">
+                    <v-img
+                      src="/orientaceprvku1.png"
+                      class="mx-auto"
+                      max-height="70px"
+                      max-width="90px"
 
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-col cols="12">
-                <v-img
-                  src="/orientaceprvku2.png"
-                  class="mx-auto"
-                  max-height="120px"
-                  max-width="65px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio value="oprvku1" class="mt-6 ml-4" color="#F8B400"></v-radio>
+                  </v-row>
+                </v-col>
+                <v-col cols="6">
+                  <v-col cols="12">
+                    <v-img
+                      src="/orientaceprvku2.png"
+                      class="mx-auto"
+                      max-height="120px"
+                      max-width="65px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
 
-                ></v-checkbox>
-              </v-row>
+                    <v-radio
+                      value="oprvku2"
+                      color="#F8B400"
+                      class="mt-6 ml-5"
+                    >
 
+                    </v-radio>
+                  </v-row>
+                </v-col>
+              </v-radio-group>
             </v-col>
           </v-row>
           <v-divider></v-divider>
           <v-row class="pt-3">
             <v-col cols="10">
               <p
-
                 style="color: gray"
               >Suky:</p>
             </v-col>
             <v-col cols="2">
               <v-dialog
-                v-model="dialog"
+                v-model="dialog2"
                 width="300">
                 <template #activator="{ on, attrs }">
                   <v-btn
@@ -194,7 +198,7 @@
                     <v-btn
                       class="white--text"
                       text
-                      @click="dialog = false"
+                      @click="dialog2 = false"
                     >
                       OK
                     </v-btn>
@@ -202,51 +206,61 @@
                 </v-card>
               </v-dialog>
             </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/suk1.png"
-                  class="mx-auto pr-1"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
-            </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/suk2.png"
-                  class="mx-auto pr-0"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
-            </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/suk3.png"
-                  class="mx-auto pr-0"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
+            <v-col cols="12">
+              <v-radio-group v-model="radio2" row class="d-flex justify-space-between">
+                <v-col cols="4">
+                  <v-col cols="12">
+                    <v-img
+                      src="/suk1.png"
+                      class="mx-auto pr-1"
+                      max-width="60px"
+                      max-height="80px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio
+                      value="suk1"
+                      class="mt-6 ml-5"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
+                </v-col>
+                <v-col cols="4">
+                  <v-col cols="12">
+                    <v-img
+                      src="/suk2.png"
+                      class="mx-auto pr-0"
+                      max-width="60px"
+                      max-height="80px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio
+                      value="suk2"
+                      class="mt-6 ml-5"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
+                </v-col>
+                <v-col cols="4">
+                  <v-col cols="12">
+                    <v-img
+                      src="/suk3.png"
+                      class="mx-auto pr-0"
+                      max-width="60px"
+                      max-height="80px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio
+                      value="suk3"
+                      class="mt-6 ml-5"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
 
+                </v-col>
+              </v-radio-group>
             </v-col>
           </v-row>
           <v-divider></v-divider>
@@ -256,7 +270,7 @@
             </v-col>
             <v-col cols="2">
               <v-dialog
-                v-model="dialog"
+                v-model="dialog3"
                 width="300"
               >
                 <template #activator="{ on, attrs }">
@@ -295,7 +309,7 @@
                     <v-btn
                       class="white--text"
                       text
-                      @click="dialog = false"
+                      @click="dialog3 = false"
                     >
                       OK
                     </v-btn>
@@ -304,50 +318,61 @@
               </v-dialog>
 
             </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/odklon1.png"
-                  class="mx-auto pr-1"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
-            </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/odklon2.png"
-                  class="mx-auto pr-1"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center" class="pt-1">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
-            </v-col>
-            <v-col cols="4">
-              <v-col cols="12">
-                <v-img
-                  src="/odklon3.png"
-                  class="mx-auto pr-1"
-                  max-width="60px"
-                  max-height="80px"
-                ></v-img>
-              </v-col>
-              <v-row justify="center">
-                <v-checkbox
-                  color="#F8B400"
-                ></v-checkbox>
-              </v-row>
+            <v-col cols="12">
+              <v-radio-group v-model="radio2" row class="d-flex justify-space-between">
+                <v-col cols="4">
+                  <v-col cols="12">
+
+                    <v-img
+                      src="/odklon1.png"
+                      class="mx-auto pr-1"
+                      max-width="60px"
+                      height="60px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio
+                      class="mt-6 ml-5"
+                      value="odklon1"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
+                </v-col>
+                <v-col cols="4">
+                  <v-col cols="12">
+                    <v-img
+                      src="/odklon2.png"
+                      class="mx-auto pr-1"
+                      max-width="60px"
+                      height="60px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center" >
+                    <v-radio
+                      class="mt-6 ml-5"
+                      value="odklon2"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
+                </v-col>
+                <v-col cols="4">
+                  <v-col cols="12">
+                    <v-img
+                      src="/odklon3.png"
+                      class="mx-auto pr-1"
+                      max-width="60px"
+                      height="60px"
+                    ></v-img>
+                  </v-col>
+                  <v-row justify="center">
+                    <v-radio
+                      class="mt-6 ml-5"
+                      value="oklon3"
+                      color="#F8B400"
+                    ></v-radio>
+                  </v-row>
+                </v-col>
+              </v-radio-group>
             </v-col>
           </v-row>
           <v-divider></v-divider>
@@ -357,7 +382,7 @@
             </v-col>
             <v-col cols="2">
               <v-dialog
-                v-model="dialog"
+                v-model="dialog4"
                 width="300"
               >
                 <template #activator="{ on, attrs }">
@@ -396,7 +421,7 @@
                     <v-btn
                       class="white--text"
                       text
-                      @click="dialog = false"
+                      @click="dialog4 = false"
                     >
                       OK
                     </v-btn>
@@ -443,7 +468,12 @@ export default {
   layout: "AllroundLayout",
   data() {
     return {
-      dialog: false,
+      dialog1: false,
+      dialog2: false,
+      dialog3: false,
+      dialog4: false,
+      radio1: false,
+      radio2: false
     }
   },
 }
