@@ -2,6 +2,10 @@
   <v-app>
     <layout-component
       title="Tutorial"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-component>
     <v-list
       subheader

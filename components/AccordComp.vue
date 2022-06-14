@@ -2,7 +2,7 @@
   <v-expansion-panels>
     <v-expansion-panel>
       <v-expansion-panel-header class="py-6">
-        <v-col cols="2">
+        <v-col cols="1" sm="1" xs="2">
           <v-icon
             style="position:absolute; left: 14px; top: 20px"
             size="30px"
@@ -10,7 +10,7 @@
           >mdi-square-edit-outline
           </v-icon>
         </v-col>
-        {{ name }}
+       <p class="pl-6 my-1">{{name}}</p>
       </v-expansion-panel-header>
       <v-expansion-panel-content>
         <p

@@ -2,6 +2,10 @@
   <v-app>
     <layout-comp
       title="Nazev projektu"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-comp>
     <AccordComp
       name="Project Description"

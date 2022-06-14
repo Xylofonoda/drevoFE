@@ -2,6 +2,10 @@
   <v-app>
     <layout-comp
       title="Měření 02"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-comp>
     <accord-comp
       name="Measurement description"

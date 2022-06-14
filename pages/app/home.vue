@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/user-profile-view"
         style="text-decoration: none">
@@ -52,21 +52,11 @@
             </v-row>
           </v-row>
 
-          <!--          <v-row>-->
-          <!--            <v-list-item two-line class="py-3">-->
-          <!--              <v-list-item-content>-->
-          <!--                <v-list-item-title class="pl-3">-->
-          <!--                  &lt;!&ndash;              Nazev karticky&ndash;&gt;-->
-          <!--                  <p class="white&#45;&#45;text font-weight-thin text-uppercase" style="font-size: small;">Profil</p>-->
-          <!--                </v-list-item-title>-->
-          <!--              </v-list-item-content>-->
-          <!--            </v-list-item>-->
-          <!--          </v-row>-->
 
         </v-card>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/plan"
         style="text-decoration: none">
@@ -78,7 +68,7 @@
         ></CardComponent>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/projects"
         style="text-decoration: none">
@@ -90,7 +80,7 @@
         ></CardComponent>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/tutorials"
         style="text-decoration: none">
@@ -101,7 +91,7 @@
         ></CardComponent>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/hardware"
         style="text-decoration: none">
@@ -112,7 +102,7 @@
         ></CardComponent>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to="/app/about"
         style="text-decoration: none">
@@ -167,7 +157,7 @@
         </v-card>
       </nuxt-link>
     </v-col>
-    <v-col xl="6">
+    <v-col xl="6" md="6" sm="3">
       <nuxt-link
         to=""
         style="text-decoration: none">
@@ -183,7 +173,7 @@
           style="background: transparent; border-style: solid; border-color: #F8B400"
 
         >
-          <v-row >
+          <v-row>
             <v-list-item two-line class="py-2">
               <v-list-item-content>
                 <v-list-item-title class="pl-3">

@@ -1,5 +1,4 @@
 <template>
-<!--  <v-item-group>-->
     <v-row>
       <v-col>
         <v-item v-slot="{ active, toggle }">
@@ -12,13 +11,12 @@
               'px-4': true,
             }"
             outlined
-            max-width="100%"
             @click="toggle"
           >
             <v-row
               style="min-height:100px"
             >
-              <v-col cols="6" align-self="center">
+              <v-col cols="6" xl="4" md="5" sm="3" xs="6" align-self="center">
                 <p class="mb-0">{{ evals }}</p>
                 <v-chip
                   v-if="save"
@@ -28,7 +26,7 @@
                   {{ save }}
                 </v-chip>
               </v-col>
-              <v-col cols="6" align-self="center">
+              <v-col cols="6" xl="8" md="7" sm="9" xs="6" align-self="center">
                 <p class="text-right mb-0" style="font-weight: 600">
                   {{ price }}
                 </p>
@@ -39,7 +37,6 @@
         </v-item>
       </v-col>
     </v-row>
-<!--  </v-item-group>-->
 </template>
 
 <script>

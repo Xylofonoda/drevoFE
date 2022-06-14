@@ -2,6 +2,10 @@
   <v-app>
     <layout-comp
       title="Trám 2B"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-comp>
 
     <accord-comp

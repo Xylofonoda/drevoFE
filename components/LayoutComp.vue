@@ -1,9 +1,8 @@
 <template>
   <v-app-bar fixed app>
     <v-row>
-      <v-col cols="2">
-        <v-toolbar-title
-        >
+      <v-col cols="2" xl="1" md="1" sm="1">
+
           <nuxt-link to="/app/home" style="text-decoration: none">
             <v-btn
               fab
@@ -15,9 +14,8 @@
             ><v-icon plain color="#F8B400">mdi-{{ `chevron-${miniVariant ? 'left' : 'left'}` }}</v-icon>
             </v-btn>
           </nuxt-link>
-        </v-toolbar-title>
       </v-col>
-      <v-col cols="7">
+      <v-col cols="8" xl="8" md="8" sm="8">
         <v-toolbar-title class="py-3">
           {{ title }}
         </v-toolbar-title>

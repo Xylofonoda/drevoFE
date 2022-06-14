@@ -1,6 +1,11 @@
 <template>
   <v-app class="">
-    <layout-comp title="About"></layout-comp>
+    <layout-comp
+      title="About"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"></layout-comp>
     <v-row justify="center">
       <v-container>
         <v-expansion-panels accordion class="py-1">
@@ -8,7 +13,7 @@
             v-for="accord in accords"
             :key="accord.title"
           >
-            <v-expansion-panel-header class="py-7" >
+            <v-expansion-panel-header class="py-7">
               <v-col cols="2">
                 <v-icon
                   style="position:absolute; left: 14px; top: 25px"
@@ -22,7 +27,7 @@
             <v-expansion-panel-content
             >
               <v-col cols="6" class="mx-auto">
-                <p class="text-center">{{accord.desc}}</p>
+                <p class="text-center">{{ accord.desc }}</p>
               </v-col>
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -43,24 +48,24 @@ export default {
     accords: [
       {
         title: 'Contacts',
-        desc:"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
       },
       {
 
         title: 'Project informations',
-        desc:"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
       },
       {
 
         title: 'Privacy policy',
-        desc:"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
       },
     ],
   }),
 }
 </script>
 <style scoped>
- html{
-   overflow-y: hidden;
- }
+html {
+  overflow-y: hidden;
+}
 </style>

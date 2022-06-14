@@ -2,6 +2,10 @@
   <v-app fluid>
     <layout-component
       title="Vytvořit nový projekt"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-component>
     <v-container>
       <v-form >

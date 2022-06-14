@@ -2,10 +2,12 @@
   <v-app>
   <v-main>
     <v-row no-gutters>
-        <v-col cols="2">
+        <v-col cols="1" xl="2" sm="1" md="2" xs="0">
             <v-navigation-drawer
               permanent
               src="/bg.jpg"
+              class="pr-7"
+              bottom
             >
               <v-list
                 dense
@@ -14,6 +16,7 @@
                 <v-list-item
                   v-for="item in items"
                   :key="item.title"
+                  class="pt-3 "
                   link
 
                 >
@@ -44,9 +47,7 @@ export default {
       fixed: false,
       miniVariant: false,
       items: [
-        {title: 'Dashboard', icon: 'mdi-view-dashboard'},
-        {title: 'Photos', icon: 'mdi-image'},
-        {title: 'About', icon: 'mdi-help-box'},
+        {title: 'Přehled'},
       ],
       right: null,
     }

@@ -2,6 +2,10 @@
   <v-app>
     <layout-comp
       title="Plan"
+      :items="[
+      { name: 'Přejmenovat' },
+      { name: 'Smazat' },
+    ]"
     ></layout-comp>
     <v-row class="ma-0">
       <v-col>

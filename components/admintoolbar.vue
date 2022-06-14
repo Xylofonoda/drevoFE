@@ -1,19 +1,19 @@
 <template>
     <v-app-bar color="#FFAB00" app>
       <v-row>
-        <v-col cols="2">
+        <v-col cols="8" xl="2" md="2" sm="4">
           <v-row justify="start">
             <v-img
               style="background: black"
               src="/logo_white.svg"
-              max-width="253px"
+              max-width="250px"
               height="65px"
               contain
             ></v-img>
           </v-row>
         </v-col>
-        <v-col cols="10">
-          <v-row style="position: relative;">
+        <v-col cols="4" xl="10" md="9" sm="8">
+          <v-row style="position: relative;" class="ml-2">
             <nuxt-link to="/admin/adminhome" style="text-decoration: none">
               <v-btn
                 fab
