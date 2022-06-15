@@ -54,7 +54,7 @@
                   <v-icon
                     color="#F8B400"
                     size="30px"
-                  >mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                  >mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-list-item-action>

@@ -1,11 +1,8 @@
 <template>
   <v-app>
-    <admin-tool-comp
-      name="Přehled">
-    </admin-tool-comp>
     <v-container class="ml-3 pr-10">
       <v-row>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl"
             outlined
@@ -28,7 +25,7 @@
                   class=" mt-3"
                 >
                   <v-icon>
-                    mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-col>
@@ -72,7 +69,7 @@
             </v-row>
           </v-card>
         </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
 
 
           <v-card
@@ -97,7 +94,7 @@
                   small
                 >
                   <v-icon>
-                    mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-col>
@@ -148,7 +145,7 @@
                   small
                 >
                   <v-icon>
-                    mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-col>
@@ -176,7 +173,7 @@
             </v-row>
           </v-card>
         </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl"
             outlined
@@ -201,7 +198,7 @@
                     class=" mt-3"
                   >
                     <v-icon>
-                      mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                      mdi-chevron-right
                     </v-icon>
                   </v-btn>
                 </v-col>
@@ -239,7 +236,7 @@
             </v-container>
           </v-card>
         </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl "
             color="transparent"
@@ -264,7 +261,7 @@
                     class="mt-3"
                   >
                     <v-icon>
-                      mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                      mdi-chevron-right
                     </v-icon>
                   </v-btn>
                 </v-col>
@@ -285,7 +282,7 @@
             </v-container>
           </v-card>
         </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl "
             color="transparent"
@@ -308,7 +305,7 @@
                     class="mt-3"
                   >
                     <v-icon>
-                      mdi-{{ `chevron-${miniVariant ? 'right' : 'right'}` }}
+                      mdi-chevron-right
                     </v-icon>
                   </v-btn>
                 </v-col>
@@ -335,11 +332,10 @@
 </template>
 
 <script>
-import AdminToolComp from "@/components/admintoolbar";
 
 export default {
   name: "AdminHome",
-  components: {AdminToolComp},
+
   layout: "adminlayout",
   miniVariant: false,
   data() {
