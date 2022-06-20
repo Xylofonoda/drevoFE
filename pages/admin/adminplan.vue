@@ -2,24 +2,23 @@
   <v-app>
     <v-container class="ml-3 pr-10">
       <v-row>
-        <v-col cols="12" xl="4" md="4" sm="12">
+        <v-col id="scroll-target" cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl"
             outlined
             color="black"
             rounded
-            min-width="300px"
 
           >
-            <v-container class="my-xl-1">
+            <v-container class="my-xl-3">
               <v-row>
-                <v-col cols="10" xl="10" md="9" >
+                <v-col cols="10" xl="10" md="10">
 
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                     Plán
                   </v-card-title>
                 </v-col>
-                <v-col cols="2" xl="2" md="3">
+                <v-col cols="2" xl="2" md="2">
                   <v-btn
                     plain
                     fab
@@ -32,60 +31,44 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row no-gutters>
-                <v-col cols="12" xl="12" md="12" sm="12">
-                  <v-card
-                    v-for="item in packages"
-                    :key="item.title"
-                    color="black"
-                    min-width="300px"
-                  >
-                    <v-card-title
-                      class="text-xl-body-1 text-md-body-1 text-sm-body-2"
-                      style="color: gray"
+              <v-row>
+                <v-col cols="10" xl="10" md="10" sm="10">
+
+                  <v-row v-for="item in packages" :key="item.title" no-gutters align="center">
+                    <v-col
+                      cols="10"
+                      xl="10"
+                      md="10"
+                      sm="10"
                     >
-                      {{item.title}}
-                    </v-card-title>
-                    <v-card-subtitle
-                      class="white--text text-xl-h5 text-md-body-1 text-sm-body-2"
-                      style="font-weight: 600"
+                      <v-card-title
+                        class="text-xl-body-1 text-md-body-1 text-sm-body-2"
+                        style="color: gray"
+                      >{{ item.title }}
+                      </v-card-title>
+                      <v-card-subtitle
+                        class="white--text text-xl-h5 text-md-body-1 text-sm-body-2"
+                        style="font-weight: 600"
+                      >
+                        {{ item.price }} <s>{{ item.save }}</s>
+                      </v-card-subtitle>
+                    </v-col>
+                  </v-row>
+                </v-col>
+                <v-col cols="2" xl="2" md="2">
+                  <v-row>
+                    <v-btn
+                      fab
+                      small
+                      plain
+                      style="position: absolute; top: 80%"
+                      class="ml-2"
                     >
-                      {{item.price}}
-                    </v-card-subtitle>
-                    <v-row class="float-end pr-5">
-                      <v-col cols="2" xl="2" md="4">
-                        <v-btn
-                          fab
-                          small
-                          plain
-                        >
-                          <v-icon color="#F8B400">
-                            {{ item.icon }}
-                          </v-icon>
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-                 </v-card>
-
-
-<!--                  <v-card-title class="text-xl-body-1 text-md-body-1 text-sm-body-2" style="color: gray">-->
-<!--                    Balík měření #1 CZE-->
-<!--                  </v-card-title>-->
-<!--                  <v-card-subtitle class="text-xl-h5 text-md-body-1 text-sm-body-2" style="font-weight: 600">-->
-<!--                    10ks / 1500Kč-->
-<!--                  </v-card-subtitle>-->
-<!--                  <v-card-title class="text-xl-body-1 text-md-body-1 text-sm-body-2" style="color: gray">-->
-<!--                    Balík měření #2 CZE-->
-<!--                  </v-card-title>-->
-<!--                  <v-card-subtitle class="text-xl-h5 text-md-body-1 text-sm-body-2" style="font-weight: 600">-->
-<!--                    50ks / <s>7500Kč</s> 6000Kč-->
-<!--                  </v-card-subtitle>-->
-<!--                  <v-card-title class="text-xl-body-1 text-md-body-1 text-sm-body-2" style="color: gray">-->
-<!--                    Balík měření #3 CZE-->
-<!--                  </v-card-title>-->
-<!--                  <v-card-subtitle class="text-xl-h5 text-md-body-1 text-sm-body-2" style="font-weight: 600">-->
-<!--                    20ks / <s>30000Kč</s> 2100Kč-->
-
+                      <v-icon color="#F8B400">
+                        mdi-chart-areaspline
+                      </v-icon>
+                    </v-btn>
+                  </v-row>
                 </v-col>
               </v-row>
             </v-container>
@@ -97,17 +80,16 @@
             outlined
             color="black"
             rounded
-            min-width="300px"
 
 
           >
-            <v-row no-gutters class="my-xl-8">
-              <v-col cols="10">
+            <v-row no-gutters class="my-xl-8 my-md-3">
+              <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   Otazník
                 </v-card-title>
               </v-col>
-              <v-col cols="2">
+              <v-col cols="2" xl="2" md="2" sm="2">
                 <v-btn
                   plain
                   fab
@@ -120,7 +102,7 @@
                 </v-btn>
               </v-col>
             </v-row>
-            <v-row class="my-2 ">
+            <v-row class="mb-2">
               <v-col cols="12">
                 <v-row class="pl-4">
                   <v-col cols="3" xl="3" md="3">
@@ -142,10 +124,9 @@
             outlined
             color="black"
             rounded
-            min-width="300px"
 
           >
-            <v-row no-gutters class="my-xl-5">
+            <v-row no-gutters class="my-xl-5 my-md-2">
               <v-col cols="10">
                 <v-card-title class="text-uppercase " style="font-size: 15px">
                   Vyfakturovano
@@ -175,8 +156,8 @@
               <v-col cols="2" xl="2" md="2" sm="2">
                 <v-btn
                   fab
-                  x-small
-                  class="mt-8 ml-1"
+                  small
+                  class="mt-8"
                   plain
                 >
                   <v-icon color="#F8B400">
@@ -197,7 +178,7 @@
 
 
           >
-            <v-row no-gutters class="my-xl-5">
+            <v-row no-gutters class="my-xl-5 my-md-2">
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   historie plateb
@@ -219,7 +200,7 @@
             <v-row no-gutters>
               <v-col cols="12">
                 <v-card-title>
-                  <p class="text-xl-h5 text-md-h6" style="font-weight: 600;position:relative; top: 20px ">
+                  <p class="text-xl-h5 text-md-h4" style="font-weight: 600;position:relative; top: 20px ">
                     26 672
                   </p>
                 </v-card-title>
@@ -235,7 +216,7 @@
             min-width="300px"
 
           >
-            <v-row no-gutters class="my-xl-4 pb-xl-1">
+            <v-row no-gutters class="my-xl-4 pb-xl-1 my-md-1 pb-md-1">
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   Platební metody
@@ -307,6 +288,7 @@
             <v-row>
               <v-col cols="12">
                 <v-text-field
+                  v-model="search"
                   class="px-4 my-0 text-uppercase"
                   label="hledat"
                   append-icon="mdi-magnify"
@@ -318,34 +300,53 @@
           </v-card>
         </v-col>
         <v-col cols="4">
-            <v-row class="float-end my-xl-2" align="center">
-                <v-switch
-                  color="#F8B400"
-                >
-                </v-switch>
-                <p class="text-xl-subtitle-2 my-0">
-                  S platbou
-                </p>
-              <v-btn
-                color="white"
-                small
-                fab
-                plain
-              >
-                <v-icon>
-                  mdi-dots-vertical
-                </v-icon>
-              </v-btn>
-            </v-row>
+          <v-row class="float-end my-xl-2" align="center">
+            <v-switch
+              color="#F8B400"
+            >
+            </v-switch>
+            <p class="text-xl-subtitle-2 my-0">
+              S platbou
+            </p>
+            <v-btn
+              color="white"
+              small
+              fab
+              plain
+            >
+              <v-icon>
+                mdi-dots-vertical
+              </v-icon>
+            </v-btn>
+          </v-row>
           <v-col cols="4">
 
           </v-col>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12">
+          <v-data-table
+            :headers="headers"
+            :items="keyinfo"
+            :search="search"
+          ></v-data-table>
+        </v-col>
+      </v-row>
+      <v-btn
+        v-scroll="onScroll"
+        fab
+        fixed
+        bottom
+        right
+        color="#F8B400"
+        @click="toTop"
+      >
+        <v-icon color="black">mdi-chevron-up</v-icon>
+      </v-btn>
     </v-container>
   </v-app>
 </template>
-
 <script>
 
 export default {
@@ -356,12 +357,145 @@ export default {
     return {
       packages: [
         {title: 'Balík měření #1 CZE', price: '10ks / 1500Kč'},
-        {title: 'Balík měření #2 CZE', price: '50ks / 6000Kč'},
-        {title: 'Balík měření #3 CZE', price: '10ks / 1500Kč', icon:'mdi-chart-areaspline' },
+        {title: 'Balík měření #2 CZE', save: '5000Kč', price: '50ks / 6000Kč'},
+        {title: 'Balík měření #3 CZE', save: '25000Kč', price: '10ks / 1500Kč'},
+      ],
+      search: '',
+      headers: [
+        {
+          text: 'Vytvořeno'.toUpperCase(),
+          align: 'start',
+          sortable: true,
+          value: 'name',
+        },
+        {text: 'Role'.toUpperCase(), value: 'role'},
+        {text: 'Jméno'.toUpperCase(), value: 'jmeno'},
+        {text: 'Firma'.toUpperCase(), value: 'firma'},
+        {text: 'Plán'.toUpperCase(), value: 'plan'},
+        {text: 'Projekty'.toUpperCase(), value: 'projekt'},
+        {text: 'Vyfakturováno'.toUpperCase(), value: 'paidfor'},
+        {text: 'Hardware'.toUpperCase(), value: 'hardware'},
+      ],
+      keyinfo: [
+        {
+          name: '10.6.2023',
+          role: 'admin',
+          jmeno: 'Lorem Ipsum',
+          firma: 'Lorem Ipsum',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
 
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Jaroslav Babač',
+          firma: 'Mercury Technologies',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Lorem Ipsum',
+          firma: 'Boar Coms',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ne',
+
+        },
+        {
+          name: '10.6.2023',
+          role: 'admin',
+          jmeno: 'Jiří Chovaneček',
+          firma: 'Cavernetworks',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ne',
+
+        },
+        {
+          name: '10.6.2023',
+          role: 'admin',
+          jmeno: 'Josef Pavlišta',
+          firma: 'Luckyworks',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Ludvík Beskyd',
+          firma: 'Brisco',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
+        },
+        {
+          name: '10.6.2023',
+          role: 'admin',
+          jmeno: 'Petr Holub',
+          firma: 'Voyage Navigations',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Jan Vandas',
+          firma: 'Lorem Ipsum',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ne',
+
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Jaroslav Viliš',
+          firma: 'Rush Enterprises',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ne',
+
+        },
+        {
+          name: '10.6.2023',
+          role: 'user',
+          jmeno: 'Martin Mazánek',
+          firma: 'Forestpaw',
+          plan: '36(231)',
+          projekt: '21(31)',
+          paidfor: '26 900',
+          hardware: 'ano',
+        },
       ],
     }
   },
+
+  methods: {
+    onScroll(e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset || e.target.scrollTop || 0
+      this.fab = top > 20
+    },
+    toTop() {
+      this.$vuetify.goTo(0)
+    }
+  }
 }
 </script>
 

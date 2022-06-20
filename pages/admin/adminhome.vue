@@ -179,7 +179,6 @@
             outlined
             color="black"
             rounded
-            min-width="300px"
           >
             <v-container>
 
@@ -335,7 +334,6 @@
 
 export default {
   name: "AdminHome",
-
   layout: "adminlayout",
   miniVariant: false,
   data() {

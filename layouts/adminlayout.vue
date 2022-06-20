@@ -88,7 +88,7 @@ export default {
       miniVariant: false,
       items: [
         {title: 'Přehled', link: '/admin/adminhome'},
-        {title: 'Databáze'},
+        {title: 'Databáze', link: '/admin/admindb'},
         {title: 'Plán', link: '/admin/adminplan'},
       ],
       name:"Přehled",
