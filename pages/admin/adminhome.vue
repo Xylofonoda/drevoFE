@@ -2,13 +2,13 @@
   <v-app>
     <v-container class="ml-3 pr-10">
       <v-row>
-        <v-col  cols="12" xl="4" md="4" sm="12">
+        <v-col cols="12" xl="4" md="4" sm="12">
           <v-card
-            class="rounded-xl"
+            class="rounded-xl flex-grow-1"
             outlined
             color="black"
             rounded
-            min-width="300px"
+            height="100%"
 
           >
             <v-row>
@@ -22,7 +22,7 @@
                   plain
                   fab
                   small
-                  class=" mt-3"
+                  class="mt-3"
                 >
                   <v-icon>
                     mdi-chevron-right
@@ -31,53 +31,43 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="7" xl="9" md="8" sm="9">
+              <v-col cols="7" xl="8" md="8" sm="9">
                 <v-card-title>
-                  <p class="pl-0 text-h4" style="font-weight: 600;">
+                  <p class="pa-0 mb-xl-6 text-xl-h2 text-md-h3" style="font-weight: 600; line-height: unset">
                     3 675
                   </p>
                 </v-card-title>
               </v-col>
-              <v-col cols="5" xl="3" md="4" sm="3">
+              <v-col cols="5" xl="4" md="4" sm="3">
                 <v-card-subtitle>
-                  <p class="pt-4 font-weight-thin">Uživatelé</p>
+                  <p class="pt-xl-4 ml-xl-3 font-weight-thin">
+                    <v-icon
+                      class="pa-0"
+                      large
+                      color="#F8B400"
+                    >mdi-circle-small</v-icon>
+                    Uživatelé
+                  </p>
                 </v-card-subtitle>
               </v-col>
               <v-col cols="12" xl="12" md="12" sm="12">
-                <v-card
-                  class="mx-auto text-center"
-                  color="black"
-                  dark
-                  max-width="600"
+                <v-card-text
+                  class="mr-md-5"
                 >
-                  <v-card-text>
-                      <v-sparkline
-                        :value="value"
-                        :labels="labels"
-                        color="#F8B400"
-                        height="170"
-                        width="450"
-                        padding="24"
-
-                      >
-
-                      </v-sparkline>
-
-                  </v-card-text>
-                </v-card>
+                  <apex-chart width="100%" height="230" type="line" :options="options" :series="series"></apex-chart>
+                </v-card-text>
               </v-col>
             </v-row>
           </v-card>
         </v-col>
-        <v-col  cols="12" xl="4" md="4" sm="12">
+        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
 
 
           <v-card
-            class="rounded-xl"
+            class="rounded-xl flex-grow-1"
             outlined
             color="black"
-            rounded
-            min-width="300px"
+            height="100%"
 
           >
             <v-row>
@@ -101,17 +91,17 @@
             </v-row>
             <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
-                <v-card-title>
-                  <p class="pl-0 text-h4" style="font-weight: 600; ">
+                <v-card-title class="mt-xl-12">
+                  <p class="pl-0 pa-0 ma-0 text-xl-h2" style="font-weight: 600; ">
                     1 265 200
                   </p>
                 </v-card-title>
               </v-col>
-              <v-col cols="2" xl="2" md="2" sm="10">
+              <v-col cols="2" xl="2" md="2" sm="10" class="mt-xl-16 pt-xl-7">
                 <v-btn
                   fab
-                  x-small
-                  class="mt-6 ml-6"
+                  small
+                  class=" ml-6"
                   plain
                 >
                   <v-icon color="#F8B400">
@@ -121,19 +111,19 @@
               </v-col>
             </v-row>
           </v-card>
-          <v-spacer class="mt-3"></v-spacer>
+          <v-spacer class="mt-9"></v-spacer>
           <v-card
-            class="rounded-xl"
+            class="rounded-xl flex-grow-1"
             outlined
             color="black"
             rounded
-            min-width="300px"
+            height="100%"
 
 
           >
             <v-row>
               <v-col cols="10">
-                <v-card-title class="text-uppercase pl-5 pb-3" style="font-size: 15px">
+                <v-card-title class="text-uppercase  pl-5 pb-3" style="font-size: 15px">
                   Hardware
                 </v-card-title>
               </v-col>
@@ -153,16 +143,16 @@
             <v-row no-gutters>
               <v-col cols="10">
                 <v-card-title>
-                  <p class="pl-1 text-h4" style="font-weight: 600; ">
+                  <p class="pl-0 pa-0 ma-0 mt-xl-12 text-xl-h2" style="font-weight: 600;">
                     12
                   </p>
                 </v-card-title>
               </v-col>
-              <v-col cols="2">
+              <v-col cols="2" class="mt-xl-16 pt-xl-7">
                 <v-btn
                   fab
-                  x-small
-                  class="mt-6 ml-6 "
+                  small
+                  class="ml-6"
                   plain
                 >
                   <v-icon color="#F8B400">
@@ -173,9 +163,9 @@
             </v-row>
           </v-card>
         </v-col>
-        <v-col  cols="12" xl="4" md="4" sm="12">
+        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
           <v-card
-            class="rounded-xl"
+            class="rounded-xl flex-grow-1"
             outlined
             color="black"
             rounded
@@ -194,7 +184,7 @@
                     plain
                     fab
                     small
-                    class=" mt-3"
+                    class="mt-3"
                   >
                     <v-icon>
                       mdi-chevron-right
@@ -204,7 +194,7 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-item-group>
+                  <v-item-group class="pt-xl-6">
                     <v-item>
                       <plan-card
                         evals="10 evaluations"
@@ -235,7 +225,7 @@
             </v-container>
           </v-card>
         </v-col>
-        <v-col  cols="12" xl="4" md="4" sm="12">
+        <v-col cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl "
             color="transparent"
@@ -267,21 +257,15 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="10">
-
+                  <v-col cols="12">
+                    <apex-chart width="100%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
                   </v-col>
-                  <v-col cols="2">
-                    <v-card-subtitle>
-
-                    </v-card-subtitle>
-                  </v-col>
-
                 </v-col>
               </v-row>
             </v-container>
           </v-card>
         </v-col>
-        <v-col  cols="12" xl="4" md="4" sm="12">
+        <v-col cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl "
             color="transparent"
@@ -311,21 +295,49 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="10">
-
+                  <v-col cols="12">
+                    <apex-chart width="100%" height="300px" type="donut" :options="options2" :series="series2"></apex-chart>
                   </v-col>
-                  <v-col cols="2">
-                    <v-card-subtitle>
-
-                    </v-card-subtitle>
-                  </v-col>
-
                 </v-col>
               </v-row>
             </v-container>
           </v-card>
         </v-col>
+        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
+          <v-card
+            class="rounded-xl flex-grow-1"
+            color="transparent"
+            rounded
+          >
+            <v-container>
+              <v-row>
+                <v-col cols="12">
+                  <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+                  </v-card-title>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col xl="12" md="12" sm="12" xs="12">
+                  <v-col cols="12">
+
+                  </v-col>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card>
+        </v-col>
+
       </v-row>
+      <v-btn
+        fab
+        fixed
+        bottom
+        right
+        color="#F8B400"
+
+      >
+        <v-icon color="black">mdi-chevron-up</v-icon>
+      </v-btn>
     </v-container>
   </v-app>
 </template>
@@ -338,46 +350,261 @@ export default {
   miniVariant: false,
   data() {
     return {
-      items: [
-        {title: 'Dashboard', icon: 'mdi-view-dashboard'},
-        {title: 'Photos', icon: 'mdi-image'},
-        {title: 'About', icon: 'mdi-help-box'},
-      ],
-      value: [
-        423,
-        446,
-        675,
-        510,
-        590,
-        610,
-        760,
-        590,
-        675,
-        423,
-        760,
-        960,
-      ],
-      labels:[
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ],
-      right: null,
+      options: {
+        stroke: {
+          curve: 'straight',
+          width: 4,
+          colors: '#F8B400',
+          lineCap: 'butt',
+        },
+
+        markers: {
+          size: 3,
+          colors: '#F8B400',
+        },
+        tooltip: {
+          enabled: false
+        },
+        chart: {
+          id: 'vuechart-example',
+          selection: {
+            enabled: false
+          },
+          toolbar: {
+            show: false
+          },
+          foreColor: '#ffffff',
+          zoom: {
+            enabled: false,
+          },
+
+        },
+        xaxis: {
+          labels: {
+            rotate: -45
+          },
+          categories: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ],
+        },
+        colors: ['#F8B400'],
+        width: '2px',
+      },
+      series: [{
+        data: [55, 62, 89, 66, 98, 72, 101, 75, 94, 120, 117, 139],
+      }],
+      options1:{
+        stroke:{
+          colors:['#000'],
+        },
+        tooltip: {
+          enabled: false
+        },
+        dataLabels:{
+          enabled:false
+        },
+        legend:{
+          labels:{
+            colors:'#ffffff'
+          },
+          onItemHover: {
+            highlightDataSeries: false
+          },
+          position:'right',
+          offsetY:65,
+        },
+        colors: ['#F8B400', '#ffffff'],
+        labels:['Mobile', 'Desktop'],
+        states: {
+          hover: {
+            filter: {
+              type: 'none',
+            },
+            active:{
+              filter:{
+                type:'lighten',
+                value:'0',
+              }
+            }
+          }
+        },
+
+        plotOptions: {
+          pie: {
+            startAngle: 80,
+            endAngle: 440,
+            expandOnClick: false,
+            offsetX: 0,
+            offsetY: 0,
+            customScale: 1,
+            dataLabels: {
+              offset: 0,
+              minAngleToShowLabel: 10
+            },
+            donut: {
+              size: '85%',
+              background: 'transparent',
+              labels: {
+                show: true,
+                name: {
+                  show: true,
+                  fontSize: '14px',
+                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontWeight: 400,
+                  color: '#ffffff',
+                  offsetY: -10,
+                  formatter (val) {
+                    return val
+                  }
+                },
+                value: {
+                  show: true,
+                  fontSize: '25px',
+                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  offsetY: 16,
+                  formatter (val) {
+                    return val
+                  }
+                },
+                total: {
+                  show: true,
+                  showAlways: false,
+                  label: 'Stažení',
+                  fontSize: '25px',
+                  fontFamily: 'Italic, Arial, sans-serif',
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  formatter (w) {
+                    return w.globals.seriesTotals.reduce((a, b) => {
+                      return a + b
+                    }, 0)
+                  }
+                }
+              }
+            },
+          }
+        }
+      },
+      options2:{
+        stroke:{
+          colors:['#000'],
+        },
+        tooltip: {
+          enabled: false
+        },
+        dataLabels:{
+          enabled:false
+        },
+        legend:{
+          labels:{
+            colors:'#ffffff'
+          },
+          onItemHover: {
+            highlightDataSeries: false
+          },
+          position:'right',
+          offsetY:65,
+        },
+        colors: ['#F8B400', '#ffffff', '#787878'],
+        labels:['CZE', 'ENG', 'GER'],
+        states: {
+          hover: {
+            filter: {
+              type: 'none',
+            },
+            active:{
+              filter:{
+                type:'lighten',
+                value:'0',
+              }
+            }
+          }
+        },
+
+        plotOptions: {
+          pie: {
+            startAngle: 180,
+            endAngle: 540,
+            expandOnClick: false,
+            offsetX: 0,
+            offsetY: 0,
+            customScale: 1,
+            dataLabels: {
+              offset: 0,
+              minAngleToShowLabel: 10
+            },
+            donut: {
+              size: '85%',
+              background: 'transparent',
+              labels: {
+                show: true,
+                name: {
+                  show: true,
+                  fontSize: '14px',
+                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontWeight: 400,
+                  color: '#ffffff',
+                  offsetY: -10,
+                  formatter (val) {
+                    return val
+                  }
+                },
+                value: {
+                  show: true,
+                  fontSize: '25px',
+                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  offsetY: 16,
+                  formatter (val) {
+                    return val
+                  }
+                },
+                total: {
+                  show: true,
+                  showAlways: false,
+                  label: 'Stažení',
+                  fontSize: '25px',
+                  fontFamily: 'Italic, Arial, sans-serif',
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  formatter (w) {
+                    return w.globals.seriesTotals.reduce((a, b) => {
+                      return a + b
+                    }, 0)
+                  }
+                }
+              }
+            },
+          }
+        }
+      },
+      series1: [100000,27000],
+      series2: [50000,25000,25000]
     }
-  },
+  }
 }
 </script>
 <style>
 .rounded-card {
   border-radius: 100px;
 }
+
+.v-application p {
+  margin-bottom: unset;
+}
+
 </style>
