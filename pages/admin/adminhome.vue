@@ -257,8 +257,8 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
-                    <apex-chart width="100%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
+                  <v-col cols="12" md="12">
+                    <apex-chart class="my-md-2" width="100%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
                   </v-col>
                 </v-col>
               </v-row>
@@ -295,8 +295,8 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
-                    <apex-chart width="100%" height="300px" type="donut" :options="options2" :series="series2"></apex-chart>
+                  <v-col cols="12" md="12">
+                    <apex-chart class="my-xl-2" width="100%" height="300px" type="donut" :options="options2" :series="series2"></apex-chart>
                   </v-col>
                 </v-col>
               </v-row>
@@ -305,25 +305,30 @@
         </v-col>
         <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
           <v-card
-            class="rounded-xl flex-grow-1"
-            color="transparent"
+            class="rounded-xl"
+            outlined
+            color="gray"
             rounded
+            disabled
+            min-height="100%"
+            link
           >
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  </v-card-title>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
+            <p class="text-center" style="position: relative; top:40%;">
+              <v-btn
+                outlined
+                fab
+                disabled
+                x-large
 
-                  </v-col>
-                </v-col>
-              </v-row>
-            </v-container>
+              >
+                <v-icon
+                  size="80px"
+                  class="mx-auto"
+                >mdi-plus
+                </v-icon>
+              </v-btn>
+            </p>
+
           </v-card>
         </v-col>
 
@@ -422,7 +427,7 @@ export default {
             highlightDataSeries: false
           },
           position:'right',
-          offsetY:65,
+          offsetY:40,
         },
         colors: ['#F8B400', '#ffffff'],
         labels:['Mobile', 'Desktop'],
@@ -460,7 +465,7 @@ export default {
                 name: {
                   show: true,
                   fontSize: '14px',
-                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontFamily: 'MuseoModerno, Arial, sans-serif',
                   fontWeight: 400,
                   color: '#ffffff',
                   offsetY: -10,
@@ -470,8 +475,9 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '25px',
-                  fontFamily: 'Helvetica, Arial, sans-serif',
+                  fontSize: '14px',
+                  font:'',
+                  fontFamily: 'MuseoModerno, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
                   offsetY: 16,
@@ -483,8 +489,8 @@ export default {
                   show: true,
                   showAlways: false,
                   label: 'Stažení',
-                  fontSize: '25px',
-                  fontFamily: 'Italic, Arial, sans-serif',
+                  fontSize: '14px',
+                  fontFamily: 'MuseoModerno, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
                   formatter (w) {
@@ -516,7 +522,7 @@ export default {
             highlightDataSeries: false
           },
           position:'right',
-          offsetY:65,
+          offsetY:30,
         },
         colors: ['#F8B400', '#ffffff', '#787878'],
         labels:['CZE', 'ENG', 'GER'],
@@ -564,7 +570,7 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '25px',
+                  fontSize: '14px',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
@@ -577,7 +583,7 @@ export default {
                   show: true,
                   showAlways: false,
                   label: 'Stažení',
-                  fontSize: '25px',
+                  fontSize: '14px',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
@@ -599,9 +605,6 @@ export default {
 }
 </script>
 <style>
-.rounded-card {
-  border-radius: 100px;
-}
 
 .v-application p {
   margin-bottom: unset;

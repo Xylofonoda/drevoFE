@@ -6,12 +6,12 @@
     rounded
   >
     <v-row>
-      <v-col cols="9" xl="10" md="9" sm="9">
+      <v-col cols="9" xl="10" md="10" sm="9">
         <v-card-title style="font-weight: 600" class="text-uppercase pl-5 text-md-body-2" >
           {{ title }}
         </v-card-title>
       </v-col>
-      <v-col cols="2" xl="2" md="3">
+      <v-col cols="2" xl="2" md="2">
         <v-btn
           plain
           fab

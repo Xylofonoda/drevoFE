@@ -128,7 +128,7 @@ export default {
         {
           cardtitle: 'Měření (dostupná/celkem)',
           bignum: ' 26 759 / 21 674',
-          styling: 'text-xl-h5 text-md-body-2 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h5 text-md-body-2 my-md-2  text-sm-body-1 '
         },
         {
           cardtitle: 'Projekty (aktivní/celkem)',
