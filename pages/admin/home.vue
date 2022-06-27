@@ -553,15 +553,7 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '30px',
-                  responsive:[{
-                    breakpoint: 1378,
-                    options:{
-                      value:{
-                        fontSize:'20px'
-                      }
-                    }
-                  }],
+                  fontSize: '25px',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
@@ -573,7 +565,6 @@ export default {
                 total: {
                   show: true,
                   showAlways: false,
-                  fontSize: '100%',
                   label: 'Stažení',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
