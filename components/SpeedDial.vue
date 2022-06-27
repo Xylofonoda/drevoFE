@@ -1,0 +1,115 @@
+<template>
+  <v-speed-dial
+    v-model="fab"
+    :direction="direction"
+    :transition="transition"
+    bottom
+    right
+    style="width: 300px;"
+    fixed
+
+  >
+    <template #activator>
+      <v-btn
+        v-model="fab"
+        color="#F8B400"
+        fab
+        style="float: right"
+      >
+        <v-icon v-if="fab" color="black">
+          mdi-close
+        </v-icon>
+        <v-icon v-else color="black">
+          mdi-chevron-up
+        </v-icon>
+      </v-btn>
+    </template>
+    <v-btn
+      fab
+      dark
+      small
+      style="left: 120px"
+      color="#4d4d4d"
+    >
+      <v-card
+        class="rounded"
+        style="right: 20px"
+        color="grey"
+        min-width="60px"
+      >
+        <p class="my-1 mx-1 text-lowercase">účet</p>
+      </v-card>
+      <v-icon class="mr-15">mdi-account</v-icon>
+    </v-btn>
+    <v-btn
+      fab
+      dark
+      small
+      style="left: 120px"
+      color="#4d4d4d"
+    >
+      <v-card
+        class="rounded"
+        style="right: 23px"
+        color="grey"
+        min-width="60px"
+      >
+        <p class="my-1 mx-1 text-lowercase">nastavení</p>
+      </v-card>
+      <v-icon class="mr-16 pr-2">mdi-timer-sand-complete</v-icon>
+    </v-btn>
+    <v-btn
+      fab
+      dark
+      small
+      style="left: 120px"
+      color="#F8B400"
+    >
+      <v-card
+        class="rounded"
+        style="right: 32px"
+        color="grey"
+        min-width="60px"
+      >
+        <p class="my-1 mx-1 text-lowercase">přidat poznámku</p>
+      </v-card>
+      <v-icon class="mr-16 pr-13">mdi-lightbulb</v-icon>
+    </v-btn>
+  </v-speed-dial>
+</template>
+
+<script>
+export default {
+  name: 'SpeedDial',
+  components: {},
+  data() {
+    return {
+      direction: 'top',
+      fab: false,
+      fling: false,
+      hover: false,
+      tabs: null,
+      top: false,
+      right: false,
+      bottom: false,
+      left: false,
+      transition: 'slide-y-reverse-transition',
+
+      watch: {
+        top(val) {
+          this.bottom = !val
+        },
+        right(val) {
+          this.left = !val
+        },
+        bottom(val) {
+          this.top = !val
+        },
+        left(val) {
+          this.right = !val
+        },
+      },
+    }
+  },
+}
+</script>

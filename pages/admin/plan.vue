@@ -2,19 +2,19 @@
   <v-app>
     <v-container class="ml-3 pr-10">
       <v-row>
-        <v-col id="scroll-target" cols="12" xl="4" md="4" sm="12">
+        <v-col  cols="12" xl="4" md="4" sm="12">
           <v-card
             class="rounded-xl"
             outlined
             color="black"
             rounded
+            height="103%"
 
           >
             <v-container class="my-xl-3">
               <v-row>
                 <v-col cols="10" xl="10" md="10">
-
-                  <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+                  <v-card-title class="pt-2 text-uppercase pl-5" style="font-size: 15px">
                     Plán
                   </v-card-title>
                 </v-col>
@@ -23,7 +23,7 @@
                     plain
                     fab
                     small
-                    class="mt-3"
+                    class="pt-0"
                   >
                     <v-icon>
                       mdi-chevron-right
@@ -33,7 +33,6 @@
               </v-row>
               <v-row>
                 <v-col cols="10" xl="10" md="10" sm="10">
-
                   <v-row v-for="item in packages" :key="item.title" no-gutters align="center">
                     <v-col
                       cols="10"
@@ -80,10 +79,11 @@
             outlined
             color="black"
             rounded
+            height="50%"
 
 
           >
-            <v-row no-gutters class="my-xl-8 my-md-3">
+            <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   Otazník
@@ -92,8 +92,7 @@
               <v-col cols="2" xl="2" md="2" sm="2">
                 <v-btn
                   plain
-                  fab
-                  class=" mt-3"
+                  height="100%"
                   small
                 >
                   <v-icon>
@@ -104,7 +103,7 @@
             </v-row>
             <v-row class="mb-2">
               <v-col cols="12">
-                <v-row class="pl-4">
+                <v-row class="pl-4 mt-xl-12">
                   <v-col cols="3" xl="3" md="3">
                     <nuxt-link to="" class="white--text text-md-body-2">Otazník CZE</nuxt-link>
                   </v-col>
@@ -124,20 +123,22 @@
             outlined
             color="black"
             rounded
+            height="50%"
 
           >
             <v-row no-gutters class="my-xl-5 my-md-2">
               <v-col cols="10">
-                <v-card-title class="text-uppercase " style="font-size: 15px">
+                <v-card-title class="text-uppercase pa-0 ml-4 mt-md-3" style="font-size: 15px">
                   Vyfakturovano
                 </v-card-title>
               </v-col>
               <v-col cols="2">
                 <v-btn
+                  class="mt-md-2"
                   plain
                   fab
-                  class="mt-3"
                   small
+                  height="100%"
                 >
                   <v-icon>
                     mdi-chevron-right
@@ -148,7 +149,7 @@
             <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title>
-                  <p class="text-xl-h3 text-md-h4 text-sm-h5" style="font-weight: 600; ">
+                  <p class="mt-xl-8 mt-md-9 text-xl-h3 text-md-h4 text-sm-h5" style="font-weight: 600; ">
                     1 265 200
                   </p>
                 </v-card-title>
@@ -157,8 +158,10 @@
                 <v-btn
                   fab
                   small
-                  class="mt-8"
+                  height="100%"
                   plain
+                  class="mt-xl-5 mt-md-5"
+
                 >
                   <v-icon color="#F8B400">
                     mdi-chart-areaspline
@@ -175,10 +178,11 @@
             color="black"
             rounded
             min-width="300px"
+            height="50%"
 
 
           >
-            <v-row no-gutters class="my-xl-5 my-md-2">
+            <v-row no-gutters>
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   historie plateb
@@ -188,8 +192,8 @@
                 <v-btn
                   plain
                   fab
-                  class="mt-2"
                   small
+                  height="100%"
                 >
                   <v-icon>
                     mdi-chevron-right
@@ -198,9 +202,9 @@
               </v-col>
             </v-row>
             <v-row no-gutters>
-              <v-col cols="12">
+              <v-col cols="12" xl="12" md="12" sm="12">
                 <v-card-title>
-                  <p class="text-xl-h5 text-md-h4" style="font-weight: 600;position:relative; top: 20px ">
+                  <p class="mt-xl-15 mt-md-9 text-xl-h4 text-md-h5" style="font-weight: 600; ">
                     26 672
                   </p>
                 </v-card-title>
@@ -214,9 +218,11 @@
             color="black"
             rounded
             min-width="300px"
+            height="50%"
+
 
           >
-            <v-row no-gutters class="my-xl-4 pb-xl-1 my-md-1 pb-md-1">
+            <v-row no-gutters class=" pb-xl-1 my-md-1">
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
                   Platební metody
@@ -235,10 +241,10 @@
                 </v-btn>
               </v-col>
             </v-row>
-            <v-row no-gutters>
+            <v-row no-gutters class="mt-xl-7">
               <v-col cols="12" xl="12" md="12" sm="12">
                 <v-card-title>
-                  <p class="pt-1 text-xl-h3 text-md-h4" style="font-weight: 600; ">
+                  <p class="mt-md-6 text-xl-h3 text-md-h4" style="font-weight: 600; ">
                     2
                   </p>
                 </v-card-title>
@@ -333,17 +339,9 @@
           ></v-data-table>
         </v-col>
       </v-row>
-      <v-btn
-        v-scroll="onScroll"
-        fab
-        fixed
-        bottom
-        right
-        color="#F8B400"
-        @click="toTop"
-      >
-        <v-icon color="black">mdi-chevron-up</v-icon>
-      </v-btn>
+      <speed-dial>
+
+      </speed-dial>
     </v-container>
   </v-app>
 </template>

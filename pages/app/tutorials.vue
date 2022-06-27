@@ -103,9 +103,8 @@ export default {
         title: 'Loremimpusim',
         subtitle: 'Language: CZE'
       }
-    ]
-
-  }),
+    ],
+  })
 }
 </script>
 

@@ -99,17 +99,7 @@
           ></v-data-table>
         </v-col>
       </v-row>
-      <v-btn
-        v-scroll="onScroll"
-        fab
-        fixed
-        bottom
-        right
-        color="#F8B400"
-        @click="toTop"
-      >
-        <v-icon color="black">mdi-chevron-up</v-icon>
-      </v-btn>
+      <speed-dial></speed-dial>
     </v-container>
   </v-app>
 </template>
@@ -128,19 +118,23 @@ export default {
         {
           cardtitle: 'Měření (dostupná/celkem)',
           bignum: ' 26 759 / 21 674',
-          styling: 'text-xl-h5 text-md-body-2 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1 '
         },
         {
           cardtitle: 'Projekty (aktivní/celkem)',
           bignum: '426 / 2 652',
-          styling: 'text-xl-h5 text-md-body-2 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1 '
         },
         {
           cardtitle: 'Vyfakturováno',
           bignum: '1 265 000',
-          styling: 'text-xl-h5 text-md-body-2 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1'
         },
-        {cardtitle: 'Hardware', bignum: '12', styling: 'text-xl-h5 text-md-body-2 my-md-4 pb-md-1 text-sm-body-1 '},
+        {
+          cardtitle: 'Hardware',
+          bignum: '12',
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1'
+        },
 
       ],
       search: '',

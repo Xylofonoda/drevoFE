@@ -15,7 +15,7 @@
         </v-col>
         <v-col class="d-none d-sm-block" xl="1" md="9" sm="8">
           <v-row style="position: relative;" class="ml-2">
-            <nuxt-link to="/admin/adminhome" style="text-decoration: none">
+            <nuxt-link to="/admin/home" style="text-decoration: none">
               <v-btn
                 fab
                 plain
@@ -34,7 +34,6 @@
                 {{ name }}
               </v-toolbar-title>
             </v-col>
-
           </v-row>
         </v-col>
       </v-row>
@@ -87,9 +86,10 @@ export default {
       fixed: false,
       miniVariant: false,
       items: [
-        {title: 'Přehled', link: '/admin/adminhome'},
-        {title: 'Databáze', link: '/admin/admindb'},
-        {title: 'Plán', link: '/admin/adminplan'},
+        {title: 'Přehled', link: '/admin/home'},
+        {title: 'Databáze', link: '/admin/database'},
+        {title: 'Plán', link: '/admin/plan'},
+        {title: 'Metodika', link: '/admin/tutorials'},
       ],
       name:"Přehled",
       right: null,

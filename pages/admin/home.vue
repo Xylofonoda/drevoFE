@@ -31,16 +31,16 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="7" xl="8" md="8" sm="9">
+              <v-col cols="7" xl="8" md="8" sm="8">
                 <v-card-title>
                   <p class="pa-0 mb-xl-6 text-xl-h2 text-md-h3" style="font-weight: 600; line-height: unset">
                     3 675
                   </p>
                 </v-card-title>
               </v-col>
-              <v-col cols="5" xl="4" md="4" sm="3">
+              <v-col cols="5" xl="4" md="4" sm="4">
                 <v-card-subtitle>
-                  <p class="pt-xl-4 ml-xl-3 font-weight-thin">
+                  <p class="pt-xl-4 ml-xl-3 pt-md-4 ml-md-3 ml-sm-5 font-weight-thin">
                     <v-icon
                       class="pa-0"
                       large
@@ -231,11 +231,9 @@
             color="transparent"
             style="border: 1px solid #ccc!important"
             rounded
-            min-width="300px"
+            height="100%"
           >
             <v-container>
-
-
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
@@ -258,7 +256,7 @@
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
                   <v-col cols="12">
-                    <apex-chart width="100%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
+                    <apex-chart class="mt-xl-7" width="106%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
                   </v-col>
                 </v-col>
               </v-row>
@@ -272,6 +270,7 @@
             style="border: 1px solid #ccc!important"
             rounded
             min-width="300px"
+            height="100%"
           >
             <v-container>
               <v-row>
@@ -295,8 +294,8 @@
               </v-row>
               <v-row>
                 <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
-                    <apex-chart width="100%" height="300px" type="donut" :options="options2" :series="series2"></apex-chart>
+                  <v-col cols="12" class="mt-md-7">
+                    <apex-chart  width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2" :series="series2"></apex-chart>
                   </v-col>
                 </v-col>
               </v-row>
@@ -326,18 +325,8 @@
             </v-container>
           </v-card>
         </v-col>
-
       </v-row>
-      <v-btn
-        fab
-        fixed
-        bottom
-        right
-        color="#F8B400"
-
-      >
-        <v-icon color="black">mdi-chevron-up</v-icon>
-      </v-btn>
+      <speed-dial></speed-dial>
     </v-container>
   </v-app>
 </template>
@@ -459,7 +448,7 @@ export default {
                 show: true,
                 name: {
                   show: true,
-                  fontSize: '14px',
+                  fontSize: '100%',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 400,
                   color: '#ffffff',
@@ -470,7 +459,7 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '25px',
+                  fontSize: '30px',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
@@ -483,10 +472,10 @@ export default {
                   show: true,
                   showAlways: false,
                   label: 'Stažení',
-                  fontSize: '25px',
+                  fontSize: '100%',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
-                  color: '#ffffff',
+                  color: '#808080',
                   formatter (w) {
                     return w.globals.seriesTotals.reduce((a, b) => {
                       return a + b
@@ -553,7 +542,7 @@ export default {
                 show: true,
                 name: {
                   show: true,
-                  fontSize: '14px',
+                  fontSize: '100%',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 400,
                   color: '#ffffff',
@@ -564,7 +553,15 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '25px',
+                  fontSize: '30px',
+                  responsive:[{
+                    breakpoint: 1378,
+                    options:{
+                      value:{
+                        fontSize:'20px'
+                      }
+                    }
+                  }],
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',
@@ -576,11 +573,11 @@ export default {
                 total: {
                   show: true,
                   showAlways: false,
+                  fontSize: '100%',
                   label: 'Stažení',
-                  fontSize: '25px',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
-                  color: '#ffffff',
+                  color: '#808080',
                   formatter (w) {
                     return w.globals.seriesTotals.reduce((a, b) => {
                       return a + b
@@ -599,10 +596,10 @@ export default {
 }
 </script>
 <style>
-.rounded-card {
-  border-radius: 100px;
-}
+.apexcharts-text.apexcharts-datalabel-label{
+  font-style: italic;
 
+}
 .v-application p {
   margin-bottom: unset;
 }
