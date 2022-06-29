@@ -37,7 +37,7 @@
         color="#4d4d4d"
         min-width="60px"
       >
-        <p class="my-1 mx-1 text-lowercase">účet</p>
+        <p class="my-1 mx-1 font-weight-regular text-lowercase">účet</p>
       </v-card>
       <v-icon class="mr-15">mdi-account</v-icon>
     </v-btn>
@@ -54,7 +54,7 @@
         color="#4d4d4d"
         min-width="60px"
       >
-        <p class="my-1 mx-1 text-lowercase">nastavení</p>
+        <p class="my-1 mx-1 font-weight-regular text-lowercase">nastavení</p>
       </v-card>
       <v-icon class="mr-16 pr-2">mdi-timer-sand-complete</v-icon>
     </v-btn>
@@ -71,7 +71,7 @@
         color="#4d4d4d"
         min-width="60px"
       >
-        <p class="my-1 mx-1 text-lowercase">přidat poznámku</p>
+        <p class="my-1 mx-1 font-weight-regular text-lowercase">přidat poznámku</p>
       </v-card>
       <v-icon class="mr-16 pr-13">mdi-lightbulb</v-icon>
     </v-btn>
