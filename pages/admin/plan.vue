@@ -128,13 +128,13 @@
           >
             <v-row no-gutters class="my-xl-5 my-md-2">
               <v-col cols="10">
-                <v-card-title class="text-uppercase pa-0 ml-4 mt-md-3" style="font-size: 15px">
+                 <v-card-title class="text-uppercase pa-0 mt-xl-0 ml-4 mt-md-3" style="font-size: 15px">
                   Vyfakturovano
                 </v-card-title>
               </v-col>
               <v-col cols="2">
                 <v-btn
-                  class="mt-md-2"
+                  class="mt-md-2 mt-xl-0"
                   plain
                   fab
                   small
@@ -149,7 +149,7 @@
             <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title>
-                  <p class="mt-xl-8 mt-md-9 text-xl-h3 text-md-h4 text-sm-h5" style="font-weight: 600; ">
+                  <p class="mt-xl-10 mt-md-9 text-xl-h2 text-md-h4 text-sm-h5" style="font-weight: 600; ">
                     1 265 200
                   </p>
                 </v-card-title>
@@ -160,7 +160,7 @@
                   small
                   height="100%"
                   plain
-                  class="mt-xl-5 mt-md-5"
+                  class="mt-xl-9 mt-md-5"
 
                 >
                   <v-icon color="#F8B400">

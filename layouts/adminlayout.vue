@@ -90,6 +90,8 @@ export default {
         {title: 'Databáze', link: '/admin/database'},
         {title: 'Plán', link: '/admin/plan'},
         {title: 'Metodika', link: '/admin/tutorials'},
+        {title: 'O nás', link: '/admin/about'},
+        {title: 'Normy', link: '/admin/normy'},
       ],
       name:"Přehled",
       right: null,

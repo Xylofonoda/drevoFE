@@ -97,11 +97,11 @@
                   </p>
                 </v-card-title>
               </v-col>
-              <v-col cols="2" xl="2" md="2" sm="10" class="mt-xl-16 pt-xl-7">
+              <v-col cols="2" xl="2" md="2" sm="2" class="mt-xl-16  pt-xl-7">
                 <v-btn
                   fab
                   small
-                  class=" ml-6"
+                  class="ml-6"
                   plain
                 >
                   <v-icon color="#F8B400">

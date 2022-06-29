@@ -34,7 +34,7 @@
       <v-card
         class="rounded"
         style="right: 20px"
-        color="grey"
+        color="#4d4d4d"
         min-width="60px"
       >
         <p class="my-1 mx-1 text-lowercase">účet</p>
@@ -51,7 +51,7 @@
       <v-card
         class="rounded"
         style="right: 23px"
-        color="grey"
+        color="#4d4d4d"
         min-width="60px"
       >
         <p class="my-1 mx-1 text-lowercase">nastavení</p>
@@ -68,7 +68,7 @@
       <v-card
         class="rounded"
         style="right: 32px"
-        color="grey"
+        color="#4d4d4d"
         min-width="60px"
       >
         <p class="my-1 mx-1 text-lowercase">přidat poznámku</p>

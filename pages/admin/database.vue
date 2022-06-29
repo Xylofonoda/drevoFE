@@ -13,6 +13,7 @@
             :title="item.cardtitle"
             :bignum="item.bignum"
             :styling="item.styling"
+            :icon="item.icon"
           ></thin-card-comp>
         </v-col>
         <v-col cols="12" xl="4" md="4" sm="12">
@@ -113,27 +114,41 @@ export default {
   data() {
     return {
       cards: [
-        {cardtitle: 'Registrovaní celkem', bignum: '3 675', styling: 'text-xl-h3 text-md-h4 text-sm-body-1 '},
-        {cardtitle: 'Uživatelé s min. jednou platbou', bignum: '368', styling: 'text-xl-h3 text-md-h4 text-sm-body-1'},
+        {
+          cardtitle: 'Registrovaní celkem',
+          bignum: '3 675',
+          styling: 'text-xl-h3 text-md-h4 text-sm-h4 ml-4',
+          icon:true
+        },
+        {
+          cardtitle: 'Uživatelé s min. jednou platbou',
+          bignum: '368',
+          styling: 'text-xl-h3 text-md-h4 text-sm-h4 ml-4',
+          icon:true
+        },
         {
           cardtitle: 'Měření (dostupná/celkem)',
           bignum: ' 26 759 / 21 674',
-          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h4 text-md-h6 my-md-1 pb-md-1 text-sm-h4 ml-4',
+          icon:true
         },
         {
           cardtitle: 'Projekty (aktivní/celkem)',
           bignum: '426 / 2 652',
-          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1 '
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
+          icon:true
         },
         {
           cardtitle: 'Vyfakturováno',
           bignum: '1 265 000',
-          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1'
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
+          icon:true
         },
         {
           cardtitle: 'Hardware',
           bignum: '12',
-          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-body-1'
+          styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
+          icon:true
         },
 
       ],

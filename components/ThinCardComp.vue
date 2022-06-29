@@ -9,7 +9,7 @@
   >
     <v-row>
       <v-col cols="10" xl="9" md="9" sm="10">
-        <v-card-title style="font-weight: 600" class="text-uppercase pl-5 text-sm-body-2 text-md-body-2 text-xl-body-2" >
+        <v-card-title style="font-weight: 600" class="text-uppercase pl-5 text-body-2 text-sm-body-2 text-md-body-2 text-xl-body-2" >
           {{ title }}
         </v-card-title>
       </v-col>
@@ -21,7 +21,7 @@
           small
         >
           <v-icon>
-            mdi-chevron-right
+            {{iconUp}}
           </v-icon>
         </v-btn>
       </v-col>
@@ -42,7 +42,7 @@
           plain
         >
           <v-icon color="#F8B400">
-            mdi-chart-areaspline
+            {{cardIcon}}
           </v-icon>
         </v-btn>
       </v-col>
@@ -70,7 +70,17 @@ export default {
     transparent:{
       type:Boolean,
       default:false
+    },
+    icon:{
+      type:Boolean,
+      default:false
+    },
+    iconRight:{
+      type:Boolean,
+      default:false
+
     }
+
   },
   computed:{
     color () {
@@ -78,6 +88,12 @@ export default {
     },
     border () {
       return this.transparent === true ? 'border: 1px solid #ccc!important' : ''
+    },
+    cardIcon (){
+      return this.icon === true ? 'mdi-chart-areaspline' : ''
+    },
+    iconUp(){
+      return this.iconRight === true ? 'mdi-chevron-right' : ''
     }
   }
 }
