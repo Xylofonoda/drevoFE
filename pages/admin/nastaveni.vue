@@ -11,7 +11,31 @@
             <v-card-title class="text-xl-subtitle-1 text-uppercase font-weight-bold">
               Základní nastavení
             </v-card-title>
-
+            <v-row class="">
+              <v-col cols="4" class="ml-xl-3 pb-0 mb-0">
+                <v-text-field
+                  outlined
+                  dense
+                  label="Název webové aplikace"
+                  :value="nameVal"
+                  color="white"
+                  clearable
+                ></v-text-field>
+              </v-col>
+            </v-row>
+              <v-row>
+                <v-col cols="6" class="ml-xl-3 mt-0 pt-0">
+                  <v-textarea
+                    outlined
+                    dense
+                    :value="descVal"
+                    color="white"
+                    auto-grow
+                    label="Krátký popis společnosti"
+                    clearable
+                  ></v-textarea>
+                </v-col>
+              </v-row>
           </v-card>
         </v-col>
         <v-col cols="6">
@@ -132,6 +156,9 @@ export default {
       v => !!v || 'Pole nesmí být prázdné',
       v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
     ],
+    nameVal:'Lorem Ipsum',
+    descVal:'Lorem ipsum lorem ipsum  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
+
 
     checkbox: false,
   }),
