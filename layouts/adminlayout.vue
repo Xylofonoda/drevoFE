@@ -74,6 +74,8 @@
         </v-col>
     </v-row>
   </v-main>
+    <speed-dial>
+    </speed-dial>
   </v-app>
 </template>
 
@@ -92,6 +94,7 @@ export default {
         {title: 'Metodika', link: '/admin/tutorials'},
         {title: 'O nás', link: '/admin/about'},
         {title: 'Normy', link: '/admin/normy'},
+        {title: 'Nastaveni', link: '/admin/nastaveni'},
       ],
       name:"Přehled",
       right: null,

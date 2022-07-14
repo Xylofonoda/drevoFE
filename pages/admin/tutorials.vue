@@ -183,8 +183,7 @@
           </v-card>
         </v-col>
       </v-row>
-      <speed-dial>
-      </speed-dial>
+
     </v-container>
   </v-app>
 </template>

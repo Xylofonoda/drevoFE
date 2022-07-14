@@ -144,8 +144,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <speed-dial>
-    </speed-dial>
+
   </v-app>
 </template>
 

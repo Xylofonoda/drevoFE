@@ -86,6 +86,7 @@
                               color="white"
                               label="Verze: "
                               :items="items"
+
                             >
                             </v-select>
                           <v-select
@@ -127,8 +128,6 @@
           </v-card>
         </v-col>
       </v-row>
-      <speed-dial>
-      </speed-dial>
     </v-container>
   </v-app>
 </template>
