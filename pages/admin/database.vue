@@ -14,6 +14,7 @@
             :bignum="item.bignum"
             :styling="item.styling"
             :icon="item.icon"
+            :icon-right="item.iconRight"
           ></thin-card-comp>
         </v-col>
         <v-col cols="12" xl="4" md="4" sm="12">
@@ -68,6 +69,11 @@
         </v-col>
         <v-col cols="4">
           <v-row class="float-end my-xl-2" align="center">
+            <v-pagination
+              v-model="page"
+              :length="pageCount"
+              color="#F8B400"
+            ></v-pagination>
             <v-switch
               color="#F8B400"
             >
@@ -94,9 +100,14 @@
       <v-row>
         <v-col cols="12">
           <v-data-table
+            style="background-color: transparent"
             :headers="headers"
             :items="keyinfo"
             :search="search"
+            hide-default-footer
+            :page.sync="page"
+            :items-per-page="itemsPerPage"
+            @page-count="pageCount = $event"
           ></v-data-table>
         </v-col>
       </v-row>
@@ -113,42 +124,51 @@ export default {
 
   data() {
     return {
+      page: 1,
+      pageCount: 0,
+      itemsPerPage: 6,
       cards: [
         {
           cardtitle: 'Registrovaní celkem',
           bignum: '3 675',
           styling: 'text-xl-h3 text-md-h4 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
         {
           cardtitle: 'Uživatelé s min. jednou platbou',
           bignum: '368',
           styling: 'text-xl-h3 text-md-h4 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
         {
           cardtitle: 'Měření (dostupná/celkem)',
           bignum: ' 26 759 / 21 674',
           styling: 'text-xl-h4 text-md-h6 my-md-1 pb-md-1 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
         {
           cardtitle: 'Projekty (aktivní/celkem)',
           bignum: '426 / 2 652',
           styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
         {
           cardtitle: 'Vyfakturováno',
           bignum: '1 265 000',
           styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
         {
           cardtitle: 'Hardware',
           bignum: '12',
           styling: 'text-xl-h4 text-md-h6 my-md-4 pb-md-1 text-sm-h4 ml-4',
-          icon:true
+          icon:true,
+          iconRight: true,
         },
 
       ],

@@ -14,6 +14,7 @@
             :bignum="item.bignum"
             :transparent='item.transparent'
             :styling="item.styling"
+            :icon-right="item.iconRight"
           ></thin-card-comp>
         </v-col>
         <v-col cols="12" xl="4" md="4" sm="12">
@@ -104,21 +105,72 @@
                 </v-list-item>
               </v-list>
             </v-card-text>
-            <p class="text-center my-16">
-              <v-btn
-                outlined
-                fab
-                color="grey"
-              >
-                <v-icon
-                  size="50px"
-                  class="mx-auto"
-                >mdi-plus
-                </v-icon>
-              </v-btn>
-            </p>
-            <v-divider></v-divider>
+            <v-dialog
+              v-model="dialog"
+              width="600"
 
+            >
+            <template #activator="{ on, attrs }">
+              <div class="text-center my-xl-14">
+                <v-btn
+                  outlined
+                  fab
+                  color="grey"
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  <v-icon
+                    size="50px"
+                    class="mx-auto"
+                  >mdi-plus
+                  </v-icon>
+                </v-btn>
+              </div>
+
+            </template>
+              <v-form
+                ref="form"
+                v-model="valid"
+                lazy-validation
+                @submit.prevent="addMetodika"
+              >
+                <v-card
+                  class="rounded-xl black">
+                  <v-card-title class="text-h6 black--text amber darken-1">
+                    Vložte metodiku
+                  </v-card-title>
+                  <v-card-text>
+                    <v-file-input
+                      v-model="addFile"
+                      :rules="rules"
+                      counter
+                      show-size
+                      color="white"
+                      class="mt-xl-4"
+                    ></v-file-input>
+                  </v-card-text>
+                  <v-divider></v-divider>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      color="#FFFFFF"
+                      text
+                      @click="reset"
+                    >
+                      Zrušit
+                    </v-btn>
+                    <v-btn
+                      color="#F8B400"
+                      text
+                      type="submit"
+                    >
+                      Přidat
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-form>
+            </v-dialog>
+            <v-divider></v-divider>
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
@@ -143,25 +195,33 @@ export default {
   layout: 'adminlayout',
   data() {
     return {
+      valid: false,
+      dialog:false,
+      addFile:null,
       cards: [
         {
           cardtitle: 'metodiky cze',
           bignum: '2',
           styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2',
-          transparent: true
+          transparent: true,
+          iconRight: true
         },
         {
           cardtitle: 'Tutorials',
           bignum: '2',
-          styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2'
+          styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2',
+          iconRight: true
         },
         {
           cardtitle: 'Anwesungen GER',
           bignum: '2',
-          styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2'
+          styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2',
+          iconRight: true
+
         }
       ],
       folders: [
+
         {
           title: 'Lorem Ipsum sit dolor: PDF',
           subtitle: 'Language:CZE'
@@ -171,6 +231,10 @@ export default {
           subtitle: 'Language:CZE'
         }
       ],
+      rules: [
+        value => !value || value.size < 160000000 || 'Metodika musí mít méně než 20 MB',
+        v=> !!v || "Metodika nesmí být prázdná."
+      ],
     }
   },
 
@@ -178,7 +242,23 @@ export default {
     deleteFolder(index) {
       this.folders.splice(index, 1);
     },
-  }
+    reset () {
+      this.$refs.form.reset()
+      this.dialog = false
+    },
+
+    addMetodika () {
+      this.folders.push(
+        {
+          title: this.addFile.name,
+          subtitle: "Language:CZE"
+        }
+      )
+      this.dialog = false
+
+    }
+
+  },
 }
 
 </script>

@@ -7,12 +7,13 @@
             class="rounded-xl"
             outlined
             color="black"
+            height="100%"
             rounded
-            height="103%"
+
 
           >
-            <v-container class="my-xl-3">
-              <v-row>
+            <v-container>
+              <v-row class="">
                 <v-col cols="10" xl="10" md="10">
                   <v-card-title class="pt-2 text-uppercase pl-5" style="font-size: 15px">
                     Plán
@@ -31,7 +32,7 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row>
+              <v-row no-gutters class="mt-xl-16">
                 <v-col cols="10" xl="10" md="10" sm="10">
                   <v-row v-for="item in packages" :key="item.title" no-gutters align="center">
                     <v-col
@@ -41,7 +42,7 @@
                       sm="10"
                     >
                       <v-card-title
-                        class="text-xl-body-1 text-md-body-1 text-sm-body-2"
+                        class="text-xl-h6 text-md-body-1 text-sm-body-2 font-weight-regular"
                         style="color: gray"
                       >{{ item.title }}
                       </v-card-title>
@@ -55,18 +56,10 @@
                   </v-row>
                 </v-col>
                 <v-col cols="2" xl="2" md="2">
-                  <v-row>
-                    <v-btn
-                      fab
-                      small
-                      plain
-                      style="position: absolute; top: 80%"
-                      class="ml-2"
-                    >
-                      <v-icon color="#F8B400">
+                  <v-row no-gutters>
+                      <v-icon color="#F8B400" class="ml-xl-7" style="position: absolute; bottom: 5%">
                         mdi-chart-areaspline
                       </v-icon>
-                    </v-btn>
                   </v-row>
                 </v-col>
               </v-row>
@@ -90,15 +83,18 @@
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
-                <v-btn
-                  plain
-                  height="100%"
-                  small
-                >
-                  <v-icon>
-                    mdi-chevron-right
-                  </v-icon>
-                </v-btn>
+                <v-col cols="2">
+                  <v-btn
+                    plain
+                    fab
+                    style="bottom: 10%"
+                    small
+                  >
+                    <v-icon>
+                      mdi-chevron-right
+                    </v-icon>
+                  </v-btn>
+                </v-col>
               </v-col>
             </v-row>
             <v-row class="mb-2">
@@ -123,10 +119,10 @@
             outlined
             color="black"
             rounded
-            height="50%"
+            height="47%"
 
           >
-            <v-row no-gutters class="my-xl-5 my-md-2">
+            <v-row no-gutters class="my-xl-3 my-md-2">
               <v-col cols="10">
                  <v-card-title class="text-uppercase pa-0 mt-xl-0 ml-4 mt-md-3" style="font-size: 15px">
                   Vyfakturovano
@@ -134,11 +130,11 @@
               </v-col>
               <v-col cols="2">
                 <v-btn
-                  class="mt-md-2 mt-xl-0"
+                  style="bottom: 10%"
                   plain
                   fab
                   small
-                  height="100%"
+
                 >
                   <v-icon>
                     mdi-chevron-right
@@ -155,18 +151,9 @@
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
-                <v-btn
-                  fab
-                  small
-                  height="100%"
-                  plain
-                  class="mt-xl-9 mt-md-5"
-
-                >
-                  <v-icon color="#F8B400">
+                  <v-icon color="#F8B400" class="mt-xl-16 pt-xl-6 mt-md-5 ml-xl-2">
                     mdi-chart-areaspline
                   </v-icon>
-                </v-btn>
               </v-col>
             </v-row>
           </v-card>
@@ -218,7 +205,7 @@
             color="black"
             rounded
             min-width="300px"
-            height="50%"
+            height="47%"
 
 
           >
@@ -244,7 +231,7 @@
             <v-row no-gutters class="mt-xl-7">
               <v-col cols="12" xl="12" md="12" sm="12">
                 <v-card-title>
-                  <p class="mt-md-6 text-xl-h3 text-md-h4" style="font-weight: 600; ">
+                  <p class="mt-md-3 text-xl-h3 text-md-h4" style="font-weight: 600; ">
                     2
                   </p>
                 </v-card-title>
@@ -307,6 +294,11 @@
         </v-col>
         <v-col cols="4">
           <v-row class="float-end my-xl-2" align="center">
+            <v-pagination
+              v-model="page"
+              :length="pageCount"
+              color="#F8B400"
+            ></v-pagination>
             <v-switch
               color="#F8B400"
             >
@@ -330,13 +322,19 @@
           </v-col>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row >
         <v-col cols="12">
           <v-data-table
+            style="background-color: transparent"
             :headers="headers"
             :items="keyinfo"
             :search="search"
+            :page.sync="page"
+            hide-default-footer
+            :items-per-page="itemsPerPage"
+            @page-count="pageCount = $event"
           ></v-data-table>
+
         </v-col>
       </v-row>
       <speed-dial>
@@ -353,6 +351,9 @@ export default {
   miniVariant: false,
   data() {
     return {
+      page: 1,
+      pageCount: 0,
+      itemsPerPage: 6,
       packages: [
         {title: 'Balík měření #1 CZE', price: '10ks / 1500Kč'},
         {title: 'Balík měření #2 CZE', save: '5000Kč', price: '50ks / 6000Kč'},

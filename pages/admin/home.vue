@@ -2,184 +2,22 @@
   <v-app>
     <v-container class="ml-3 pr-10">
       <v-row>
-        <v-col cols="12" xl="4" md="4" sm="12">
-          <v-card
-            class="rounded-xl flex-grow-1"
-            outlined
-            color="black"
-            rounded
-            height="100%"
+          <v-col cols="12" xl="4" md="4" sm="12">
+            <v-card
+              class="rounded-xl flex-grow-1"
+              outlined
+              color="black"
+              rounded
+              height="100%"
 
-          >
-            <v-row>
-              <v-col cols="10" xl="10" md="10">
-                <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Databáze
-                </v-card-title>
-              </v-col>
-              <v-col cols="2">
-                <v-btn
-                  plain
-                  fab
-                  small
-                  class="mt-3"
-                >
-                  <v-icon>
-                    mdi-chevron-right
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="7" xl="8" md="8" sm="8">
-                <v-card-title>
-                  <p class="pa-0 mb-xl-6 text-xl-h2 text-md-h3" style="font-weight: 600; line-height: unset">
-                    3 675
-                  </p>
-                </v-card-title>
-              </v-col>
-              <v-col cols="5" xl="4" md="4" sm="4">
-                <v-card-subtitle>
-                  <p class="pt-xl-4 ml-xl-3 pt-md-4 ml-md-3 ml-sm-5 font-weight-thin">
-                    <v-icon
-                      class="pa-0"
-                      large
-                      color="#F8B400"
-                    >mdi-circle-small</v-icon>
-                    Uživatelé
-                  </p>
-                </v-card-subtitle>
-              </v-col>
-              <v-col cols="12" xl="12" md="12" sm="12">
-                <v-card-text
-                  class="mr-md-5"
-                >
-                  <apex-chart width="100%" height="230" type="line" :options="options" :series="series"></apex-chart>
-                </v-card-text>
-              </v-col>
-            </v-row>
-          </v-card>
-        </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
-
-
-          <v-card
-            class="rounded-xl flex-grow-1"
-            outlined
-            color="black"
-            height="100%"
-
-          >
-            <v-row>
-              <v-col cols="10">
-                <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Fakturace
-                </v-card-title>
-              </v-col>
-              <v-col cols="2">
-                <v-btn
-                  plain
-                  fab
-                  class="mt-3"
-                  small
-                >
-                  <v-icon>
-                    mdi-chevron-right
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-            <v-row no-gutters>
-              <v-col cols="10" xl="10" md="10" sm="10">
-                <v-card-title class="mt-xl-12">
-                  <p class="pl-0 pa-0 ma-0 text-xl-h2" style="font-weight: 600; ">
-                    1 265 200
-                  </p>
-                </v-card-title>
-              </v-col>
-              <v-col cols="2" xl="2" md="2" sm="2" class="mt-xl-16  pt-xl-7">
-                <v-btn
-                  fab
-                  small
-                  class="ml-6"
-                  plain
-                >
-                  <v-icon color="#F8B400">
-                    mdi-chart-areaspline
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card>
-          <v-spacer class="mt-9"></v-spacer>
-          <v-card
-            class="rounded-xl flex-grow-1"
-            outlined
-            color="black"
-            rounded
-            height="100%"
-
-
-          >
-            <v-row>
-              <v-col cols="10">
-                <v-card-title class="text-uppercase  pl-5 pb-3" style="font-size: 15px">
-                  Hardware
-                </v-card-title>
-              </v-col>
-              <v-col cols="2">
-                <v-btn
-                  plain
-                  fab
-                  class=" mt-3"
-                  small
-                >
-                  <v-icon>
-                    mdi-chevron-right
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-            <v-row no-gutters>
-              <v-col cols="10">
-                <v-card-title>
-                  <p class="pl-0 pa-0 ma-0 mt-xl-12 text-xl-h2" style="font-weight: 600;">
-                    12
-                  </p>
-                </v-card-title>
-              </v-col>
-              <v-col cols="2" class="mt-xl-16 pt-xl-7">
-                <v-btn
-                  fab
-                  small
-                  class="ml-6"
-                  plain
-                >
-                  <v-icon color="#F8B400">
-                    mdi-chart-areaspline
-                  </v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card>
-        </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
-          <v-card
-            class="rounded-xl flex-grow-1"
-            outlined
-            color="black"
-            rounded
-          >
-            <v-container>
-
-
+            >
               <v-row>
-                <v-col cols="10">
+                <v-col cols="10" xl="10" md="10" sm="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Plán
+                    Databáze
                   </v-card-title>
                 </v-col>
-                <v-col cols="2">
+                <v-col cols="2" xl="2" md="2" sm="2">
                   <v-btn
                     plain
                     fab
@@ -193,59 +31,57 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-item-group class="pt-xl-6">
-                    <v-item>
-                      <plan-card
-                        evals="10 evaluations"
-                        price="1500 Kč"
-                      >
-                      </plan-card>
-                    </v-item>
-                    <v-item>
-                      <plan-card
-                        evals="30 evaluations"
-                        price="7000 Kč"
-                        save="Save 20%"
-                      >
-                      </plan-card>
-                    </v-item>
-                    <v-item>
-                      <plan-card
-                        evals="50 evaluations"
-                        save="Save 30%"
-                        price="21000 Kč"
-                      >
-                      </plan-card>
-                    </v-item>
-
-                  </v-item-group>
+                <v-col cols="7" xl="7" md="6" sm="7">
+                  <v-card-title>
+                    <p class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3" style="font-weight: 600; line-height: unset">
+                      3 675
+                    </p>
+                  </v-card-title>
+                </v-col>
+                <v-col cols="5" xl="5" md="6" sm="5">
+                  <v-card-subtitle>
+                    <p class="pt-xl-4 pl-4 ml-xl-5 pt-md-4 ml-md-3 ml-sm-5 font-weight-thin">
+                      <v-icon
+                        class="pa-0"
+                        large
+                        color="#F8B400"
+                      >mdi-circle-small</v-icon>
+                      Uživatelé
+                    </p>
+                  </v-card-subtitle>
+                </v-col>
+                <v-col cols="12" xl="12" md="12" sm="12">
+                  <v-card-text
+                    class="mr-md-5"
+                  >
+                    <apex-chart width="100%" height="230" type="line" :options="options" :series="series"></apex-chart>
+                  </v-card-text>
                 </v-col>
               </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
-          <v-card
-            class="rounded-xl "
-            color="transparent"
-            style="border: 1px solid #ccc!important"
-            rounded
-            height="100%"
-          >
-            <v-container>
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
+
+
+            <v-card
+              class="rounded-xl flex-grow-1"
+              outlined
+              color="black"
+              height="100%"
+
+            >
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Uživatelé (stažení aplikace)
+                    Fakturace
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
                   <v-btn
                     plain
                     fab
-                    small
                     class="mt-3"
+                    small
                   >
                     <v-icon>
                       mdi-chevron-right
@@ -253,38 +89,43 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row>
-                <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
-                    <apex-chart class="mt-xl-7" width="106%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
-                  </v-col>
+              <v-row no-gutters>
+                <v-col cols="10" xl="10" md="10" sm="10">
+                  <v-card-title class="mt-xl-12">
+                    <p class="pl-0 pa-0 ma-0 text-xl-h2" style="font-weight: 600; ">
+                      1 265 200
+                    </p>
+                  </v-card-title>
+                </v-col>
+                <v-col cols="2" xl="2" md="2" sm="2" class="mt-xl-16  pt-xl-7">
+                    <v-icon color="#F8B400" class="ml-xl-6">
+                      mdi-chart-areaspline
+                    </v-icon>
                 </v-col>
               </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12">
-          <v-card
-            class="rounded-xl "
-            color="transparent"
-            style="border: 1px solid #ccc!important"
-            rounded
-            min-width="300px"
-            height="100%"
-          >
-            <v-container>
+            </v-card>
+            <v-spacer class="mt-9"></v-spacer>
+            <v-card
+              class="rounded-xl flex-grow-1"
+              outlined
+              color="black"
+              rounded
+              height="100%"
+
+
+            >
               <v-row>
                 <v-col cols="10">
-                  <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Uživatelé (podíl mutací)
+                  <v-card-title class="text-uppercase  pl-5 pb-3" style="font-size: 15px">
+                    Hardware
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
                   <v-btn
                     plain
                     fab
-                    small
                     class="mt-3"
+                    small
                   >
                     <v-icon>
                       mdi-chevron-right
@@ -292,39 +133,259 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row>
-                <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12" class="mt-md-7">
-                    <apex-chart  width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2" :series="series2"></apex-chart>
-                  </v-col>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
-        <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
-          <v-card
-            class="rounded-xl flex-grow-1"
-            color="transparent"
-            rounded
-          >
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+              <v-row no-gutters>
+                <v-col cols="10">
+                  <v-card-title>
+                    <p class="pl-0 pa-0 ma-0 mt-xl-12 text-xl-h2" style="font-weight: 600;">
+                      12
+                    </p>
                   </v-card-title>
                 </v-col>
-              </v-row>
-              <v-row>
-                <v-col xl="12" md="12" sm="12" xs="12">
-                  <v-col cols="12">
-
-                  </v-col>
+                <v-col cols="2" class="mt-xl-16 pt-xl-7">
+                    <v-icon color="#F8B400" class="ml-xl-6">
+                      mdi-chart-areaspline
+                    </v-icon>
                 </v-col>
               </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12" class="d-flex flex-column">
+            <v-card
+              class="rounded-xl flex-grow-1"
+              outlined
+              color="black"
+              rounded
+            >
+              <v-container>
+
+
+                <v-row>
+                  <v-col cols="10">
+                    <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+                      Plán
+                    </v-card-title>
+                  </v-col>
+                  <v-col cols="2">
+                    <v-btn
+                      plain
+                      fab
+                      small
+                      class="mt-3"
+                    >
+                      <v-icon>
+                        mdi-chevron-right
+                      </v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col xl="12" md="12" sm="12" xs="12">
+                    <v-item-group class="pt-xl-6">
+                      <v-item>
+                        <plan-card
+                          evals="10 evaluations"
+                          price="1500 Kč"
+                        >
+                        </plan-card>
+                      </v-item>
+                      <v-item>
+                        <plan-card
+                          evals="50 evaluations"
+                          price="6000 Kč"
+                          save="Save 20%"
+                          past-price="7500 Kč"
+                        >
+                        </plan-card>
+                      </v-item>
+                      <v-item>
+                        <plan-card
+                          evals="200 evaluations"
+                          save="Save 30%"
+                          price="21000 Kč"
+                          past-price="30000 Kč"
+                        >
+                        </plan-card>
+                      </v-item>
+
+                    </v-item-group>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12">
+            <v-card
+              class="rounded-xl "
+              color="transparent"
+              style="border: 1px solid #ccc!important"
+              rounded
+              height="100%"
+            >
+              <v-container>
+                <v-row>
+                  <v-col cols="10">
+                    <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+                      Uživatelé (stažení aplikace)
+                    </v-card-title>
+                  </v-col>
+                  <v-col cols="2">
+                    <v-btn
+                      plain
+                      fab
+                      small
+                      class="mt-3"
+                    >
+                      <v-icon>
+                        mdi-chevron-right
+                      </v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col xl="12" md="12" sm="12" xs="12">
+                    <v-col cols="12">
+                      <apex-chart class="mt-xl-7" width="106%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
+                    </v-col>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12">
+            <v-card
+              class="rounded-xl "
+              color="transparent"
+              style="border: 1px solid #ccc!important"
+              rounded
+              min-width="300px"
+              height="100%"
+            >
+              <v-container>
+                <v-row>
+                  <v-col cols="10">
+                    <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
+                      Uživatelé (podíl mutací)
+                    </v-card-title>
+                  </v-col>
+                  <v-col cols="2">
+                    <v-btn
+                      plain
+                      fab
+                      small
+                      class="mt-3"
+                    >
+                      <v-icon>
+                        mdi-chevron-right
+                      </v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col xl="12" md="12" sm="12" xs="12">
+                    <v-col cols="12" class="mt-md-7">
+                      <apex-chart  width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2" :series="series2"></apex-chart>
+                    </v-col>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12" >
+            <v-card
+              class="rounded-xl"
+              outlined
+              color="gray"
+              rounded
+              min-height="300px"
+              height="100%"
+              link
+            >
+              <p class="text-center" style="position: absolute; top: 45%; left: 45%">
+                <v-btn
+                  outlined
+                  fab
+                  disabled
+
+                >
+                  <v-icon
+                    size="50px"
+                    class="mx-auto"
+                  >mdi-plus
+                  </v-icon>
+                </v-btn>
+              </p>
+
+            </v-card>
+          </v-col>
+          <v-col cols="12" xl="4" md="4" sm="12">
+            <v-card
+              color="black"
+              rounded
+              class="rounded-xl"
+            >
+              <v-container>
+
+                <v-textarea
+
+                  label="Lorem ipsum sit dolor delicious amete"
+                  solo
+                  background-color="black"
+                  auto-grow
+                ></v-textarea>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn
+                    color="white"
+                    text
+                    class="pt-0"
+                  >
+                    Přejít na seznam
+                  </v-btn>
+                  <v-btn
+                    color="#F8B400"
+                    text
+                    @click="snackbar = true"
+                  >
+
+                    Vytvořit
+                  </v-btn>
+
+                  <v-snackbar
+                    v-model="snackbar"
+                    :multi-line="multiLine"
+                    color="black"
+                    width="100%"
+                    rounded="pill"
+                  >
+                    {{ text }}
+
+                    <template #action="{ attrs }">
+                      <v-btn
+                        color="#F8B400"
+                        text
+                      >
+                        Vzít akci zpět
+                      </v-btn>
+                      <v-btn
+                        color="white"
+                        text
+                        x-small
+                        fab
+                        v-bind="attrs"
+                        @click="snackbar = false"
+                      >
+                        <v-icon>
+                          mdi-close
+                        </v-icon>
+                      </v-btn>
+                    </template>
+                  </v-snackbar>
+
+                </v-card-actions>
+              </v-container>
+            </v-card>
+
+          </v-col>
       </v-row>
       <speed-dial></speed-dial>
     </v-container>
@@ -339,6 +400,9 @@ export default {
   miniVariant: false,
   data() {
     return {
+      multiLine: false,
+      snackbar: false,
+      text: `Prvek byl přidán.`,
       options: {
         stroke: {
           curve: 'straight',

@@ -5,7 +5,6 @@
     :transition="transition"
     bottom
     right
-    style="width: 300px;"
     fixed
 
   >
@@ -28,7 +27,7 @@
       fab
       dark
       small
-      style="left: 120px"
+      style=""
       color="#4d4d4d"
     >
       <v-card
@@ -45,7 +44,6 @@
       fab
       dark
       small
-      style="left: 120px"
       color="#4d4d4d"
     >
       <v-card
@@ -62,7 +60,7 @@
       fab
       dark
       small
-      style="left: 120px"
+
       color="#F8B400"
     >
       <v-card

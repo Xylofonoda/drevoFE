@@ -15,6 +15,7 @@
             :transparent='item.transparent'
             :styling="item.styling"
             :icon="item.icon"
+            :icon-right="item.iconRight"
           ></thin-card-comp>
         </v-col>
         <v-col cols="12" xl="4" md="4" sm="12">
@@ -66,7 +67,9 @@
                       <v-expansion-panel
                         v-for="item in expansion"
                         :key="item.expatitle"
-                        class="black"
+                        class="black mx-2"
+                        style="border-bottom: 1px solid white!important;"
+
                       >
                         <v-expansion-panel-header>
                           {{ item.expatitle }}
@@ -75,6 +78,26 @@
                           {{ item.expacontent }}
                         </v-expansion-panel-content>
                       </v-expansion-panel>
+                      <v-row>
+                        <v-col cols="12">
+                          <v-select
+                              v-model="prvniSelect"
+                              class="mx-6 ma-0 mt-3"
+                              color="white"
+                              label="Verze: "
+                              :items="items"
+                            >
+                            </v-select>
+                          <v-select
+                            v-model="druhySelect"
+                            class="mx-6 ma-0"
+                            color="white"
+                            label="Copyright: "
+                            :items="secondItems"
+                          >
+                          </v-select>
+                        </v-col>
+                      </v-row>
                     </v-expansion-panels>
                   </v-row>
                 </v-row>
@@ -88,6 +111,9 @@
                 color="white"
                 text
                 class="pt-0"
+                @click="smazatVec"
+
+
               >
                 Zrušit
               </v-btn>
@@ -119,20 +145,23 @@ export default {
           bignum: 'Lorem ipsum s.r.o.',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
           transparent: false,
-          icon: false
+          icon: false,
+          iconRight: true
         },
         {
           cardtitle: 'Informace o projektu',
           bignum: '1.0.0 (50)',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
           transparent: true,
-          icon: false
+          icon: false,
+          iconRight: true
         },
         {
           cardtitle: 'Podmínky užívání aplikace',
           bignum: '2',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
-          icon: false
+          icon: false,
+          iconRight: true
         }
       ],
       expansion: [
@@ -142,17 +171,23 @@ export default {
             '\n' +
             'Pokud by se pro stejný účel použil smysluplný text, bylo by těžké hodnotit pouze vzhled, aniž by se pozorovatel nechal svést ke čtení obsahu. Pokud by byl naopak použit nesmyslný, ale pravidelný text (např. opakování „asdf asdf asdf…“), oko by při posuzování vzhledu bylo vyrušováno pr'
         },
-        {
-          expatitle: 'Verze:',
-          expacontent: '1.0.0(50)'
-        },
-        {
-          expatitle: 'Copyright',
-          expacontent: 'Copyright 2022 Lorem ipsum s.r.o'
-        }
-      ]
+      ],
+      items:[
+        '1.0.0(50)',
+      ],
+      secondItems:[
+        'Copyright 2022 Lorem ipsum s.r.o'
+      ],
+      prvniSelect:null,
+      druhySelect:null,
+
     }
   },
+  methods: {
+    smazatVec() { this.prvniSelect = this.druhySelect = null }
+  }
 }
 
 </script>
+<style>
+</style>

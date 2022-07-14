@@ -15,6 +15,7 @@
       </v-col>
       <v-col cols="2" xl="3" md="3" sm="2">
         <v-btn
+          v-if="iconUp"
           plain
           fab
           class="mt-2 ml-xl-13 pr-md-3 ml-sm-2"
@@ -35,16 +36,13 @@
         </v-card-title>
       </v-col>
       <v-col cols="2" xl="3" md="5" sm="2">
-        <v-btn
-          fab
-          x-small
-          class="mt-4 mt-xl-8 mt-md-7 px-sm-5 ml-md-12 pa-md-0 px-sm-6"
-          plain
-        >
-          <v-icon color="#F8B400">
+          <v-icon
+            color="#F8B400"
+            class="mt-4 mt-xl-8 mt-md-7 px-sm-5 ml-md-12 pa-md-0 px-sm-6 "
+          >
             {{cardIcon}}
           </v-icon>
-        </v-btn>
+
       </v-col>
     </v-row>
   </v-card>
