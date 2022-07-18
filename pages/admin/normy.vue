@@ -165,45 +165,31 @@ export default {
       ],
       timeline:[
         {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
+          time:'2.11 2021',
+          nameTask:'LoremeIpsum',
           taskDesc:'Lorem Ipsum'
         },
         {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
+          time:'3.11 2021',
+          nameTask:'LoremeeIpsum',
+          taskDesc:'Lorems Ipsum'
         },
         {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
+          time:'4.11 2021',
+          nameTask:'LoremasIpsum',
+          taskDesc:'Loremd Ipsum'
         },
         {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
+          time:'5.11 2021',
+          nameTask:'LoremssIpsum',
+          taskDesc:'Lorem4 Ipsum'
         },
         {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
+          time:'6.11 2021',
+          nameTask:'LoremasasdIpsum',
+          taskDesc:'Loreaasdm Ipsum'
         },
-        {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
-        },
-        {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
-        },
-        {
-          time:'4.10 2021',
-          nameTask:'LoremIpsum',
-          taskDesc:'Lorem Ipsum'
-        },
+
       ]
     }
   },
