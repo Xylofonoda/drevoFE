@@ -67,6 +67,11 @@
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
+              <v-row justify="end">
+                <v-col cols="12">
+                  daskdaso
+                </v-col>
+              </v-row>
             </v-navigation-drawer>
         </v-col>
         <v-col cols="10" class="mt-7">

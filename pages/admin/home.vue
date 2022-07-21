@@ -92,12 +92,12 @@
               <v-row no-gutters>
                 <v-col cols="10" xl="10" md="10" sm="10">
                   <v-card-title class="mt-xl-12">
-                    <p class="pl-0 pa-0 ma-0 text-xl-h2" style="font-weight: 600; ">
+                    <p class="pl-0 pa-0 ma-0 mt-md-14 text-xl-h2 text-md-h3" style="font-weight: 600; ">
                       1 265 200
                     </p>
                   </v-card-title>
                 </v-col>
-                <v-col cols="2" xl="2" md="2" sm="2" class="mt-xl-16  pt-xl-7">
+                <v-col cols="2" xl="2" md="2" sm="2" class="mt-xl-16  pt-xl-7 mt-md-16 pt-md-7">
                     <v-icon color="#F8B400" class="ml-xl-6">
                       mdi-chart-areaspline
                     </v-icon>
@@ -136,12 +136,12 @@
               <v-row no-gutters>
                 <v-col cols="10">
                   <v-card-title>
-                    <p class="pl-0 pa-0 ma-0 mt-xl-12 text-xl-h2" style="font-weight: 600;">
+                    <p class="pl-0 pa-0 ma-0 mt-xl-12 mt-md-14 text-xl-h2 text-md-h3" style="font-weight: 600;">
                       12
                     </p>
                   </v-card-title>
                 </v-col>
-                <v-col cols="2" class="mt-xl-16 pt-xl-7">
+                <v-col cols="2" class="mt-xl-16 pt-xl-7 mt-md-16 pt-md-7">
                     <v-icon color="#F8B400" class="ml-xl-6">
                       mdi-chart-areaspline
                     </v-icon>
@@ -244,7 +244,7 @@
                 <v-row>
                   <v-col xl="12" md="12" sm="12" xs="12">
                     <v-col cols="12">
-                      <apex-chart class="mt-xl-7" width="106%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
+                      <apex-chart class="mt-xl-7 mt-md-7" width="106%" height="300px" type="donut" :options="options1" :series="series1"></apex-chart>
                     </v-col>
                   </v-col>
                 </v-row>

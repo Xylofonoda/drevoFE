@@ -32,7 +32,6 @@
                 outlined
                 fab
                 disabled
-
               >
                 <v-icon
                   size="50px"
@@ -142,7 +141,7 @@ export default {
         {
           cardtitle: 'Kontakty',
           bignum: 'Lorem ipsum s.r.o.',
-          styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
+          styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3  pb-md-0 text-h3 ml-3 mb-xl-2',
           transparent: false,
           icon: false,
           iconRight: true

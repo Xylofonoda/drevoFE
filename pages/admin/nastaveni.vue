@@ -2,17 +2,18 @@
   <v-app>
     <v-container>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" xl="6" md="6" sm="12">
           <v-card
-            height="75vh"
+            height="103%"
             class="rounded-xl"
             color="black"
+
           >
             <v-card-title class="text-xl-subtitle-1 text-uppercase font-weight-bold">
               Základní nastavení
             </v-card-title>
             <v-row class="">
-              <v-col cols="4" class="ml-xl-3 pb-0 mb-0">
+              <v-col cols="6" sm="6" md="6" xl="6" class="ml-xl-3 ml-md-3 pb-0 mb-0">
                 <v-text-field
                   outlined
                   dense
@@ -24,7 +25,7 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="6" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
+              <v-col cols="12" sm="12" md="6" xl="6" class="ml-xl-3 ml-md-3 mt-0 pt-0 mb-0 pb-0">
                 <v-textarea
                   outlined
                   dense
@@ -37,7 +38,7 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="6" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
+              <v-col cols="6" class="ml-xl-3 ml-md-3 mt-0 pt-0 mb-0 pb-0">
                 <v-text-field
                   outlined
                   dense
@@ -56,7 +57,7 @@
               >
                 <v-btn
                   color="#F8B400"
-                  class="ml-xl-2 black--text"
+                  class="ml-xl-2 ml-md-2 black--text"
                   @click="save"
 
                 >
@@ -86,31 +87,37 @@
               >
                 <v-card
                   color="gray"
-                  class="rounded-lg"
-                  min-height="200px"
-                  min-width="100px"
+                  class="rounded-lg my-md-4"
+
+
                   style="border: 1px solid #696969"
                   link
                   :to="item.link"
                 >
-                  <div class="text-center">
-                    <v-icon style="position:relative; top: 3.5rem;" class="text-h2" color="#F8B400">
-                      {{item.icon}}
-                    </v-icon>
-                    <v-card-text class="mt-xl-10 text-xl-body-1 text-uppercase " style="font-weight: 600;">
-                      {{item.title}}
-                    </v-card-text>
-                  </div>
-                </v-card>
+                  <v-card-actions >
+                    <v-row no-gutters class="justify-center">
+                      <v-col cols="12">
+                        <v-icon  class="text-h4 text-center" color="#F8B400">
+                          {{item.icon}}
+                        </v-icon>
+                      </v-col>
+                    </v-row>
+                    <v-row no-gutters>
+                      <v-col cols="12">
+                        <v-card-actions class=" text-xl-body-2 text-uppercase " style="font-weight: 600;">
+                          {{item.title}}
+                        </v-card-actions>
+                      </v-col>
+                    </v-row>
+                  </v-card-actions>
+                  </v-card>
               </v-col>
-
             </v-row>
-
           </v-card>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" sm="12" md="6" xl="6">
           <v-card
-            height="100%"
+            height="103%"
             class="rounded-xl"
             color="black"
           >

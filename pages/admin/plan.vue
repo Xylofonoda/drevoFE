@@ -32,7 +32,7 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row no-gutters class="mt-xl-16">
+              <v-row no-gutters class="mt-xl-16 mt-md-9">
                 <v-col cols="10" xl="10" md="10" sm="10">
                   <v-row v-for="item in packages" :key="item.title" no-gutters align="center">
                     <v-col
@@ -57,7 +57,7 @@
                 </v-col>
                 <v-col cols="2" xl="2" md="2">
                   <v-row no-gutters>
-                      <v-icon color="#F8B400" class="ml-xl-7" style="position: absolute; bottom: 5%">
+                      <v-icon color="#F8B400" class="ml-xl-7 mb-md-2" style="position: absolute; bottom: 5%">
                         mdi-chart-areaspline
                       </v-icon>
                   </v-row>
@@ -151,7 +151,7 @@
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
-                  <v-icon color="#F8B400" class="mt-xl-16 pt-xl-6 mt-md-5 ml-xl-2">
+                  <v-icon color="#F8B400" class="mt-xl-16 pt-xl-6 mt-md-14 ml-xl-2">
                     mdi-chart-areaspline
                   </v-icon>
               </v-col>

@@ -111,7 +111,7 @@
 
             >
             <template #activator="{ on, attrs }">
-              <div class="text-center my-xl-14">
+              <div class="text-center my-xl-14 my-md-14">
                 <v-btn
                   outlined
                   fab

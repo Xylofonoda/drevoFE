@@ -2,7 +2,7 @@
   <v-app>
     <v-container>
       <v-row>
-        <v-col cols="8">
+        <v-col cols="8" md="8">
           <v-card
             height="75vh"
             class="rounded-xl"
@@ -13,8 +13,8 @@
             </v-card-title>
             <v-row no-gutters>
               <v-col cols="12">
-                <v-card-subtitle class="pa-0 ma-0 ml-4">
-                  TYP
+                <v-card-subtitle class="pa-0 ma-0 ml-4 text-uppercase">
+                  typ
                 </v-card-subtitle>
                 <v-card-title class="pa-0 ma-0 ml-4 text-xl-h4 font-weight-bold">Hodnota (50mm)</v-card-title>
                 <v-card-subtitle class="pt-4">#01623 Jméno Příjmení</v-card-subtitle>

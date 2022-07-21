@@ -11,73 +11,102 @@
             <v-card-title class="text-xl-subtitle-1 text-uppercase justify-center font-weight-bold">
               Účet
             </v-card-title>
+            <v-avatar>
 
-              <v-row class="justify-center">
-                <v-col cols="4" class="ml-xl-3 pb-0 mb-0 ">
-                  <v-text-field
-                    outlined
-                    dense
-                    label="Název webové aplikace"
-                    :value="nameVal"
-                    color="white"
-                    clearable
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row class="justify-center">
-                <v-col cols="4" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
-                  <v-textarea
-                    outlined
-                    dense
-                    :value="descVal"
-                    color="white"
-                    auto-grow
-                    label="Krátký popis společnosti"
-                    clearable
-                  ></v-textarea>
-                </v-col>
-              </v-row>
-              <v-row class="justify-center">
-                <v-col cols="4" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
-                  <v-text-field
-                    outlined
-                    dense
-                    readonly
-                    label="E-mail administrátora"
-                    :value="nameVal"
-                    color="white"
-                  ></v-text-field>
-                </v-col>
-              </v-row>
+            </v-avatar>
+            <div align="center">
+              <v-col cols="6" class="ml-xl-3 pb-0 mb-0 float ">
+                <v-row class="justify-center">
 
-            <v-card-actions class="justify-center">
-              <v-form
-                ref="form"
-                v-model="saved"
-              >
-                <v-btn
-                  color="#F8B400"
-                  class="ml-xl-2 black--text"
-                  @click="save"
+                  <v-col cols="4">
+                    <v-text-field
+                      outlined
+                      dense
+                      label="Jméno"
+                      :value="nameVal"
+                      color="white"
+                      clearable
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-text-field
+                      outlined
+                      dense
+                      label="Přijmení"
+                      :value="nameVal"
+                      color="white"
+                      clearable
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col cols="4" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
+                <v-text-field
+                  :rules="emailRules"
+                  outlined
+                  dense
+                  :value="emailVal"
+                  color="white"
+                  auto-grow
+                  label="Email"
+                  clearable
+                ></v-text-field>
+              </v-col>
+              <v-col cols="4" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
+                <v-text-field
+                  outlined
+                  dense
+                  :value="nameVal"
+                  color="white"
+                  auto-grow
+                  label="Telefonní číslo"
+                  clearable
+                ></v-text-field>
+              </v-col>
+              <v-col cols="4" class="ml-xl-3 mt-0 pt-0 mb-0 pb-0">
+                <v-text-field
+                  v-model="password"
+                  outlined
+                  dense
+                  :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                  :rules="[rules.required, rules.min]"
+                  :type="show1 ? 'text' : 'password'"
+                  name="input-10-1"
+                  label="Heslo"
+                  hint="Vaše nové heslo musí být jiné než staré."
+                  counter
+                  color="white"
+                  @click:append="show1 = !show1"
 
+                ></v-text-field>
+              </v-col>
+              <v-card-actions class="justify-center ">
+                <v-form
+                  ref="form"
+                  v-model="saved"
                 >
-                  Uložit
-                </v-btn>
-                <v-snackbar
-                  v-model="snackbarSave"
-                  color="yellow darken-2"
-                  :timeout="timeout"
-                  class="rounded-lg"
-                  elevation="10"
-                >
-                  <div class="text-center black--text pa-0">
-                    {{ textSave }}
-                  </div>
-                </v-snackbar>
-              </v-form>
-            </v-card-actions>
+                  <v-btn
+                    color="#F8B400"
+                    class="ml-xl-2 black--text"
+                    @click="save"
 
-
+                  >
+                    Uložit
+                  </v-btn>
+                  <v-snackbar
+                    v-model="snackbarSave"
+                    color="yellow darken-2"
+                    :timeout="timeout"
+                    class="rounded-lg"
+                    elevation="10"
+                  >
+                    <div class="text-center black--text pa-0">
+                      {{ textSave }}
+                    </div>
+                  </v-snackbar>
+                </v-form>
+              </v-card-actions>
+            </div>
           </v-card>
         </v-col>
       </v-row>
@@ -97,25 +126,29 @@ export default {
     valid: true,
     name: '',
     // snackbar Uložit
-    snackbarSave:false,
-    textSave:'Úspěšně uloženo',
-    saved:true,
+    snackbarSave: false,
+    textSave: 'Úspěšně uloženo',
+    saved: true,
     // permanent values
     nameVal: 'Lorem Ipsum',
     descVal: 'Lorem ipsum lorem ipsum  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
+    emailVal: 'lorem@ipsum.cz',
+
+    // password input
+    show1: false,
+    password: 'Password',
+    rules: {
+      required: value => !!value || 'Required.',
+      min: v => v.length >= 8 || 'Min 8 characters',
+    },
 
     // validation
     nameRules: [
       v => !!v || 'Pole Jména a příjmení nesmí být prázdné',
     ],
-    email: '',
     emailRules: [
       v => !!v || 'Pole e-mailu nesmí být prázdné',
       v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
-    ],
-    textArea: '',
-    textAreaRules: [
-      v => !!v || 'Pole nesmí být prázdné',
     ],
     phone: '',
     phoneRules: [
