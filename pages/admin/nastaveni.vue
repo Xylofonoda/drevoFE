@@ -219,7 +219,7 @@ export default {
     // permanent values
     nameVal: 'Lorem Ipsum',
     descVal: 'Lorem ipsum lorem ipsum  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-    // link cards
+    // Card links
     items: [
       { link: '/admin/account', icon:'mdi-account', title:'účet'},
       { link: '/admin/home', icon:'mdi-home', title:'Přehled'},
@@ -246,7 +246,7 @@ export default {
       v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
     ],
   }),
-  // button methods
+  // Button methods Send, Validate, Reset form and print a success message snackbar.
   methods: {
     validate() {
       this.$refs.form.validate()

@@ -124,11 +124,13 @@ export default {
 
   data() {
     return {
+      // Data table content count per page.
       page: 1,
       pageCount: 0,
       itemsPerPage: 6,
       cards: [
         {
+          // Card content
           cardtitle: 'Registrovaní celkem',
           bignum: '3 675',
           styling: 'text-xl-h3 text-md-h4 text-sm-h3 ml-4',
@@ -175,6 +177,7 @@ export default {
       search: '',
       headers: [
         {
+          // Data table headers
           text: 'Vytvořeno'.toUpperCase(),
           align: 'start',
           sortable: true,
@@ -188,6 +191,7 @@ export default {
         {text: 'Vyfakturováno'.toUpperCase(), value: 'paidfor'},
         {text: 'Hardware'.toUpperCase(), value: 'hardware'},
       ],
+      // Data table content
       keyinfo: [
         {
           name: '10.6.2023',
@@ -297,17 +301,6 @@ export default {
       ],
     }
   },
-
-  methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-  }
 }
 </script>
 

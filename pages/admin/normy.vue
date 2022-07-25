@@ -156,6 +156,7 @@ export default {
     return {
       tab: null,
       items: [
+        // Input navigation
         {
           title: 'detail',
         },
@@ -163,6 +164,7 @@ export default {
           title: 'informace'
         }
       ],
+      // Timeline component content
       timeline:[
         {
           time:'2.11 2021',

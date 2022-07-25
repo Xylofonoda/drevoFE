@@ -349,16 +349,20 @@ export default {
   miniVariant: false,
   data() {
     return {
+      // Data table content allowed per page
       page: 1,
       pageCount: 0,
       itemsPerPage: 6,
       packages: [
+        // Card content packages.
         {title: 'Balík měření #1 CZE', price: '10ks / 1500Kč'},
         {title: 'Balík měření #2 CZE', save: '5000Kč', price: '50ks / 6000Kč'},
         {title: 'Balík měření #3 CZE', save: '25000Kč', price: '10ks / 1500Kč'},
       ],
+      // Data table search bar
       search: '',
       headers: [
+        // Data table headers
         {
           text: 'Vytvořeno'.toUpperCase(),
           align: 'start',
@@ -373,6 +377,7 @@ export default {
         {text: 'Vyfakturováno'.toUpperCase(), value: 'paidfor'},
         {text: 'Hardware'.toUpperCase(), value: 'hardware'},
       ],
+      // Data table contents
       keyinfo: [
         {
           name: '10.6.2023',

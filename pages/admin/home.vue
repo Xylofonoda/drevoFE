@@ -64,10 +64,10 @@
 
 
             <v-card
-              class="rounded-xl flex-grow-1"
+              class="rounded-xl"
               outlined
               color="black"
-              height="100%"
+              height="50%"
 
             >
               <v-row>
@@ -91,7 +91,7 @@
               </v-row>
               <v-row no-gutters>
                 <v-col cols="10" xl="10" md="10" sm="10">
-                  <v-card-title class="mt-xl-12">
+                  <v-card-title>
                     <p class="pl-0 pa-0 ma-0 mt-md-14 text-xl-h2 text-md-h3" style="font-weight: 600; ">
                       1 265 200
                     </p>
@@ -110,7 +110,7 @@
               outlined
               color="black"
               rounded
-              height="100%"
+              height="50%"
 
 
             >

@@ -139,6 +139,7 @@ export default {
     return {
       cards: [
         {
+          // Card content
           cardtitle: 'Kontakty',
           bignum: 'Lorem ipsum s.r.o.',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3  pb-md-0 text-h3 ml-3 mb-xl-2',
@@ -162,6 +163,7 @@ export default {
           iconRight: true
         }
       ],
+      // Accordion component
       expansion: [
         {
           expatitle: 'Popis',
@@ -170,6 +172,7 @@ export default {
             'Pokud by se pro stejný účel použil smysluplný text, bylo by těžké hodnotit pouze vzhled, aniž by se pozorovatel nechal svést ke čtení obsahu. Pokud by byl naopak použit nesmyslný, ale pravidelný text (např. opakování „asdf asdf asdf…“), oko by při posuzování vzhledu bylo vyrušováno pr'
         },
       ],
+      // select components
       items:[
         '1.0.0(50)',
       ],
@@ -181,11 +184,10 @@ export default {
 
     }
   },
+  // Clear selects
   methods: {
     smazatVec() { this.prvniSelect = this.druhySelect = null }
   }
 }
 
 </script>
-<style>
-</style>

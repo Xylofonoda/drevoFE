@@ -194,11 +194,13 @@ export default {
   layout: 'adminlayout',
   data() {
     return {
+      // Validation, dialog and file upload
       valid: false,
       dialog:false,
       addFile:null,
       cards: [
         {
+          // Card contents
           cardtitle: 'metodiky cze',
           bignum: '2',
           styling: 'text-xl-h3 text-md-h3 text-sm-h3 ml-sm-3 text-h3 ml-3 mb-xl-2',
@@ -220,6 +222,7 @@ export default {
         }
       ],
       folders: [
+        // Uploaded files
 
         {
           title: 'Lorem Ipsum sit dolor: PDF',
@@ -231,6 +234,7 @@ export default {
         }
       ],
       rules: [
+        // File and file size validation
         value => !value || value.size < 160000000 || 'Metodika musí mít méně než 20 MB',
         v=> !!v || "Metodika nesmí být prázdná."
       ],
@@ -238,14 +242,16 @@ export default {
   },
 
   methods: {
+    // Button method to delete a folder
     deleteFolder(index) {
       this.folders.splice(index, 1);
     },
+    // Button method to reset a dialog window after submitting.
     reset () {
       this.$refs.form.reset()
       this.dialog = false
     },
-
+    // Button method to submit and save uploaded file.
     addMetodika () {
       this.folders.push(
         {
