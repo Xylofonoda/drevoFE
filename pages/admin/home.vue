@@ -448,14 +448,14 @@ export default {
             "September",
             "October",
             "November",
-            "December"
+            "December",
           ],
         },
         colors: ['#F8B400'],
         width: '2px',
       },
       series: [{
-        data: [55, 62, 89, 66, 98, 72, 101, 75, 94, 120, 117, 139],
+        data: [1000, 1400, 2000, 900, 1000, 1100, 1200, 4000, 1300, 1900, 2000, 2100],
       }],
       options1:{
         stroke:{
@@ -617,7 +617,7 @@ export default {
                 },
                 value: {
                   show: true,
-                  fontSize: '25px',
+                  fontSize: '30px',
                   fontFamily: 'Helvetica, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#ffffff',

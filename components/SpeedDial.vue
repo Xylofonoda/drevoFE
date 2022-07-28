@@ -27,24 +27,26 @@
       fab
       dark
       small
-      style=""
+      to="/admin/account"
       color="#4d4d4d"
     >
       <v-card
         class="rounded"
         style="right: 20px"
         color="#4d4d4d"
-        min-width="60px"
+
       >
         <p class="my-1 mx-1 font-weight-regular text-lowercase">účet</p>
       </v-card>
-      <v-icon class="mr-15">mdi-account</v-icon>
+      <v-icon class="mr-10">mdi-account</v-icon>
     </v-btn>
     <v-btn
       fab
       dark
       small
       color="#4d4d4d"
+      to="/admin/nastaveni"
+
     >
       <v-card
         class="rounded"
@@ -60,8 +62,8 @@
       fab
       dark
       small
-
       color="#F8B400"
+      to="/admin/home"
     >
       <v-card
         class="rounded"
