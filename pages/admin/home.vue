@@ -14,7 +14,7 @@
             <v-row>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Databáze
+                  {{$t('home.database')}}
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
@@ -34,8 +34,9 @@
               <v-col cols="7" xl="7" md="6" sm="7">
                 <v-card-title>
                   <p
-class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
-                     style="font-weight: 600; line-height: unset">
+                    class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
+                    style="font-weight: 600; line-height: unset"
+                  >
                     3 675
                   </p>
                 </v-card-title>
@@ -49,7 +50,7 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
                       color="#F8B400"
                     >mdi-circle-small
                     </v-icon>
-                    Uživatelé
+                    {{$t('home.users')}}
                   </p>
                 </v-card-subtitle>
               </v-col>
@@ -76,7 +77,7 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
             <v-row>
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Fakturace
+                  {{$t('home.invoice')}}
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -118,7 +119,7 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
             <v-row>
               <v-col cols="10">
                 <v-card-title class="text-uppercase  pl-5 pb-3" style="font-size: 15px">
-                  Hardware
+                  {{$t('home.hardware')}}
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -163,7 +164,7 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Plán
+                    {{$t('home.plan')}}
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -218,7 +219,7 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Uživatelé (stažení aplikace)
+                    {{$t('home.userDown')}}
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -238,8 +239,9 @@ class="pa-0 pl-1 pl-sm-1 pl-xl-1 mb-xl-6 text-xl-h2 text-md-h3"
                 <v-col xl="12" md="12" sm="12" xs="12">
                   <v-col cols="12">
                     <apex-chart
-class="mt-xl-7 mt-md-7" width="106%" height="300px" type="donut" :options="options1"
-                                :series="series1"></apex-chart>
+                      class="mt-xl-7 mt-md-7" width="106%" height="300px" type="donut" :options="options1"
+                      :series="series1"
+                    ></apex-chart>
                   </v-col>
                 </v-col>
               </v-row>
@@ -259,7 +261,7 @@ class="mt-xl-7 mt-md-7" width="106%" height="300px" type="donut" :options="optio
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    Uživatelé (podíl mutací)
+                    {{$t('home.userAmount')}}
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -336,7 +338,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                   text
                   class="pt-0"
                 >
-                  Přejít na seznam
+                  {{$t('home.buttonList')}}
                 </v-btn>
                 <v-btn
                   color="#F8B400"
@@ -344,7 +346,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                   @click="snackbar = true"
                 >
 
-                  Vytvořit
+                  {{$t('home.buttonCreate')}}
                 </v-btn>
 
                 <v-snackbar
@@ -361,7 +363,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                       color="#F8B400"
                       text
                     >
-                      Vzít akci zpět
+                      {{$t('home.buttonReturn')}}
                     </v-btn>
                     <v-btn
                       color="white"
@@ -381,10 +383,8 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
               </v-card-actions>
             </v-container>
           </v-card>
-
         </v-col>
       </v-row>
-
     </v-container>
   </v-app>
 </template>
