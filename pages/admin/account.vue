@@ -9,7 +9,7 @@
             color="black"
           >
             <v-card-title class="text-xl-subtitle-1 text-uppercase justify-center font-weight-bold">
-              Nastavení účtu
+              Account settings
             </v-card-title>
             <div class="text-center my-xl-3">
               <v-avatar
@@ -30,7 +30,7 @@
                     <v-text-field
                       outlined
                       dense
-                      label="Jméno"
+                      label="Name"
                       :value="nameVal"
                       color="white"
                       clearable
@@ -40,7 +40,7 @@
                     <v-text-field
                       outlined
                       dense
-                      label="Přijmení"
+                      label="Surname"
                       :value="nameVal"
                       color="white"
                       clearable
@@ -67,7 +67,7 @@
                   :value="nameVal"
                   color="white"
                   auto-grow
-                  label="Telefonní číslo"
+                  label="Phone number"
                   clearable
                 ></v-text-field>
               </v-col>
@@ -80,8 +80,8 @@
                   :rules="[rules.required, rules.min]"
                   :type="show1 ? 'text' : 'password'"
                   name="input-10-1"
-                  label="Heslo"
-                  hint="Zvolte si nové heslo."
+                  label="Password"
+                  hint="State a new password"
                   counter
                   color="white"
                   @click:append="show1 = !show1"
@@ -99,7 +99,7 @@
                     @click="save"
 
                   >
-                    Uložit
+                    Save
                   </v-btn>
                   <v-snackbar
                     v-model="snackbarSave"
@@ -127,15 +127,14 @@ export default {
   components: {},
   layout: 'adminlayout',
   data: () => ({
-    // snackbar Odeslat
+    // snackbar Send
     snackbar: false,
-    text: 'Vaše připomínka byla zaslána na podporu.',
     timeout: 2000,
     valid: true,
     name: '',
-    // snackbar Uložit
+    // snackbar Save
     snackbarSave: false,
-    textSave: 'Úspěšně uloženo',
+    textSave: 'Saved successfully',
     saved: true,
     // permanent values
     nameVal: 'Lorem Ipsum',
@@ -152,21 +151,21 @@ export default {
 
     // validation
     nameRules: [
-      v => !!v || 'Pole Jména a příjmení nesmí být prázdné',
+      v => !!v || 'Name and surname entries cannot be empty.',
     ],
     emailRules: [
-      v => !!v || 'Pole e-mailu nesmí být prázdné',
+      v => !!v || 'Email entry must not be empty.',
       v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
     ],
     phone: '',
     phoneRules: [
-      v => !!v || 'Pole nesmí být prázdné',
+      v => !!v || 'Phone number entry must not be empty',
       v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
     ],
   }),
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Účet'})
+    this.$store.commit('CHANGE_NAME', {name: 'Account'})
   },
   // button methods
   methods: {

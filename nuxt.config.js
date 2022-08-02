@@ -6,27 +6,27 @@ export default {
   env: {
     local: process.env.UCO_LOCAL || true,
     gqlApiEndpoint: process.env.UCO_GQL_API_ENDPOINT,
-    recaptchaSiteKey: process.env.UCO_RECAPTCHA_SITE_KEY,
+    recaptchaSiteKey: process.env.UCO_RECAPTCHA_SITE_KEY
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Dřevo Libor',
-    title: 'libor',
+    titleTemplate: '%s - Dřevo FE',
+    title: 'DřevoFE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{src: '~/plugins/apexcharts.js', ssr: false}, { src: '~/plugins/vueI18n', ssr: false},],
+  plugins: [{src: '~/plugins/apexcharts.js', ssr: false}, { src: '~/plugins/vueI18n', ssr: false}],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,7 +36,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,39 +46,39 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
-    '@nuxtjs/i18n',
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: '/'
   },
 
   apollo: {
     clientConfigs: {
-      default: '~/apollo/apolloDefault.js',
+      default: '~/apollo/apolloDefault.js'
     },
-    errorHandler: '~/plugins/apolloErrorHandler.js',
+    errorHandler: '~/plugins/apolloErrorHandler.js'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'UCO Customer Portal ',
-      short_name: 'UCO Portal',
+      name: 'DřevoFE',
+      short_name: 'DřevoFE',
       background_color: '#f5efe9', // #f5efe9
       theme_color: '#096453',
-      description: 'Portal for customers',
+      description: 'Showcase',
       lang: 'cs',
       csp: "script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net www.recaptcha.net www.gstatic.com; frame-src cdn.jsdelivr.net www.recaptcha.net www.gstatic.com; object-src 'self'; img-src https://*; worker-src 'self'; child-src 'self';",
-    },
+    }
   },
 
   i18n: {
     locales: [
       { code: 'en', iso: 'en-GB', file: 'en-GB.js', isCatchallLocale: true },
-      { code: 'cs', iso: 'cs-CZ', file: 'cs-CZ.js' },
+      { code: 'cs', iso: 'cs-CZ', file: 'cs-CZ.js' }
     ],
     lazy: true,
     langDir: 'locales/',
@@ -87,9 +87,9 @@ export default {
     detectBrowserLanguage: {
       useCookie: true,
       onlyOnRoot: false,
-      cookieKey: 'uco-customer-portal-lang',
+      cookieKey: 'uco-customer-portal-lang'
     },
-    seo: false,
+    seo: false
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -110,12 +110,12 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          lightgray: colors.grey.lighten5,
-        },
-      },
-    },
+          lightgray: colors.grey.lighten5
+        }
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }
