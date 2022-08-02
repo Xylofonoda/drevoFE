@@ -54,7 +54,7 @@
             color="black"
           >
             <v-card-title class="text-h6 black--text amber darken-1">
-              Metodiky CZE
+              Tutorials CZE
             </v-card-title>
 
             <v-card-text>
@@ -137,7 +137,7 @@
                 <v-card
                   class="rounded-xl black">
                   <v-card-title class="text-h6 black--text amber darken-1">
-                    Vložte metodiku
+                    Add tutorial
                   </v-card-title>
                   <v-card-text>
                     <v-file-input
@@ -157,14 +157,14 @@
                       text
                       @click="reset"
                     >
-                      Zrušit
+                      Close
                     </v-btn>
                     <v-btn
                       color="#F8B400"
                       text
                       type="submit"
                     >
-                      Přidat
+                      Add
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -177,7 +177,7 @@
                 color="#F8B400"
                 text
               >
-                Uložit
+                Save
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -234,14 +234,14 @@ export default {
       ],
       rules: [
         // File and file size validation
-        value => !value || value.size < 160000000 || 'Metodika musí mít méně než 20 MB',
-        v=> !!v || "Metodika nesmí být prázdná."
+        value => !value || value.size < 160000000 || 'Updated file has to be less than 20 MB',
+        v=> !!v || "Tutorial file must not be empty"
       ],
     }
   },
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Metodika'})
+    this.$store.commit('CHANGE_NAME', {name: 'Tutorials'})
   },
 
   methods: {

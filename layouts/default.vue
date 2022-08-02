@@ -5,7 +5,7 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
-      app
+
     >
       <v-list>
         <v-list-item
@@ -24,7 +24,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped">
+    <v-app-bar style="max-height: 60px">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -37,9 +37,9 @@
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-<!--      <v-btn icon @click.stop="rightDrawer = !rightDrawer">-->
-<!--        <v-icon>mdi-menu</v-icon>-->
-<!--      </v-btn>-->
+      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-main>
         <Nuxt />
@@ -54,9 +54,9 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-<!--    <v-footer :absolute="!fixed" app>-->
-<!--      <span>&copy; {{ new Date().getFullYear() }}</span>-->
-<!--    </v-footer>-->
+    <v-footer :absolute="!fixed" app>
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
   </v-app>
 </template>
 
@@ -71,13 +71,8 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Appka',
-          to: '/app/Home',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Login',
-          to: '/auth/login',
+          title: 'Showcase',
+          to: '/admin/home',
         },
       ],
       miniVariant: false,

@@ -54,7 +54,7 @@
             color="black"
           >
             <v-card-title class="text-h6 black--text amber darken-1">
-              Informace o projektu
+              Project information
             </v-card-title>
             <v-card-text>
               <v-col>
@@ -80,7 +80,7 @@
                       <v-row>
                         <v-col cols="12">
                           <v-select
-                              v-model="prvniSelect"
+                              v-model="firstSelect"
                               class="mx-6 ma-0 mt-3"
                               color="white"
                               label="Verze: "
@@ -89,7 +89,7 @@
                             >
                             </v-select>
                           <v-select
-                            v-model="druhySelect"
+                            v-model="secondSelect"
                             class="mx-6 ma-0"
                             color="white"
                             label="Copyright: "
@@ -111,17 +111,17 @@
                 color="white"
                 text
                 class="pt-0"
-                @click="smazatVec"
+                @click="clearForm"
 
 
               >
-                Zrušit
+                Close
               </v-btn>
               <v-btn
                 color="#F8B400"
                 text
               >
-                Uložit
+                Save
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -139,8 +139,8 @@ export default {
     return {
       cards: [
         {
-          // Card content
-          cardtitle: 'Kontakty',
+          // Card contents
+          cardtitle: 'Contacts',
           bignum: 'Lorem ipsum s.r.o.',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3  pb-md-0 text-h3 ml-3 mb-xl-2',
           transparent: false,
@@ -148,7 +148,7 @@ export default {
           iconRight: true
         },
         {
-          cardtitle: 'Informace o projektu',
+          cardtitle: 'Project version',
           bignum: '1.0.0 (50)',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
           transparent: true,
@@ -156,17 +156,17 @@ export default {
           iconRight: true
         },
         {
-          cardtitle: 'Podmínky užívání aplikace',
+          cardtitle: 'Users logged in',
           bignum: '2',
           styling: 'text-xl-h4 text-md-h4 text-sm-h4 ml-sm-3 text-h3 ml-3 mb-xl-2',
           icon: false,
           iconRight: true
         }
       ],
-      // Accordion component
+      // Accordion component filled with lorem ipsum
       expansion: [
         {
-          expatitle: 'Popis',
+          expatitle: 'Description',
           expacontent: 'tivní výplňový text při vytváření pracovních ukázek grafických návrhů (např. internetových stránek, rozvržení časopisů či všech druhů reklamních materiálů). Lipsum tak pracovně znázorňuje text v ukázkových maketách (tzv. mock-up) předtím, než bude do hotového návrhu vložen smysluplný obsah.\n' +
             '\n' +
             'Pokud by se pro stejný účel použil smysluplný text, bylo by těžké hodnotit pouze vzhled, aniž by se pozorovatel nechal svést ke čtení obsahu. Pokud by byl naopak použit nesmyslný, ale pravidelný text (např. opakování „asdf asdf asdf…“), oko by při posuzování vzhledu bylo vyrušováno pr'
@@ -179,18 +179,18 @@ export default {
       secondItems:[
         'Copyright 2022 Lorem ipsum s.r.o'
       ],
-      prvniSelect:null,
-      druhySelect:null,
+      firstSelect:null,
+      secondSelect:null,
 
     }
   },
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'O nás'})
+    this.$store.commit('CHANGE_NAME', {name: 'About us'})
   },
   // Clear selects
   methods: {
-    smazatVec() { this.prvniSelect = this.druhySelect = null }
+    clearForm() { this.firstSelect = this.secondSelect = null }
   }
 }
 

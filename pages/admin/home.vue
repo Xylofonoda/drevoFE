@@ -14,7 +14,7 @@
             <v-row>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  {{$t('home.database')}}
+                  Databases
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
@@ -50,7 +50,7 @@
                       color="#F8B400"
                     >mdi-circle-small
                     </v-icon>
-                    {{$t('home.users')}}
+                    Users
                   </p>
                 </v-card-subtitle>
               </v-col>
@@ -77,7 +77,7 @@
             <v-row>
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  {{$t('home.invoice')}}
+                  invoicing
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -119,7 +119,7 @@
             <v-row>
               <v-col cols="10">
                 <v-card-title class="text-uppercase  pl-5 pb-3" style="font-size: 15px">
-                  {{$t('home.hardware')}}
+                  Hardware
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -164,7 +164,7 @@
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    {{$t('home.plan')}}
+                    Plan
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -219,7 +219,7 @@
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    {{$t('home.userDown')}}
+                    Users (Downloaded app)
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -261,7 +261,7 @@
               <v-row>
                 <v-col cols="10">
                   <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                    {{$t('home.userAmount')}}
+                    Users (filtered by mutations)
                   </v-card-title>
                 </v-col>
                 <v-col cols="2">
@@ -338,7 +338,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                   text
                   class="pt-0"
                 >
-                  {{$t('home.buttonList')}}
+                  Show list
                 </v-btn>
                 <v-btn
                   color="#F8B400"
@@ -346,7 +346,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                   @click="snackbar = true"
                 >
 
-                  {{$t('home.buttonCreate')}}
+                  Create
                 </v-btn>
 
                 <v-snackbar
@@ -363,7 +363,7 @@ width="100%" height="300px" class="text-xl-h6" type="donut" :options="options2"
                       color="#F8B400"
                       text
                     >
-                      {{$t('home.buttonReturn')}}
+                      Rollback
                     </v-btn>
                     <v-btn
                       color="white"
@@ -399,7 +399,7 @@ export default {
     return {
       multiLine: false,
       snackbar: false,
-      text: `Prvek byl přidán.`,
+      text: `Comment succesfully saved`,
       options: {
         stroke: {
           curve: 'straight',
@@ -532,7 +532,7 @@ export default {
                 total: {
                   show: true,
                   showAlways: false,
-                  label: 'Stažení',
+                  label: 'Downloads',
                   fontSize: '100%',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
@@ -626,7 +626,7 @@ export default {
                 total: {
                   show: true,
                   showAlways: false,
-                  label: 'Stažení',
+                  label: 'Downloads',
                   fontFamily: 'Italic, Arial, sans-serif',
                   fontWeight: 600,
                   color: '#808080',
@@ -647,7 +647,7 @@ export default {
   },
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Přehled'})
+    this.$store.commit('CHANGE_NAME', {name: 'Home'})
   },
 }
 </script>

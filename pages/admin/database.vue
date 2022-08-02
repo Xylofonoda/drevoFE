@@ -45,7 +45,7 @@
       <v-row class="pt-xl-5 pt-md-3">
         <v-col cols="4">
           <p class="text-start text-uppercase text-xl-h6 mt-xl-3" style="font-weight: 600">
-            registrovaní uživatelé
+            Registered users
           </p>
         </v-col>
         <v-col cols="4" >
@@ -58,7 +58,7 @@
                 <v-text-field
                   v-model="search"
                   class="px-4 my-0 text-uppercase"
-                  label="hledat"
+                  label="Search"
                   append-icon="mdi-magnify"
                   color="gray"
                 >
@@ -74,13 +74,6 @@
               :length="pageCount"
               color="#F8B400"
             ></v-pagination>
-            <v-switch
-              color="#F8B400"
-            >
-            </v-switch>
-            <p class="text-xl-subtitle-2 my-0">
-              S platbou
-            </p>
             <v-btn
               color="white"
               small
@@ -131,35 +124,35 @@ export default {
       cards: [
         {
           // Card content
-          cardtitle: 'Registrovaní uživatelé',
+          cardtitle: 'Registered users',
           bignum: '3 675',
           styling: 'text-xl-h3 text-md-h4 ml-md-1 mt-md-5 text-sm-h3 ml-4',
           icon:true,
           iconRight: true,
         },
         {
-          cardtitle: 'Uživatelé s min. jednou platbou',
+          cardtitle: 'Users with valid payment',
           bignum: '368',
           styling: 'text-xl-h3 text-md-h4 mt-md-5 ml-md-1 text-sm-h3 ml-4',
           icon:true,
           iconRight: true,
         },
         {
-          cardtitle: 'Měření (dostupná/celkem)',
+          cardtitle: 'Measurements (Available/Total)',
           bignum: ' 26 759 / 21 674',
           styling: 'text-xl-h4 text-md-h5 mt-md-5 ml-md-1 pb-md-1 text-sm-h4 ml-4',
           icon:true,
           iconRight: true,
         },
         {
-          cardtitle: 'Projekty (aktivní/celkem)',
+          cardtitle: 'Projects (Active/Total)',
           bignum: '426 / 2 652',
           styling: 'text-xl-h4 text-md-h5 mt-md-5 pb-md-1 ml-md-1 text-sm-h4 ml-4',
           icon:true,
           iconRight: true,
         },
         {
-          cardtitle: 'Vyfakturováno',
+          cardtitle: 'Invoiced',
           bignum: '1 265 000',
           styling: 'text-xl-h4 text-md-h5 mt-md-5 pb-md-1 text-sm-h4 ml-md-1 ml-4',
           icon:true,
@@ -178,17 +171,17 @@ export default {
       headers: [
         {
           // Data table headers
-          text: 'Vytvořeno'.toUpperCase(),
+          text: 'Created at'.toUpperCase(),
           align: 'start',
           sortable: true,
           value: 'name',
         },
         {text: 'Role'.toUpperCase(), value: 'role'},
-        {text: 'Jméno'.toUpperCase(), value: 'jmeno'},
-        {text: 'Firma'.toUpperCase(), value: 'firma'},
-        {text: 'Plán'.toUpperCase(), value: 'plan'},
-        {text: 'Projekty'.toUpperCase(), value: 'projekt'},
-        {text: 'Vyfakturováno'.toUpperCase(), value: 'paidfor'},
+        {text: 'Name'.toUpperCase(), value: 'jmeno'},
+        {text: 'Company'.toUpperCase(), value: 'firma'},
+        {text: 'Plan'.toUpperCase(), value: 'plan'},
+        {text: 'Projects'.toUpperCase(), value: 'projekt'},
+        {text: 'Invoiced'.toUpperCase(), value: 'paidfor'},
         {text: 'Hardware'.toUpperCase(), value: 'hardware'},
       ],
       // Data table content
@@ -303,7 +296,7 @@ export default {
   },
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Databáze'})
+    this.$store.commit('CHANGE_NAME', {name: 'Database'})
   },
 }
 </script>

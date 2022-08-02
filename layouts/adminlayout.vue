@@ -90,7 +90,7 @@
               </v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Účet</v-list-item-title>
+              <v-list-item-title>Account</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list>
@@ -122,13 +122,12 @@ export default {
       right: true,
       rightDrawer: false,
       items: [
-        {title: 'Přehled', link: '/admin/home', icon: 'mdi-home-outline'},
-        {title: 'Databáze', link: '/admin/database', icon: 'mdi-database-outline'},
-        {title: 'Plán', link: '/admin/plan', icon: 'mdi-clock-outline'},
-        {title: 'Metodika', link: '/admin/tutorials', icon: 'mdi-lightbulb-outline'},
-        {title: 'O nás', link: '/admin/about', icon: 'mdi-information-outline'},
-        {title: 'Normy', link: '/admin/normy', icon: 'mdi-chart-donut'},
-        {title: 'Nastaveni', link: '/admin/nastaveni', icon: 'mdi-cog-outline'},
+        {title: 'Home', link: '/admin/home', icon: 'mdi-home-outline'},
+        {title: 'Database', link: '/admin/database', icon: 'mdi-database-outline'},
+        {title: 'Plan', link: '/admin/plan', icon: 'mdi-clock-outline'},
+        {title: 'Tutorials', link: '/admin/tutorials', icon: 'mdi-lightbulb-outline'},
+        {title: 'About us', link: '/admin/about', icon: 'mdi-information-outline'},
+        {title: 'Settings', link: '/admin/nastaveni', icon: 'mdi-cog-outline'},
       ],
 
     }

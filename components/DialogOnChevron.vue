@@ -25,7 +25,7 @@
         color="black"
       >
         <v-card-title class="text-h6 black--text amber darken-1">
-          Upravit lorem ipsum (formulář - okno)
+          Update lorem ipsum
           <v-spacer></v-spacer>
           <v-btn
             plain
@@ -50,7 +50,7 @@
                 xl="10"
               >
                 <v-select
-                  label="Společnost"
+                  label="Company"
                   required
                   color="white"
                 ></v-select>
@@ -92,7 +92,7 @@
                 xl="5"
               >
                 <v-select
-                  label="Stav"
+                  label="State"
                   required
                   color="white"
                 ></v-select>
@@ -103,12 +103,12 @@
                     <v-expansion-panel
                       class="black"
                     >
-                      <v-expansion-panel-header class="text-xl-body-1">Dodatečné nastavení</v-expansion-panel-header>
+                      <v-expansion-panel-header class="text-xl-body-1">Additional settings</v-expansion-panel-header>
                       <v-expansion-panel-content>
                         <v-row>
                           <v-col cols="5">
                             <v-text-field
-                              label="Cena"
+                              label="Price"
                               suffix="Kč"
                               color="white"
                               required
@@ -116,7 +116,7 @@
                           </v-col>
                           <v-col cols="5">
                             <v-text-field
-                              label="Sleva"
+                              label="Discount"
                               color="white"
                               suffix="Kč"
                               required
@@ -124,14 +124,14 @@
                           </v-col>
                           <v-col cols="5">
                             <v-select
-                              label="Datum"
+                              label="Date"
                               color="white"
                               required
                             ></v-select>
                           </v-col>
                           <v-col cols="5">
                             <v-select
-                              label="Zdroj"
+                              label="Source"
                               color="white"
                               required
                             ></v-select>
@@ -152,7 +152,7 @@
             text
             type="submit"
           >
-            Přidat
+            Add
           </v-btn>
         </v-card-actions>
       </v-card>

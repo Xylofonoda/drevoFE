@@ -16,7 +16,7 @@
               <v-row class="">
                 <v-col cols="10" xl="10" md="10">
                   <v-card-title class="pt-2 text-uppercase pl-5" style="font-size: 15px">
-                    Plán
+                    Plan
                   </v-card-title>
                 </v-col>
                 <v-col cols="2" xl="2" md="2">
@@ -73,13 +73,11 @@
             color="black"
             rounded
             height="50%"
-
-
           >
             <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Otazník
+                  questionnaire
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
@@ -99,12 +97,12 @@
             </v-row>
             <v-row class="mb-2">
               <v-col cols="12">
-                <v-row class="pl-4 mt-xl-12">
+                <v-row class="pl-4 mt-xl-12 mt-md-3">
                   <v-col cols="3" xl="3" md="3">
                     <nuxt-link to="" class="white--text text-md-body-2">Otazník CZE</nuxt-link>
                   </v-col>
                   <v-col cols="4" xl="4" md="4">
-                    <nuxt-link to="" class="white--text text-md-body-2">Questionmark ENG</nuxt-link>
+                    <nuxt-link to="" class="white--text text-md-body-2">Questionarre ENG</nuxt-link>
                   </v-col>
                   <v-col cols="4" xl="4" md="4">
                     <nuxt-link to="" class="white--text text-md-body-2">Fragezeichen GER</nuxt-link>
@@ -125,16 +123,15 @@
             <v-row no-gutters class="my-xl-3 my-md-2">
               <v-col cols="10">
                  <v-card-title class="text-uppercase pa-0 mt-xl-0 ml-4 mt-md-3" style="font-size: 15px">
-                  Vyfakturovano
+                  Invoiced
                 </v-card-title>
               </v-col>
               <v-col cols="2">
                 <v-btn
-                  style="bottom: 10%"
+                  class="mt-md-2"
                   plain
                   fab
                   small
-
                 >
                   <v-icon>
                     mdi-chevron-right
@@ -145,13 +142,13 @@
             <v-row no-gutters>
               <v-col cols="10" xl="10" md="10" sm="10">
                 <v-card-title>
-                  <p class="mt-xl-10 mt-md-9 text-xl-h2 text-md-h4 text-sm-h5" style="font-weight: 600; ">
+                  <p class="mt-xl-10 mt-md-5 text-xl-h2 text-md-h4 text-sm-h5" style="font-weight: 600; ">
                     1 265 200
                   </p>
                 </v-card-title>
               </v-col>
               <v-col cols="2" xl="2" md="2" sm="2">
-                  <v-icon color="#F8B400" class="mt-xl-16 pt-xl-6 mt-md-14 ml-xl-2">
+                  <v-icon color="#F8B400" class="mt-xl-16 pt-xl-6 mt-md-11 ml-xl-2">
                     mdi-chart-areaspline
                   </v-icon>
               </v-col>
@@ -172,7 +169,7 @@
             <v-row no-gutters>
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  historie plateb
+                  Payment history
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -191,7 +188,7 @@
             <v-row no-gutters>
               <v-col cols="12" xl="12" md="12" sm="12">
                 <v-card-title>
-                  <p class="mt-xl-15 mt-md-9 text-xl-h4 text-md-h5" style="font-weight: 600; ">
+                  <p class="mt-xl-15 mt-md-11 text-xl-h4 text-md-h5" style="font-weight: 600; ">
                     26 672
                   </p>
                 </v-card-title>
@@ -212,7 +209,7 @@
             <v-row no-gutters class=" pb-xl-1 my-md-1">
               <v-col cols="10">
                 <v-card-title class="text-uppercase pl-5" style="font-size: 15px">
-                  Platební metody
+                  Methods of pay
                 </v-card-title>
               </v-col>
               <v-col cols="2">
@@ -268,12 +265,12 @@
         </v-col>
       </v-row>
       <v-row class="pt-xl-5 pt-md-3">
-        <v-col cols="4">
+        <v-col cols="12" sm="12" xl="4" md="4" >
           <p class="text-start text-uppercase text-xl-h6 mt-xl-3" style="font-weight: 600">
-            historie plateb
+            Payment history
           </p>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" xl="4" md="4" >
           <v-card
             outlined
             color="gray"
@@ -283,7 +280,7 @@
                 <v-text-field
                   v-model="search"
                   class="px-4 my-0 text-uppercase"
-                  label="hledat"
+                  label="Search"
                   append-icon="mdi-magnify"
                   color="gray"
                 >
@@ -292,20 +289,14 @@
             </v-row>
           </v-card>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" xl="4" md="4" >
           <v-row class="float-end my-xl-2" align="center">
             <v-pagination
               v-model="page"
               :length="pageCount"
               color="#F8B400"
             ></v-pagination>
-            <v-switch
-              color="#F8B400"
-            >
-            </v-switch>
-            <p class="text-xl-subtitle-2 my-0">
-              S platbou
-            </p>
+
             <v-btn
               color="white"
               small
@@ -355,26 +346,26 @@ export default {
       itemsPerPage: 6,
       packages: [
         // Card content packages.
-        {title: 'Balík měření #1 CZE', price: '10ks / 1500Kč'},
-        {title: 'Balík měření #2 CZE', save: '5000Kč', price: '50ks / 6000Kč'},
-        {title: 'Balík měření #3 CZE', save: '25000Kč', price: '10ks / 1500Kč'},
+        {title: 'Measure bundle #1 CZE', price: '10ks / 1500Kč'},
+        {title: 'Measure bundle #2 CZE', save: '5000Kč', price: '50ks / 6000Kč'},
+        {title: 'Measure bundle #3 CZE', save: '25000Kč', price: '10ks / 1500Kč'},
       ],
       // Data table search bar
       search: '',
       headers: [
         // Data table headers
         {
-          text: 'Vytvořeno'.toUpperCase(),
+          text: 'Created at'.toUpperCase(),
           align: 'start',
           sortable: true,
           value: 'name',
         },
         {text: 'Role'.toUpperCase(), value: 'role'},
-        {text: 'Jméno'.toUpperCase(), value: 'jmeno'},
-        {text: 'Firma'.toUpperCase(), value: 'firma'},
-        {text: 'Plán'.toUpperCase(), value: 'plan'},
-        {text: 'Projekty'.toUpperCase(), value: 'projekt'},
-        {text: 'Vyfakturováno'.toUpperCase(), value: 'paidfor'},
+        {text: 'Name'.toUpperCase(), value: 'jmeno'},
+        {text: 'Company'.toUpperCase(), value: 'firma'},
+        {text: 'Plan'.toUpperCase(), value: 'plan'},
+        {text: 'Projects'.toUpperCase(), value: 'projekt'},
+        {text: 'Invoiced'.toUpperCase(), value: 'paidfor'},
         {text: 'Hardware'.toUpperCase(), value: 'hardware'},
       ],
       // Data table contents
@@ -489,19 +480,9 @@ export default {
   },
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Plán'})
+    this.$store.commit('CHANGE_NAME', {name: 'Plan'})
   },
 
-  methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-  },
 }
 </script>
 

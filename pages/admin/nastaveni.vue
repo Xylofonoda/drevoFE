@@ -10,14 +10,14 @@
 
           >
             <v-card-title class="text-xl-subtitle-1 text-uppercase font-weight-bold">
-              Základní nastavení
+              Settings
             </v-card-title>
             <v-row class="">
               <v-col cols="6" sm="6" md="6" xl="6" class="ml-xl-3 ml-md-3 pb-0 mb-0">
                 <v-text-field
                   outlined
                   dense
-                  label="Název webové aplikace"
+                  label="Name of the web application"
                   :value="nameVal"
                   color="white"
                   clearable
@@ -32,7 +32,7 @@
                   :value="descVal"
                   color="white"
                   auto-grow
-                  label="Krátký popis společnosti"
+                  label="Short company description"
                   clearable
                 ></v-textarea>
               </v-col>
@@ -43,7 +43,7 @@
                   outlined
                   dense
                   readonly
-                  label="E-mail administrátora"
+                  label="Admin email"
                   :value="nameVal"
                   color="white"
                 ></v-text-field>
@@ -61,7 +61,7 @@
                   @click="save"
 
                 >
-                  Uložit
+                  Save
                 </v-btn>
                 <v-snackbar
                   v-model="snackbarSave"
@@ -122,7 +122,7 @@
             color="black"
           >
             <v-card-title class="text-xl-subtitle-1 text-uppercase font-weight-bold">
-              Kontaktní formulář na podporu
+              Support contact form
             </v-card-title>
             <v-container>
               <v-form
@@ -133,7 +133,7 @@
                 <v-text-field
                   v-model="name"
                   :rules="nameRules"
-                  label="Jméno a přijmení"
+                  label="Name and Surname"
                   color="white"
                   outlined
                   dense
@@ -153,7 +153,7 @@
                 <v-text-field
                   v-model="phone"
                   :rules="phoneRules"
-                  label="Telefonní číslo"
+                  label="Phone number"
                   color="white"
                   outlined
                   dense
@@ -165,7 +165,7 @@
                   v-model="textArea"
                   class="pt-xl-1"
                   outlined
-                  label="Popis problému"
+                  label="Bug description"
                   auto-grow
                   :rules="textAreaRules"
                   color="white"
@@ -179,7 +179,7 @@
                   class="mr-4 black--text"
                   @click="validate"
                 >
-                  Odeslat
+                  Send
                 </v-btn>
                 <v-snackbar
                   v-model="snackbar"
@@ -208,13 +208,13 @@ export default {
   data: () => ({
     // snackbar Odeslat
     snackbar: false,
-    text: 'Vaše připomínka byla zaslána na podporu.',
+    text: 'Your complaint has been sent to the support team.',
     timeout: 2000,
     valid: true,
     name: '',
-    // snackbar Uložit
+    // snackbar Save
     snackbarSave:false,
-    textSave:'Úspěšně uloženo',
+    textSave:'Saved successfully',
     saved:true,
     // permanent values
     nameVal: 'Lorem Ipsum',
@@ -229,26 +229,26 @@ export default {
 
     // validation
     nameRules: [
-      v => !!v || 'Pole Jména a příjmení nesmí být prázdné',
+      v => !!v || 'Name and surname entries must not be empty.',
     ],
     email: '',
     emailRules: [
-      v => !!v || 'Pole e-mailu nesmí být prázdné',
-      v => /^\S+@\S+\.\S+$/.test(v) || "E-mail must be valid"
+      v => !!v || 'Email entry must not be empty.',
+      v => /^\S+@\S+\.\S+$/.test(v) || "E-mail has to be valid"
     ],
     textArea: '',
     textAreaRules: [
-      v => !!v || 'Pole nesmí být prázdné',
+      v => !!v || 'Bug entry must not be empty.',
     ],
     phone: '',
     phoneRules: [
-      v => !!v || 'Pole nesmí být prázdné',
-      v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
+      v => !!v || 'Phone number entry must not be empty',
+      v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Phone number has to be valid'
     ],
   }),
   // Local storage title change
   mounted() {
-    this.$store.commit('CHANGE_NAME', {name: 'Nastavení'})
+    this.$store.commit('CHANGE_NAME', {name: 'Settings'})
   },
   // Button methods Send, Validate, Reset form and print a success message snackbar.
   methods: {
