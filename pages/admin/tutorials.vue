@@ -240,6 +240,10 @@ export default {
       ],
     }
   },
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'Metodika'})
+  },
 
   methods: {
     // Button method to delete a folder
@@ -262,7 +266,6 @@ export default {
       this.dialog = false
 
     }
-
   },
 }
 

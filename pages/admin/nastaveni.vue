@@ -246,6 +246,10 @@ export default {
       v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
     ],
   }),
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'Nastavení'})
+  },
   // Button methods Send, Validate, Reset form and print a success message snackbar.
   methods: {
     validate() {
@@ -256,7 +260,7 @@ export default {
     save() {
       this.snackbarSave = true
     },
-  }
+  },
 }
 
 

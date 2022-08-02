@@ -38,8 +38,6 @@
           </v-col>
         </v-row>
       </v-app-bar>
-
-
       <v-navigation-drawer
         v-model="drawer"
         src="/bg.jpg"
@@ -58,7 +56,6 @@
             :key="item.title"
             :to="item.link"
             link
-
           >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
@@ -86,7 +83,6 @@
             class="text-left"
             link
             to="/admin/account"
-
           >
             <v-list-item-action>
               <v-icon>
@@ -97,19 +93,13 @@
               <v-list-item-title>Účet</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-
           <v-list>
-            <v-list-item
-
-            >
+            <v-list-item>
               <v-list-item-title>
               </v-list-item-title>
             </v-list-item>
           </v-list>
-
         </v-list>
-
-
       </v-navigation-drawer>
       <v-col cols="12" class="mt-4">
         <Nuxt/>
@@ -126,7 +116,6 @@ export default {
   name: "AdminLayout",
   data() {
     return {
-      name: 'Prehled',
       miniVariant: false,
       clipped: false,
       drawer: true,
@@ -142,6 +131,12 @@ export default {
         {title: 'Nastaveni', link: '/admin/nastaveni', icon: 'mdi-cog-outline'},
       ],
 
+    }
+  },
+  // Local storage title change getter
+  computed:{
+    name() {
+      return this.$store.getters.getPageName
     }
   }
 }

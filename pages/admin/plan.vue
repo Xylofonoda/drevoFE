@@ -487,6 +487,10 @@ export default {
       ],
     }
   },
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'Plán'})
+  },
 
   methods: {
     onScroll(e) {
@@ -497,7 +501,7 @@ export default {
     toTop() {
       this.$vuetify.goTo(0)
     }
-  }
+  },
 }
 </script>
 

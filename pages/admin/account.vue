@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <v-row>
+      <v-row kist>
         <v-col cols="12">
           <v-card
             height="75vh"
@@ -9,11 +9,19 @@
             color="black"
           >
             <v-card-title class="text-xl-subtitle-1 text-uppercase justify-center font-weight-bold">
-              Účet
+              Nastavení účtu
             </v-card-title>
-            <v-avatar>
-
-            </v-avatar>
+            <div class="text-center my-xl-3">
+              <v-avatar
+                width="100px"
+                height="100px"
+                color="#F8B400">
+                <v-icon
+                  x-large>
+                  mdi-account
+                </v-icon>
+              </v-avatar>
+            </div>
             <div align="center">
               <v-col cols="6" class="ml-xl-3 pb-0 mb-0 float ">
                 <v-row class="justify-center">
@@ -73,7 +81,7 @@
                   :type="show1 ? 'text' : 'password'"
                   name="input-10-1"
                   label="Heslo"
-                  hint="Vaše nové heslo musí být jiné než staré."
+                  hint="Zvolte si nové heslo."
                   counter
                   color="white"
                   @click:append="show1 = !show1"
@@ -156,6 +164,10 @@ export default {
       v => /([+]?\d{1,3}[. \s]?)?(\d{9}?)|([+]?\d{1,3} [.\s]?)?(\d{3}?) (\d{3}?) (\d{3}?)/.test(v) || 'Telefonní číslo musí být platné.'
     ],
   }),
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'Účet'})
+  },
   // button methods
   methods: {
     validate() {
@@ -166,7 +178,8 @@ export default {
     save() {
       this.snackbarSave = true
     },
-  }
+
+  },
 }
 
 

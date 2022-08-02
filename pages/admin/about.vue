@@ -184,6 +184,10 @@ export default {
 
     }
   },
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'O nás'})
+  },
   // Clear selects
   methods: {
     smazatVec() { this.prvniSelect = this.druhySelect = null }

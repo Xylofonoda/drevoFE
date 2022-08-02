@@ -301,6 +301,10 @@ export default {
       ],
     }
   },
+  // Local storage title change
+  mounted() {
+    this.$store.commit('CHANGE_NAME', {name: 'Databáze'})
+  },
 }
 </script>
 
