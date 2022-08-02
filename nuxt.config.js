@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import {cs} from 'vuetify/src/locale'
 
 export default {
   ssr: false,
@@ -25,7 +26,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/syncI18n', ssr: false}, {src: '~/plugins/apexcharts.js', ssr: false}],
+  plugins: [{src: '~/plugins/apexcharts.js', ssr: false}, { src: '~/plugins/vueI18n', ssr: false},],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -45,7 +46,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
-    // '@nuxtjs/i18n',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,25 +75,29 @@ export default {
     },
   },
 
-  // i18n: {
-  //   locales: [
-  //     { code: 'en', iso: 'en-GB', file: 'en-GB.js', isCatchallLocale: true },
-  //     { code: 'cs', iso: 'cs-CZ', file: 'cs-CZ.js' },
-  //   ],
-  //   lazy: true,
-  //   langDir: 'locales/',
-  //   defaultLocale: 'cs',
-  //   vueI18n: '~/plugins/vueI18n.js',
-  //   detectBrowserLanguage: {
-  //     useCookie: true,
-  //     onlyOnRoot: true,
-  //     cookieKey: 'uco-customer-portal-lang',
-  //   },
-  //   seo: false,
-  // },
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-GB', file: 'en-GB.js', isCatchallLocale: true },
+      { code: 'cs', iso: 'cs-CZ', file: 'cs-CZ.js' },
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    defaultLocale: 'cs',
+    vueI18n: '~/plugins/vueI18n.js',
+    detectBrowserLanguage: {
+      useCookie: true,
+      onlyOnRoot: false,
+      cookieKey: 'uco-customer-portal-lang',
+    },
+    seo: false,
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    lang: {
+      locales: { cs },
+      current: 'cs'
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
