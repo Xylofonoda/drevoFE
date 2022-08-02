@@ -223,7 +223,6 @@ export default {
       ],
       folders: [
         // Uploaded files
-
         {
           title: 'Lorem Ipsum sit dolor: PDF',
           subtitle: 'Language:CZE'

@@ -133,8 +133,8 @@ export default {
 
     }
   },
-  // Local storage title change getter
   computed:{
+    // Local storage title change getter
     name() {
       return this.$store.getters.getPageName
     }
